@@ -29,4 +29,4 @@ console.log('pra finalizar...')
 console.log(!!('' || null || 0 || ' '))
 
 let nome = 'Lucas'
-console.log(nome || 'Desconhecido')
+//console.log(nome || 'Desconhecido')
