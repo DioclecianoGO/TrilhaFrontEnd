@@ -1,18 +1,16 @@
-function teste1(num) {
-    if(num > 7)
-        console.log(num)
-    
-    console.log('Final')
+const notas = [6.7, 7.4, 9.8, 8.1, 7.7]
+
+for (let i in notas) {
+    console.log(i, notas[i])
 }
 
-teste1(6)
-teste1(8)
-
-function teste2(num) {
-    if(num > 7); { // cuidado com o ';', não usar com as estruturas de controle
-        console.log(num)
-    }
+const pessoa = {
+    nome: 'Ana',
+    sobrenome: 'Silva',
+    idade: 29,
+    peso: 64
 }
 
-teste2(6)
-teste2(8)
+for(let atributo in pessoa) {
+    console.log(`${atributo} = ${pessoa[atributo]}`)
+}
