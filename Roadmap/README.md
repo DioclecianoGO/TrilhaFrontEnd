@@ -10,8 +10,8 @@ This is the knowledge path I am following to study about front-end, through this
 ✔ Client-Server Communications <br/>
 ✔ Understanding Web Hosting <br/>
 ✔ Understanding Domain Names <br/>
-❌ A Deeper Look at Browsers <br/>
-❌ Web Technologies <br/>
+✔ A Deeper Look at Browsers <br/>
+✔ Web Technologies <br/>
 ❌ Web Technology Quiz <br/>
 #### File Management
 ❌ Understanding Files & Folders <br/>
