@@ -8,7 +8,7 @@ This is the knowledge path I am following to study about front-end, through this
 #### Terminology
 ✔ Understanding Client & Server <br/>
 ✔ Client-Server Communications <br/>
-❌ Understanding Web Hosting <br/>
+✔ Understanding Web Hosting <br/>
 ❌ Understanding Domain Names <br/>
 ❌ A Deeper Look at Browsers <br/>
 ❌ Web Technologies <br/>
