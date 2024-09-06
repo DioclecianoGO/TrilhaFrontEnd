@@ -1,5 +1,5 @@
 # FRONT-END ROADMAP
-Está é a trilha de conhecimento que estou seguindo para estudar sobre front-end, através desse [Roadmap](https://roadmap.sh/frontend)
+This is the knowledge path I am following to study about front-end, through this [Roadmap](https://roadmap.sh/frontend)
 
 # Internet
 ## Learn How the Web Works
