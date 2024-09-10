@@ -12,15 +12,15 @@ This is the knowledge path I am following to study about front-end, through this
 ✔ Understanding Domain Names <br/>
 ✔ A Deeper Look at Browsers <br/>
 ✔ Web Technologies <br/>
-❌ Web Technology Quiz <br/>
+✔ Web Technology Quiz <br/>
 #### File Management
-❌ Understanding Files & Folders <br/>
-❌ Files on Mac <br/>
-❌ Install Visual Studio Code (VSCode) on Mac <br/>
-❌ Files on Windows <br/>
-❌ Install Visual Studio Code (VSCode) on Windows <br/>
+✔ Understanding Files & Folders <br/>
+✔ Files on Mac <br/>
+✔ Install Visual Studio Code (VSCode) on Mac <br/>
+✔ Files on Windows <br/>
+✔ Install Visual Studio Code (VSCode) on Windows <br/>
 #### Loading Files in the Browser
-❌ Folders on Windows <br/>
+✔ Folders on Windows <br/>
 ❌ Opening Files in the Browser on Windows <br/>
 ❌ Folders on Mac <br/>
 ❌ Opening Files in the Browser on Mac <br/>
