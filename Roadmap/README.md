@@ -21,11 +21,11 @@ This is the knowledge path I am following to study about front-end, through this
 ✔ Install Visual Studio Code (VSCode) on Windows <br/>
 #### Loading Files in the Browser
 ✔ Folders on Windows <br/>
-❌ Opening Files in the Browser on Windows <br/>
-❌ Folders on Mac <br/>
-❌ Opening Files in the Browser on Mac <br/>
-❌ Naming Conventions <br/>
-❌ Loading CSS, JavaScript, & Images in Web Pages <br/>
+✔ Opening Files in the Browser on Windows <br/>
+✔ Folders on Mac <br/>
+✔ Opening Files in the Browser on Mac <br/>
+✔ Naming Conventions <br/>
+✔ Loading CSS, JavaScript, & Images in Web Pages <br/>
 ❌ Nested Folders & Files <br/>
 ❌ File Path Exercises <br/>
 ❌ Using CodePen <br/>
