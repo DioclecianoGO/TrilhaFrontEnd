@@ -26,10 +26,12 @@ This is the knowledge path I am following to study about front-end, through this
 ✔ Opening Files in the Browser on Mac <br/>
 ✔ Naming Conventions <br/>
 ✔ Loading CSS, JavaScript, & Images in Web Pages <br/>
-❌ Nested Folders & Files <br/>
-❌ File Path Exercises <br/>
-❌ Using CodePen <br/>
-❌ Moving Code Into CodePen <br/>
-❌ Moving Code Out of Codepen <br/>
+✔ Nested Folders & Files <br/>
+✔ File Path Exercises <br/>
+✔ Using CodePen <br/>
+✔ Moving Code Into CodePen <br/>
+✔ Moving Code Out of Codepen <br/>
 #### Wrap Up
-❌ Wrapping Up <br/>
+✔ Wrapping Up <br/>
+### How does the Internet Work?
+❌ Read
