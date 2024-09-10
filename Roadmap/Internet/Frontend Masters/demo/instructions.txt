@@ -1,0 +1,21 @@
+For each page given here, see if you can do the following:
+
+1. On line 6 in all HTML files: add the correct path to the CSS file inside of the quotes.
+<link href="" rel="stylesheet">
+
+2. On lines 13, 14, and 15 in all HTML files, link the pages together by replacing the # with the correct path.
+<li><a href="#">Home</a></li>
+
+3. Wherever an image tag appears, like this:
+
+<!-- <img src="" alt="Pie's all gone!"> -->
+
+a. Delete the comment code <!-- -->
+b. In between the quotes, enter the correct path to the image.
+
+4. Towards the bottom of each page, find the JavaScript tag:
+<script src=""></script>
+
+In between the quotes, enter the correct path to the JavaScript file.
+
+5. If you want a challenge, look in the "advanced" folder and see if you can complete the same 5 steps above with challenge.html
