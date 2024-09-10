@@ -34,4 +34,8 @@ This is the knowledge path I am following to study about front-end, through this
 #### Wrap Up
 ✔ Wrapping Up <br/>
 ### How does the Internet Work?
+✔ Read
+### The Internet Explained
+❌ Read
+### How does the Internet Work?
 ❌ Read
