@@ -1,7 +1,11 @@
 # FRONT-END ROADMAP
 This is the knowledge path I am following to study about front-end, through this [Roadmap](https://roadmap.sh/frontend)
 
-# Internet
+
+<details>
+<summary>Internet</summary>
+<br>
+
 ### Learn How the Web Works
 #### Introduction
 ✔ Introduction
@@ -38,4 +42,41 @@ This is the knowledge path I am following to study about front-end, through this
 ### The Internet Explained
 ✔ Read
 ### How does the Internet Work?
-❌ Read
+<!-- ❌ Read -->
+✔ Read
+### Introduction to Internet
+✔ Read
+### How does the Internet work?
+✔ watched
+### How the Internet Works in 5 Minutes
+✔ watched
+</details>
+
+<details>
+<summary>How does the Internet Work?</summary>
+<br>
+✔ Introduction to Internet
+✔ How does the Internet Work?
+✔ How Does the Internet Work? MDN Docs
+✔ How does the Internet work?
+✔ How the Internet Works in 5 Minutes
+</details>
+
+<details>
+<summary>What is HTTP?</summary>
+<br>
+✔ Everything you need to know about HTTP
+✔ What is HTTP?
+✔ How HTTPS Works …in a comic!
+✔ An overview of HTTP
+✔ HTTP/3 From A To Z: Core Concepts
+✔ HTTP/3 Is Now a Standard: Why Use It and How to Get Started
+✔ HTTP Crash Course & Exploration 
+</details>
+
+<details>
+<summary>What is a Domain Name?</summary>
+<br>
+❌ What is a Domain Name?
+❌ What is a Domain Name? | Domain name vs. URL
+❌ A Beginners Guide to How Domain Names Work
