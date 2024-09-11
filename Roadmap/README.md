@@ -5,11 +5,11 @@ This is the knowledge path I am following to study about front-end, through this
 <details>
 <summary>Internet</summary>
 <br>
-
-### Learn How the Web Works
-#### Introduction
-✔ Introduction
-#### Terminology
+<!-- <details>
+<summary> --> ✔ Learn How the Web Works</br><!-- </summary>
+<h5>Introduction</h5>
+✔ Introduction <br/>
+<h5>Terminology</h5>
 ✔ Understanding Client & Server <br/>
 ✔ Client-Server Communications <br/>
 ✔ Understanding Web Hosting <br/>
@@ -17,13 +17,13 @@ This is the knowledge path I am following to study about front-end, through this
 ✔ A Deeper Look at Browsers <br/>
 ✔ Web Technologies <br/>
 ✔ Web Technology Quiz <br/>
-#### File Management
+<h5>File Management</h5>
 ✔ Understanding Files & Folders <br/>
 ✔ Files on Mac <br/>
 ✔ Install Visual Studio Code (VSCode) on Mac <br/>
 ✔ Files on Windows <br/>
 ✔ Install Visual Studio Code (VSCode) on Windows <br/>
-#### Loading Files in the Browser
+<h5>Loading Files in the Browser</h5>
 ✔ Folders on Windows <br/>
 ✔ Opening Files in the Browser on Windows <br/>
 ✔ Folders on Mac <br/>
@@ -35,48 +35,43 @@ This is the knowledge path I am following to study about front-end, through this
 ✔ Using CodePen <br/>
 ✔ Moving Code Into CodePen <br/>
 ✔ Moving Code Out of Codepen <br/>
-#### Wrap Up
-✔ Wrapping Up <br/>
-### How does the Internet Work?
-✔ Read
-### The Internet Explained
-✔ Read
-### How does the Internet Work?
+<h5>Wrap Up</h5>
+✔ Wrapping Up<br/>
+</details> -->
+✔ How does the Internet Work?<br/>
+✔ The Internet Explained<br/>
+✔ How does the Internet Work?<br/>
 <!-- ❌ Read -->
-✔ Read
-### Introduction to Internet
-✔ Read
-### How does the Internet work?
-✔ watched
-### How the Internet Works in 5 Minutes
-✔ watched
+✔ Introduction to Internet<br/>
+✔ How does the Internet work?<br/>
+✔ How the Internet Works in 5 Minutes<br/>
 </details>
 
 <details>
 <summary>How does the Internet Work?</summary>
 <br>
-✔ Introduction to Internet
-✔ How does the Internet Work?
-✔ How Does the Internet Work? MDN Docs
-✔ How does the Internet work?
-✔ How the Internet Works in 5 Minutes
+✔ Introduction to Internet <br/>
+✔ How does the Internet Work? <br/>
+✔ How Does the Internet Work? MDN Docs <br/>
+✔ How does the Internet work? <br/>
+✔ How the Internet Works in 5 Minutes <br/>
 </details>
 
 <details>
 <summary>What is HTTP?</summary>
 <br>
-✔ Everything you need to know about HTTP
-✔ What is HTTP?
-✔ How HTTPS Works …in a comic!
-✔ An overview of HTTP
-✔ HTTP/3 From A To Z: Core Concepts
-✔ HTTP/3 Is Now a Standard: Why Use It and How to Get Started
-✔ HTTP Crash Course & Exploration 
+✔ Everything you need to know about HTTP <br/>
+✔ What is HTTP? <br/>
+✔ How HTTPS Works …in a comic! <br/>
+✔ An overview of HTTP <br/>
+✔ HTTP/3 From A To Z: Core Concepts <br/>
+✔ HTTP/3 Is Now a Standard: Why Use It and How to Get Started <br/>
+✔ HTTP Crash Course & Exploration  <br/>
 </details>
 
 <details>
 <summary>What is a Domain Name?</summary>
 <br>
-❌ What is a Domain Name?
-❌ What is a Domain Name? | Domain name vs. URL
-❌ A Beginners Guide to How Domain Names Work
+❌ What is a Domain Name? <br/>
+❌ What is a Domain Name? | Domain name vs. URL <br/>
+❌ A Beginners Guide to How Domain Names Work <br/>
