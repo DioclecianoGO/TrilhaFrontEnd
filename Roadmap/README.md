@@ -72,6 +72,29 @@ This is the knowledge path I am following to study about front-end, through this
 <details>
 <summary>What is a Domain Name?</summary>
 <br>
-❌ What is a Domain Name? <br/>
-❌ What is a Domain Name? | Domain name vs. URL <br/>
-❌ A Beginners Guide to How Domain Names Work <br/>
+✔ What is a Domain Name? <br/>
+✔ What is a Domain Name? | Domain name vs. URL <br/>
+✔ A Beginners Guide to How Domain Names Work <br/>
+</details>
+
+<details>
+<summary>What is a Hosting?</summary>
+<br>
+✔ What Is Web Hosting? Explained <br/>
+✔ Different Types of Web Hosting Explained <br/>
+✔ Where to Host a Fullstack Project on a Budget <br/>
+</details>
+
+<details>
+<summary>DNS and how it workds?</summary>
+<br>
+❌ What is DNS? <br/>
+❌ Mess with DNS - DNS Playground <br/>
+❌ How DNS works (comic) <br/>
+❌ DNS and How does it Work? <br/>
+❌ DNS Records <br/>
+❌ When to add glue records to DNS settings <br/>
+❌ DNS Records for Newbies - How To Manage Website Records <br/>
+❌ Explore top posts about DNS <br/>
+  
+</details>
