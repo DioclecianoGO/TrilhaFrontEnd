@@ -9,7 +9,7 @@ transformaReal1(0.30000000000000004)
 
 function transformaReal2(b,c){
     d = b + c
-    console.log("R$ " + (d.toPrecision(2).toString(".", ",")))
+    console.log("R$ " + (d.toPrecision(2).toString().replace(".", ",")))
 }
 
 transformaReal2(0.1, 0.2)
