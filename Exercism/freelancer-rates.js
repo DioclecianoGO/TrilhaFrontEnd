@@ -15,7 +15,7 @@ console.log(daysInBudget(20000, 89))
 /* export */ function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
     const daysBillable = 22
     const dayCostVar = dayRate(ratePerHour)
-    let dayCostWithDescont = dayCostVar - (dayCostVar * discount)
+    let dayCostWithDescont = dayCostVar - (dayCostVar * discount) // ao inves de retirar o valor do desconto e reduzir do valor inteiro, basta subtrair o desconto de 1 para ter o percentual a ser pago ex: (1 - discount)
     let monthBillable = Math.floor(numDays / daysBillable)
     let monthCostWithDescont = dayCostWithDescont * daysBillable
     let remaninderDays = numDays % daysBillable 
