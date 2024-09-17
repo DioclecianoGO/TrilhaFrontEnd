@@ -28,3 +28,4 @@ function recordes(nota) {
 }
 
 console.log(recordes(registro))
+console.log(recordes("30, 40, 20, 4, 51, 25, 42, 38, 56, 0"))
