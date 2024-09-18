@@ -9,9 +9,9 @@
     return `${option1} is clearly the better choice.`
     */
    
-    return option1 < option2 ? option1 + " is clearly the better choice." : option2 + " is clearly the better choice." // achei essa solução mais elegante
+    // return option1 < option2 ? option1 + " is clearly the better choice." : option2 + " is clearly the better choice." // achei essa solução mais elegante
 
-    // return {option1, option2}.sort()[0] + " is clearly the better choice."     // Essa solução não funcionou no VSCode
+    return [option1, option2].sort()[0] + " is clearly the better choice."     // Essa solução é ainda mais elegante
 }
 
 /*export*/ function calculateResellPrice(originalPrice, age) {
