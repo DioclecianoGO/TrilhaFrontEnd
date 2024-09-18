@@ -3,10 +3,12 @@
 }
   
 /*export*/ function chooseVehicle(option1, option2) {
-    if (option1 > option2){
+    /*if (option1 > option2){
         return `${option2} is clearly the better choice.`
     } else
-        return `${option1} is clearly the better choice.`
+    return `${option1} is clearly the better choice.`
+    */
+   return option1 < option2 ? option1 + " is clearly the better choice." : option2 + " is clearly the better choice." // achei essa solução mais elegante
 }
 
 /*export*/ function calculateResellPrice(originalPrice, age) {
