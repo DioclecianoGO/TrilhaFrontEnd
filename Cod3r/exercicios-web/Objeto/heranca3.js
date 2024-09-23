@@ -1,4 +1,4 @@
-const pai = { nome: 'Pedro', corCabelo: 'preto' }
+const pai = { nome: 'Pedro', corCabelo: 'preto', nobres: 'Portugal' }
 
 const filha1 = Object.create(pai)
 filha1.nome = 'Ana'
@@ -10,6 +10,8 @@ const filha2 = Object.create(pai, {
 
 console.log(filha2.nome)
 filha2.nome = 'Carla'
+filha2.idade = 32
+filha2.genero = 'Femenino'
 console.log(`${filha2.nome} tem cabelo ${filha2.corCabelo}`)
 
 console.log(Object.keys(filha1))
@@ -17,5 +19,5 @@ console.log(Object.keys(filha2))
 
 for(let key in filha2) {
     filha2.hasOwnProperty(key) ?
-        console.log(key) : console.log(`Por herança: ${key}`)
+        console.log(key) : console.log(`Por herança: ${key}:${filha2[key]}`)
 }
