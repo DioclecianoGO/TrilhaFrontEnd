@@ -18,6 +18,6 @@ ola = _ => 'Olá' // possui um param
 console.log(ola())
 
 
-() => "string"
-(a, b) => a + b
+let a = () => "string"
+let b = (a, b) => a + b
 a => 2 * a
