@@ -85,7 +85,7 @@ console.log(limesToCut(80, ['small', 'large', 'large', 'medium', 'small', 'large
         }
     }
     let i = 0
-    while (timeControl > 0 && ) {
+    while (timeControl > 0 && i < conjuntoNumber.length) {
       timeControl = timeControl - conjuntoNumber[i]
       conjuntoSobra.shift()
       i++
