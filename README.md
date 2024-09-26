@@ -19,3 +19,7 @@ To follow the concepts, i studied using the Web Moderno course from Cod3r, which
 To reinforce and test my knowledge, I am also using the Exercism platform.
 
 [Exercism](https://exercism.org/tracks/javascript)
+
+## W3SCHOOL
+Learn to Code With the world's largest web developer site. 
+[W3Schools](https://www.w3schools.com/)
