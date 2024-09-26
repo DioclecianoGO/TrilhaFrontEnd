@@ -16,3 +16,8 @@ let ola = function () {
 ola = () => 'Olá'
 ola = _ => 'Olá' // possui um param
 console.log(ola())
+
+
+() => "string"
+(a, b) => a + b
+a => 2 * a
