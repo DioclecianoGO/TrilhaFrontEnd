@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quotation and Citation Elements</title>
+</head>
+<body>
+    <h1>HTML Quotation and Citation Elements</h1>
+
+    <p>O elemento <code>&lt;blockquote&gt;</code> é utilizado para delimitar uma seção que foi citada de outra fonte. Veja o exemplo abaixo de uma citação retirada do site da WWF:</p>
+
+    <p>Abaixo está uma citação retirada do site da WWF:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html" style="background-color: #f9f9f9; border-left: 10px solid #ccc; margin: 20px; padding: 10px 20px;">
+        "Por 60 anos, a WWF trabalhou para ajudar pessoas e a natureza a prosperarem. Como a principal organização de conservação do mundo, a WWF atua em quase 100 países. Em todos os níveis, colaboramos com pessoas ao redor do mundo para desenvolver e fornecer soluções inovadoras que protejam as comunidades, a vida selvagem e os locais onde vivem."
+    </blockquote>
+
+    <p>O elemento <code>&lt;q&gt;</code> é usado para citações curtas e inserirá automaticamente aspas em volta do texto. Por exemplo:</p>
+    <p>A missão da WWF é: <q style="quotes: '“' '”';">Construir um futuro onde as pessoas vivam em harmonia com a natureza.</q></p>
+
+    <h2>Usando Abreviações com o elemento <code>&lt;abbr&gt;</code></h2>
+    <p>O uso de abreviações pode ajudar na acessibilidade e clareza. Por exemplo, ao referir-se à "Organização Mundial da Saúde" (OMS), podemos usar o elemento <code>&lt;abbr&gt;</code>:</p>
+    <p>A <abbr title="World Health Organization" style="border-bottom: 1px dotted;">WHO</abbr> foi fundada em 1948.</p>
+
+    <h2>Contato com o elemento <code>&lt;address&gt;</code></h2>
+    <p>O elemento <code>&lt;address&gt;</code> é ideal para fornecer informações de contato. Abaixo está um exemplo simples:</p>
+    <address style="font-style: italic; margin-top: 20px;">
+        Escrito por John Doe.<br>
+        Visite-nos em:<br>
+        Example.com<br>
+        Caixa Postal 564, Disneyland<br>
+        EUA
+    </address>
+
+    <h2>Citando Trabalhos com o elemento <code>&lt;cite&gt;</code></h2>
+    <p>O elemento <code>&lt;cite&gt;</code> é usado para referenciar o título de uma obra criativa. Aqui está um exemplo mencionando uma pintura famosa:</p>
+    <p><cite style="font-style: italic;">O Grito</cite>, de Edvard Munch. Pintado em 1893.</p>
+
+    <h2>Controle de Direção de Texto com o elemento <code>&lt;bdo&gt;</code></h2>
+    <p>O elemento <code>&lt;bdo&gt;</code> pode ser usado para alterar a direção do texto. Aqui está um exemplo onde forçamos o texto a ser escrito da direita para a esquerda:</p>
+    <p><bdo dir="rtl" style="display: block; margin-top: 20px;">Este texto será escrito da direita para a esquerda.</bdo></p>
+
+    <h2>Testando Combinações</h2>
+    <p>Agora vamos testar uma combinação de diferentes elementos:</p>
+    <blockquote cite="http://example.com" style="background-color: #f9f9f9; border-left: 10px solid #ccc; margin: 20px; padding: 10px 20px;">
+        "Este é um exemplo de citação longa. Vamos incluir uma citação curta aqui: <q style="quotes: '“' '”';">este é o trecho curto.</q> E agora, continuamos com o texto original."
+    </blockquote>
+    <p>Em 1945, a <abbr title="Organização das Nações Unidas" style="border-bottom: 1px dotted;">ONU</abbr> foi criada para promover a paz.</p>
+    <p><cite style="font-style: italic;">Dom Quixote</cite>, de Miguel de Cervantes.</p>
+
+</body>
+</html>
