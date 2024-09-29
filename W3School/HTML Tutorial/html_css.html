@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de CSS</title>
+    
+    <!-- Estilo Interno -->
+    <style>
+        /* Estilos Internos */
+        body {
+            background-color: powderblue; /* Cor de fundo */
+        }
+
+        h1 {
+            color: blue; /* Cor de texto */
+            font-family: Verdana, sans-serif; /* Fonte */
+            font-size: 300%; /* Tamanho da fonte */
+        }
+
+        p {
+            color: red; /* Cor do parágrafo */
+            font-family: Courier, monospace; /* Fonte */
+            font-size: 160%; /* Tamanho da fonte */
+        }
+
+        .border-example {
+            border: 2px solid powderblue; /* Borda */
+            padding: 30px; /* Espaçamento interno (padding) */
+            margin: 50px; /* Espaçamento externo (margin) */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seção sobre Estilo Inline -->
+    <h1 style="color:blue;">Título em Azul (Inline CSS)</h1>
+    <p style="color:red;">Este é um parágrafo com CSS Inline (Cor vermelha).</p>
+
+    <!-- Exemplo com Estilo Interno -->
+    <h1>Título com Estilo Interno</h1>
+    <p>Este é um parágrafo com estilo interno definido no cabeçalho.</p>
+
+    <!-- Exemplo de Cores usando RGB, HEX e HSL -->
+    <h2>Exemplos de Cores com CSS</h2>
+    <p style="color: rgb(255, 99, 71);">Texto em Vermelho com RGB (rgb(255, 99, 71))</p>
+    <p style="color: #4682b4;">Texto em Azul com HEX (hex: #4682b4)</p>
+    <p style="color: hsl(120, 100%, 50%);">Texto em Verde com HSL (hsl(120, 100%, 50%))</p>
+
+    <!-- Exemplo com Bordas, Padding e Margin -->
+    <h2>Exemplo de Bordas, Padding e Margin</h2>
+    <p class="border-example">Este parágrafo tem uma borda azul claro, com padding interno de 30px e uma margem de 50px ao redor da borda.</p>
+
+    <!-- Link para um Estilo Externo -->
+    <h2>CSS Externo</h2>
+    <p>Para usar CSS externo, é necessário vincular o arquivo com a tag <code>&lt;link&gt;</code> no <code>&lt;head&gt;</code>.</p>
+    <p>Exemplo de uso:</p>
+    <pre>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+    </pre>
+
+    <!-- Exemplo de Arquivo CSS Externo -->
+    <h2>Arquivo Externo (styles.css)</h2>
+    <p>O arquivo <code>styles.css</code> pode conter algo como:</p>
+    <pre>
+        body {
+            background-color: powderblue;
+        }
+        h1 {
+            color: blue;
+        }
+        p {
+            color: red;
+        }
+    </pre>
+
+</body>
+</html>
