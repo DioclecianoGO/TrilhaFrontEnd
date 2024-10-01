@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Tabelas em HTML</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Explicação sobre Tabelas em HTML</h1>
+
+    <p>As tabelas em HTML são uma maneira de organizar dados em um formato de linhas e colunas. Cada tabela é composta por uma série de células, organizadas em linhas (<code>&lt;tr&gt;</code>) e colunas (<code>&lt;td&gt;</code>). Cabeçalhos podem ser adicionados usando a tag <code>&lt;th&gt;</code>, que por padrão exibe o conteúdo em negrito e centralizado.</p>
+
+    <h2>Exemplo básico de tabela</h2>
+    <p>Abaixo temos uma tabela simples que exibe o nome, idade e país de três pessoas:</p>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>País</th>
+        </tr>
+        <tr>
+            <td>Emil</td>
+            <td>16</td>
+            <td>Alemanha</td>
+        </tr>
+        <tr>
+            <td>Tobias</td>
+            <td>14</td>
+            <td>Suécia</td>
+        </tr>
+        <tr>
+            <td>Linus</td>
+            <td>10</td>
+            <td>Noruega</td>
+        </tr>
+    </table>
+
+    <h2>Células de Dados</h2>
+    <p>Cada célula de dados dentro de uma tabela é definida pela tag <code>&lt;td&gt;</code>, que representa uma "table data" ou dado da tabela. Células podem conter texto, imagens ou até outras tabelas.</p>
+
+    <h2>Cabeçalhos de Tabela</h2>
+    <p>Para cabeçalhos, usamos a tag <code>&lt;th&gt;</code>. Esses cabeçalhos aparecem geralmente na primeira linha e ajudam a identificar o conteúdo de cada coluna. No exemplo acima, os cabeçalhos são "Nome", "Idade" e "País".</p>
+
+    <h2>Mais Linhas e Células</h2>
+    <p>Podemos adicionar quantas linhas forem necessárias para representar os dados. Por exemplo, podemos incluir mais informações, como idade e país de outras pessoas:</p>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>País</th>
+        </tr>
+        <tr>
+            <td>Emil</td>
+            <td>16</td>
+            <td>Alemanha</td>
+        </tr>
+        <tr>
+            <td>Tobias</td>
+            <td>14</td>
+            <td>Suécia</td>
+        </tr>
+        <tr>
+            <td>Linus</td>
+            <td>10</td>
+            <td>Noruega</td>
+        </tr>
+        <tr>
+            <td>Francisco</td>
+            <td>32</td>
+            <td>México</td>
+        </tr>
+        <tr>
+            <td>Helen</td>
+            <td>45</td>
+            <td>Reino Unido</td>
+        </tr>
+    </table>
+
+</body>
+</html>
