@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Image Maps - Exemplo e Explicações</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .example {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .example img {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Image Maps - Definições e Exemplos</h1>
+
+    <p>Um mapa de imagens em HTML permite que você crie áreas clicáveis em uma imagem. Estas áreas são definidas com a tag <code>&lt;area&gt;</code>, enquanto o mapa de imagens é criado com a tag <code>&lt;map&gt;</code>.</p>
+
+    <h2>Exemplo Básico de Mapa de Imagem</h2>
+
+    <div class="example">
+        <p>Tente clicar no computador, no telefone ou na xícara de café na imagem abaixo:</p>
+
+        <!-- Exemplo de Mapa de Imagem -->
+        <img src="img/workplace.jpg" alt="Workplace" usemap="#workmap">
+
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+        </map>
+    </div>
+
+    <h2>Como Funciona?</h2>
+    <p>O conceito por trás de um mapa de imagens é que você pode realizar diferentes ações, dependendo de onde clicar na imagem. A imagem é conectada ao mapa através do atributo <code>usemap</code>:</p>
+
+    <pre><code>&lt;img src="workplace.jpg" alt="Workplace" usemap="#workmap"&gt;</code></pre>
+
+    <p>O valor do <code>usemap</code> deve começar com <code>#</code>, seguido do nome do mapa, que é definido no atributo <code>name</code> da tag <code>&lt;map&gt;</code>.</p>
+
+    <h3>Definindo Áreas Clicáveis com <code>&lt;area&gt;</code></h3>
+
+    <p>Cada área clicável é definida com a tag <code>&lt;area&gt;</code>. Vamos ver os diferentes tipos de áreas que podem ser criadas:</p>
+
+    <h3>Forma Retangular: <code>shape="rect"</code></h3>
+
+    <div class="example">
+        <p>Exemplo de área retangular clicável. Clicar no retângulo levará à página "computer.htm":</p>
+
+        <img src="img/workplace.jpg" alt="Workplace" usemap="#workmap-rect">
+        
+        <map name="workmap-rect">
+            <area shape="rect" coords="34,44,270,350" href="computer.htm">
+        </map>
+    </div>
+
+    <h3>Forma Circular: <code>shape="circle"</code></h3>
+
+    <div class="example">
+        <p>Exemplo de área circular clicável. Clicar no círculo levará à página "coffee.htm":</p>
+
+        <img src="img/workplace.jpg" alt="Workplace" usemap="#workmap-circle">
+        
+        <map name="workmap-circle">
+            <area shape="circle" coords="337,300,44" href="coffee.htm">
+        </map>
+    </div>
+
+    <h3>Forma Poligonal: <code>shape="poly"</code></h3>
+
+    <div class="example">
+        <p>Exemplo de área poligonal clicável (formato de croissant). Clicar na área levará à página "croissant.htm":</p>
+
+        <img src="img/french_food.jpg" alt="French Food" usemap="#workmap-poly">
+
+        <map name="workmap-poly">
+            <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm">
+        </map>
+    </div>
+
+    <h3>Mapas de Imagem com JavaScript</h3>
+
+    <p>Você também pode associar um evento JavaScript a uma área clicável, utilizando o atributo <code>onclick</code>. Neste exemplo, um alerta será exibido quando o usuário clicar na área circular.</p>
+
+    <div class="example">
+        <p>Clique na xícara de café para disparar um evento JavaScript:</p>
+
+        <img src="img/workplace.jpg" alt="Workplace" usemap="#workmap-js">
+
+        <map name="workmap-js">
+            <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+        </map>
+    </div>
+
+    <script>
+        function myFunction() {
+            alert("Você clicou na xícara de café!");
+        }
+    </script>
+
+    <h2>Resumo</h2>
+
+    <ul>
+        <li>Use a tag <code>&lt;map&gt;</code> para definir um mapa de imagens.</li>
+        <li>A tag <code>&lt;area&gt;</code> define as áreas clicáveis dentro do mapa.</li>
+        <li>O atributo <code>usemap</code> da tag <code>&lt;img&gt;</code> é usado para associar a imagem ao mapa.</li>
+        <li>As áreas podem ser retangulares (<code>rect</code>), circulares (<code>circle</code>) ou poligonais (<code>poly</code>).</li>
+        <li>As áreas podem acionar eventos JavaScript usando o atributo <code>onclick</code>.</li>
+    </ul>
+
+</body>
+</html>
