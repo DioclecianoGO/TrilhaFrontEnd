@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Imagens em HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        img {
+            margin: 10px 0;
+        }
+        .example {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #ccc;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Imagens em HTML</h1>
+    <p>Imagens podem melhorar o design e a aparência de uma página web. Abaixo estão as explicações e exemplos práticos sobre como usar imagens em HTML.</p>
+
+    <h2>Tag <code>&lt;img&gt;</code> no HTML</h2>
+    <p>A tag <code>&lt;img&gt;</code> é usada para incorporar uma imagem em uma página HTML. Ela é uma tag auto-contida e não requer uma tag de fechamento. Duas de suas propriedades mais importantes são:</p>
+    <ul>
+        <li><strong>src</strong>: Especifica o caminho para a imagem.</li>
+        <li><strong>alt</strong>: Fornece um texto alternativo caso a imagem não possa ser exibida.</li>
+    </ul>
+
+    <h3>Exemplo de uso básico</h3>
+    <div class="example">
+        <code>&lt;img src="pic_trulli.jpg" alt="Italian Trulli"&gt;</code>
+        <br>
+        <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Italian Trulli">
+    </div>
+
+    <h2>Atributo <code>src</code></h2>
+    <p>O atributo <code>src</code> é usado para especificar o caminho para a imagem. O navegador carrega a imagem a partir do servidor e a insere na página quando ela é carregada.</p>
+
+    <h3>Exemplo de <code>src</code> correto</h3>
+    <div class="example">
+        <code>&lt;img src="img_chania.jpg" alt="Flowers in Chania"&gt;</code>
+        <br>
+        <img src="https://www.w3schools.com/html/img_chania.jpg" alt="Flowers in Chania">
+    </div>
+
+    <h2>Atributo <code>alt</code></h2>
+    <p>O atributo <code>alt</code> fornece um texto alternativo caso a imagem não seja carregada ou em situações de acessibilidade, como no uso de leitores de tela.</p>
+
+    <h3>Exemplo com erro no <code>src</code>, exibindo o <code>alt</code></h3>
+    <div class="example">
+        <code>&lt;img src="imagem_incorreta.jpg" alt="Flowers in Chania"&gt;</code>
+        <br>
+        <img src="imagem_incorreta.jpg" alt="Flowers in Chania">
+    </div>
+
+    <h2>Definindo Tamanho da Imagem</h2>
+    <p>Você pode definir o tamanho de uma imagem usando os atributos <code>width</code> e <code>height</code> ou através do CSS com o atributo <code>style</code>. Isso ajuda a controlar o layout da página e melhorar a experiência do usuário.</p>
+
+    <h3>Exemplo usando <code>width</code> e <code>height</code></h3>
+    <div class="example">
+        <code>&lt;img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"&gt;</code>
+        <br>
+        <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+    </div>
+
+    <h3>Exemplo usando CSS com o atributo <code>style</code></h3>
+    <div class="example">
+        <code>&lt;img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;"&gt;</code>
+        <br>
+        <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+    </div>
+
+    <h2>Imagens em Diretórios Diferentes</h2>
+    <p>Se a imagem estiver em uma pasta diferente, você deve especificar o caminho relativo ou absoluto.</p>
+
+    <h3>Exemplo de imagem em subpasta</h3>
+    <div class="example">
+        <code>&lt;img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;"&gt;</code>
+        <br>
+        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools" style="width:128px;height:128px;">
+    </div>
+
+    <h2>Imagens Externas</h2>
+    <p>Imagens podem ser referenciadas de outros servidores usando um caminho absoluto. Tenha cuidado com o uso de imagens externas, pois elas podem estar sujeitas a direitos autorais ou serem removidas pelo servidor original.</p>
+
+    <h3>Exemplo com URL absoluto</h3>
+    <div class="example">
+        <code>&lt;img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"&gt;</code>
+        <br>
+        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+    </div>
+
+    <h2>Imagens Animadas</h2>
+    <p>O HTML também permite a inserção de GIFs animados.</p>
+
+    <h3>Exemplo de GIF animado</h3>
+    <div class="example">
+        <code>&lt;img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;"&gt;</code>
+        <br>
+        <img src="https://www.w3schools.com/html/programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+    </div>
+
+    <h2>Imagem como Link</h2>
+    <p>Você pode usar uma imagem como link, colocando a tag <code>&lt;img&gt;</code> dentro da tag <code>&lt;a&gt;</code>.</p>
+
+    <h3>Exemplo de imagem clicável</h3>
+    <div class="example">
+        <code>
+        &lt;a href="https://www.w3schools.com"&gt;<br>
+        &lt;img src="https://www.w3schools.com/html/img_chania.jpg" alt="Flowers in Chania" style="width:100px;height:100px;"&gt;<br>
+        &lt;/a&gt;
+        </code>
+        <br>
+        <a href="https://www.w3schools.com">
+            <img src="https://www.w3schools.com/html/img_chania.jpg" alt="Flowers in Chania" style="width:100px;height:100px;">
+        </a>
+    </div>
+
+    <h2>Imagem Flutuante (Float)</h2>
+    <p>A propriedade CSS <code>float</code> permite que uma imagem flutue ao lado do texto.</p>
+
+    <h3>Exemplo de imagem flutuando à direita</h3>
+    <div class="example">
+        <code>&lt;p&gt;&lt;img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;"&gt;Texto ao redor da imagem.&lt;/p&gt;</code>
+        <br>
+        <p>
+            <img src="https://www.w3schools.com/html/smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+            Texto ao redor da imagem. Ela está flutuando à direita do parágrafo.
+        </p>
+    </div>
+
+    <h2>Formatos Comuns de Imagem</h2>
+    <p>Abaixo estão os formatos de imagem mais comuns suportados pelos navegadores:</p>
+    <ul>
+        <li><strong>APNG</strong> - Animated Portable Network Graphics (.apng)</li>
+        <li><strong>GIF</strong> - Graphics Interchange Format (.gif)</li>
+        <li><strong>ICO</strong> - Microsoft Icon (.ico)</li>
+        <li><strong>JPEG</strong> - Joint Photographic Expert Group (.jpg, .jpeg)</li>
+        <li><strong>PNG</strong> - Portable Network Graphics (.png)</li>
+        <li><strong>SVG</strong> - Scalable Vector Graphics (.svg)</li>
+    </ul>
+
+</body>
+</html>
