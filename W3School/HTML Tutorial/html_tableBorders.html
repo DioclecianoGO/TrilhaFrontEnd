@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Table Borders and Styles</title>
+  <style>
+    /* Estilo básico para tabela com bordas */
+    table, th, td {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    /* Estilo para colapsar bordas */
+    .collapsed-table {
+      border-collapse: collapse;
+    }
+
+    /* Estilo para bordas invisíveis */
+    .invisible-borders table, .invisible-borders th, .invisible-borders td {
+      border: 1px solid white;
+      border-collapse: collapse;
+    }
+    .invisible-borders th, .invisible-borders td {
+      background-color: #96D4D4;
+    }
+
+    /* Bordas arredondadas */
+    .rounded-borders th, .rounded-borders td {
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+
+    /* Bordas pontilhadas */
+    .dotted-borders th, .dotted-borders td {
+      border-style: dotted;
+    }
+
+    /* Cor personalizada para bordas */
+    .colored-borders th, .colored-borders td {
+      border-color: #96D4D4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exemplos de Tabelas com Bordas em HTML</h1>
+
+  <h2>Tabela com Bordas Simples</h2>
+  <p>Uma tabela básica com bordas sólidas de 1px ao redor dos elementos <code>table</code>, <code>th</code> e <code>td</code>:</p>
+  <table>
+    <tr>
+      <th>Empresa</th>
+      <th>Contato</th>
+      <th>País</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Alemanha</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>México</td>
+    </tr>
+  </table>
+
+  <h2>Tabela com Bordas Colapsadas</h2>
+  <p>Aqui, usamos a propriedade <code>border-collapse</code> para colapsar as bordas duplas, criando uma borda única entre as células:</p>
+  <table class="collapsed-table">
+    <tr>
+      <th>Empresa</th>
+      <th>Contato</th>
+      <th>País</th>
+    </tr>
+    <tr>
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+      <td>Reino Unido</td>
+    </tr>
+    <tr>
+      <td>Laughing Bacchus Winecellars</td>
+      <td>Yoshi Tannamuri</td>
+      <td>Canadá</td>
+    </tr>
+  </table>
+
+  <h2>Tabela com Bordas Invisíveis</h2>
+  <p>Simulamos a ausência de bordas ao usar a mesma cor de fundo do documento (branco) nas bordas e atribuímos uma cor de fundo às células:</p>
+  <div class="invisible-borders">
+    <table>
+      <tr>
+        <th>Empresa</th>
+        <th>Contato</th>
+        <th>País</th>
+      </tr>
+      <tr>
+        <td>Magazzini Alimentari Riuniti</td>
+        <td>Giovanni Rovelli</td>
+        <td>Itália</td>
+      </tr>
+      <tr>
+        <td>Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Áustria</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>Tabela com Bordas Arredondadas</h2>
+  <p>Usando a propriedade <code>border-radius</code>, aplicamos cantos arredondados às bordas:</p>
+  <table class="rounded-borders">
+    <tr>
+      <th>Empresa</th>
+      <th>Contato</th>
+      <th>País</th>
+    </tr>
+    <tr>
+      <td>Laughing Bacchus Winecellars</td>
+      <td>Yoshi Tannamuri</td>
+      <td>Canadá</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>México</td>
+    </tr>
+  </table>
+
+  <h2>Tabela com Bordas Pontilhadas</h2>
+  <p>Aqui, aplicamos a propriedade <code>border-style: dotted</code> para criar bordas pontilhadas:</p>
+  <table class="dotted-borders">
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+    </tr>
+    <tr>
+      <td>Emil</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>Tobias</td>
+      <td>14</td>
+    </tr>
+  </table>
+
+  <h2>Tabela com Cor Personalizada para Bordas</h2>
+  <p>Finalmente, a cor das bordas é personalizada com a propriedade <code>border-color</code>:</p>
+  <table class="colored-borders">
+    <tr>
+      <th>Empresa</th>
+      <th>Contato</th>
+      <th>País</th>
+    </tr>
+    <tr>
+      <td>Magazzini Alimentari Riuniti</td>
+      <td>Giovanni Rovelli</td>
+      <td>Itália</td>
+    </tr>
+    <tr>
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+      <td>Reino Unido</td>
+    </tr>
+  </table>
+
+</body>
+</html>
