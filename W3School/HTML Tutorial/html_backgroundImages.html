@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Imagens de Fundo em HTML</title>
+    <style>
+        /* Estilo para o parágrafo com imagem de fundo */
+        p {
+            background-image: url('img/img_girl.jpg');
+            padding: 20px;
+            color: rgb(61, 61, 61);
+        }
+
+        /* Estilo para a página inteira com imagem de fundo */
+        body {
+            background-image: url('img/workplace.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: rgb(255, 0, 0);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Exemplo de imagem de fundo não repetida */
+        .no-repeat {
+            background-image: url('img/img_girl.jpg');
+            background-repeat: no-repeat;
+            height: 200px;
+            padding: 20px;
+        }
+
+        /* Exemplo de imagem de fundo coberta */
+        .cover-background {
+            background-image: url('img/img_girl.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 200px;
+            padding: 20px;
+        }
+
+        /* Exemplo de imagem de fundo esticada */
+        .stretched-background {
+            background-image: url('img/img_girl.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exemplos de Imagens de Fundo com HTML e CSS</h1>
+
+    <section>
+        <h2>Imagem de Fundo em Elementos HTML</h2>
+        <p style="background-image: url('img/img_girl.jpg');">
+            Este parágrafo tem uma imagem de fundo aplicada diretamente no atributo style.
+        </p>
+    </section>
+
+    <section>
+        <h2>Imagem de Fundo Definida no CSS</h2>
+        <p>
+            Neste exemplo, a imagem de fundo foi definida no CSS usando a propriedade background-image.
+        </p>
+    </section>
+
+    <section>
+        <h2>Imagem de Fundo para a Página Inteira</h2>
+        <p>
+            Aqui, aplicamos uma imagem de fundo em todo o corpo da página, utilizando o elemento body e as propriedades CSS adequadas.
+        </p>
+    </section>
+
+    <section class="no-repeat">
+        <h2>Imagem de Fundo Sem Repetição</h2>
+        <p>
+            Quando a imagem de fundo não é repetida, ela aparece uma única vez. Isso é feito com a propriedade background-repeat: no-repeat.
+        </p>
+    </section>
+
+    <section class="cover-background">
+        <h2>Imagem de Fundo Com Cobertura Total</h2>
+        <p>
+            A imagem de fundo cobre completamente o elemento, sem distorções. Usamos background-size: cover para garantir isso.
+        </p>
+    </section>
+
+    <section class="stretched-background">
+        <h2>Imagem de Fundo Esticada</h2>
+        <p>
+            Neste exemplo, a imagem de fundo é esticada para preencher todo o elemento, usando background-size: 100% 100%.
+        </p>
+    </section>
+
+</body>
+</html>
