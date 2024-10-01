@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo do Elemento &lt;picture&gt;</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .example {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>O Elemento &lt;picture&gt; no HTML</h1>
+<p>O elemento <code>&lt;picture&gt;</code> permite exibir diferentes imagens dependendo do dispositivo ou tamanho da tela. Isso proporciona flexibilidade para otimizar a experiência do usuário, carregando imagens apropriadas de acordo com as características do dispositivo.</p>
+
+<h2>Uso Básico do Elemento &lt;picture&gt;</h2>
+<div class="example">
+    <h3>Exemplo 1: Diferentes imagens para diferentes tamanhos de tela</h3>
+    <picture>
+        <source media="(min-width: 800px)" srcset="img_grande.jpg">
+        <source media="(min-width: 500px)" srcset="img_media.jpg">
+        <img src="img_pequena.jpg" alt="Imagem padrão">
+    </picture>
+    <p>Neste exemplo, <code>img_grande.jpg</code> será exibida em telas de pelo menos 800 pixels, <code>img_media.jpg</code> em telas de pelo menos 500 pixels, e <code>img_pequena.jpg</code> será a imagem padrão.</p>
+</div>
+
+<h2>Otimização de Imagens com &lt;picture&gt;</h2>
+<div class="example">
+    <h3>Exemplo 2: Suporte a diferentes formatos de imagem</h3>
+    <picture>
+        <source srcset="img_avatar.webp" type="image/webp">
+        <source srcset="img_girl.jpg" type="image/jpeg">
+        <img src="img_fallback.png" alt="Imagem padrão">
+    </picture>
+    <p>Neste exemplo, se o navegador suportar o formato WebP, a imagem <code>img_avatar.webp</code> será exibida. Caso contrário, <code>img_girl.jpg</code> será carregada, e, por fim, a imagem <code>img_fallback.png</code> será a alternativa para navegadores que não suportam os formatos anteriores.</p>
+</div>
+
+<h2>Considerações Finais</h2>
+<p>O uso do elemento <code>&lt;picture&gt;</code> é essencial para a criação de páginas web responsivas, permitindo tanto o ajuste de imagens com base nas características do dispositivo quanto a oferta de suporte para diversos formatos de imagem. Isso otimiza o desempenho e melhora a experiência do usuário, garantindo que imagens apropriadas sejam carregadas conforme as condições do dispositivo.</p>
+
+</body>
+</html>
