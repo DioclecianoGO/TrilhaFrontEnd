@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon e Ícones</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> <!-- Exemplo de como adicionar um favicon -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Favicon e Ícones em HTML</h1>
+
+    <p>Um <strong>favicon</strong> é uma pequena imagem exibida ao lado do título da página na aba do navegador. Essa imagem ajuda a identificar rapidamente a página entre várias abertas.</p>
+
+    <h2>Como Adicionar um Favicon em HTML</h2>
+    <p>Para adicionar um favicon ao seu site, você pode usar qualquer imagem. É recomendável que o favicon seja uma imagem simples e de alto contraste, pois isso facilita a visualização.</p>
+
+    <p>Você deve salvar a imagem do favicon no diretório raiz do servidor ou em uma pasta chamada <code>images</code>. Um nome comum para um favicon é <code>favicon.ico</code>.</p>
+
+    <p>Para adicionar o favicon no seu arquivo <code>index.html</code>, insira o seguinte código após o elemento <code>&lt;title&gt;</code>:</p>
+
+    <pre><code>&lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;</code></pre>
+
+    <h2>Exemplo de Código HTML com Favicon</h2>
+    <p>O código a seguir ilustra como configurar o favicon:</p>
+
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Meu Título de Página&lt;/title&gt;
+    &lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Este é um Cabeçalho&lt;/h1&gt;
+    &lt;p&gt;Este é um parágrafo.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <h2>Atributos do Elemento <code>&lt;link&gt;</code></h2>
+    <p>Os atributos <code>rel</code> e <code>type</code> do elemento <code>&lt;link&gt;</code> desempenham funções importantes na definição de um favicon:</p>
+
+    <h3>Atributo <code>rel</code></h3>
+    <p>O atributo <code>rel</code> especifica a relação entre o documento HTML e o recurso vinculado. Para favicons, o valor mais comum é <code>"icon"</code>, que informa ao navegador que o recurso deve ser tratado como um ícone da página.</p>
+
+    <h3>Atributo <code>type</code></h3>
+    <p>O atributo <code>type</code> indica o tipo de mídia do recurso. Para favicons, o valor típico é <code>"image/x-icon"</code>, que informa ao navegador que o arquivo é um ícone no formato .ico.</p>
+
+    <h2>Resumo</h2>
+    <p>Em resumo, o uso correto dos atributos <code>rel</code> e <code>type</code> é essencial para garantir que o favicon seja reconhecido e exibido adequadamente pelos navegadores, contribuindo para a identidade visual do site.</p>
+
+</body>
+</html>
