@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamanhos de Tabelas HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        h2 {
+            color: #2C3E50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tamanhos de Tabelas HTML</h1>
+    
+    <p>O conceito de <strong>Tamanhos de Tabelas HTML</strong> permite que desenvolvedores ajustem a largura e altura de tabelas, colunas e linhas, garantindo uma apresentação clara e organizada dos dados.</p>
+
+    <h2>Largura da Tabela</h2>
+    <p>Para definir a largura de uma tabela, usa-se o atributo <code>style</code> no elemento <code>&lt;table&gt;</code>, permitindo que a tabela ocupe <code>100%</code> da largura disponível do elemento pai. Isso é ideal para layouts responsivos.</p>
+    <pre><code>&lt;table style="width:100%"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Firstname&lt;/th&gt;
+        &lt;th&gt;Lastname&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Jill&lt;/td&gt;
+        &lt;td&gt;Smith&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+    <h2>Largura de Colunas Específicas</h2>
+    <p>A largura de colunas específicas pode ser ajustada em elementos <code>&lt;th&gt;</code> ou <code>&lt;td&gt;</code>. Por exemplo, uma coluna pode ser configurada com <code>70%</code> de largura.</p>
+    <pre><code>&lt;table style="width:100%"&gt;
+    &lt;tr&gt;
+        &lt;th style="width:70%"&gt;Firstname&lt;/th&gt;
+        &lt;th&gt;Lastname&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Jill&lt;/td&gt;
+        &lt;td&gt;Smith&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+    <h2>Altura das Linhas</h2>
+    <p>A altura das linhas também é manipulável, utilizando o atributo <code>style</code> no elemento <code>&lt;tr&gt;</code>. Isso possibilita criar linhas com alturas fixas, como <code>200px</code>, para realçar determinadas informações.</p>
+    <pre><code>&lt;table style="width:100%"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Firstname&lt;/th&gt;
+        &lt;th&gt;Lastname&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr style="height:200px"&gt;
+        &lt;td&gt;Jill&lt;/td&gt;
+        &lt;td&gt;Smith&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+    <p>Essas propriedades proporcionam aos desenvolvedores controle detalhado sobre o layout das tabelas, contribuindo para interfaces mais estéticas e funcionais.</p>
+</body>
+</html>
