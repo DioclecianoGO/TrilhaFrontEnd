@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Padding & Spacing</title>
+    <style>
+        /* Exemplo de padding nas células */
+        .example-padding th, .example-padding td {
+            padding: 15px;
+            border: 1px solid black;
+        }
+
+        /* Exemplo de padding em lados específicos */
+        .example-padding-specific th, .example-padding-specific td {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            padding-right: 40px;
+            border: 1px solid black;
+        }
+
+        /* Exemplo de cell spacing */
+        .example-spacing {
+            border-spacing: 30px;
+        }
+        
+        /* Estilo comum para tabelas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Table Padding & Spacing</h1>
+
+    <p>
+        As tabelas em HTML permitem ajustar o preenchimento interno das células (padding) e o espaçamento entre as células (spacing), 
+        o que melhora a apresentação visual e a legibilidade das tabelas.
+    </p>
+
+    <h2>Padding nas Células</h2>
+    <p>
+        O padding define o espaço entre o conteúdo de uma célula e suas bordas. No exemplo abaixo, todas as células têm um padding de 15px, 
+        resultando em mais espaço interno.
+    </p>
+
+    <table class="example-padding">
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Idade</th>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>Silva</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>Bruno</td>
+            <td>Oliveira</td>
+            <td>34</td>
+        </tr>
+    </table>
+
+    <h2>Padding em Lados Específicos</h2>
+    <p>
+        Podemos definir o padding de forma individual para cada lado da célula (topo, base, esquerda e direita). No exemplo abaixo, 
+        o padding foi configurado com valores diferentes para cada lado.
+    </p>
+
+    <table class="example-padding-specific">
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+        </tr>
+        <tr>
+            <td>Notebook</td>
+            <td>R$ 3500</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>R$ 150</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <h2>Espaçamento entre Células (Spacing)</h2>
+    <p>
+        O cell spacing define o espaço entre as células de uma tabela. O exemplo a seguir demonstra como as células 
+        podem ser espaçadas utilizando a propriedade <code>border-spacing</code>, neste caso com 30px de espaçamento.
+    </p>
+
+    <table class="example-spacing" style="border: 1px solid black;">
+        <tr>
+            <th>Nome</th>
+            <th>País</th>
+            <th>Idade</th>
+        </tr>
+        <tr>
+            <td>Lucas</td>
+            <td>Brasil</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Sofia</td>
+            <td>Portugal</td>
+            <td>29</td>
+        </tr>
+    </table>
+
+</body>
+</html>
