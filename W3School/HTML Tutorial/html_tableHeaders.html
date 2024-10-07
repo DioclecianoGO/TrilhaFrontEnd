@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Headers</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Table Headers</h1>
+    <p>Os cabeçalhos em tabelas HTML organizam o conteúdo das colunas ou linhas e ajudam a identificar o que cada dado representa. Eles são definidos pela tag <code>&lt;th&gt;</code>, que estiliza os conteúdos de cabeçalho em negrito e centralizados, destacando-os das células normais, que usam a tag <code>&lt;td&gt;</code>.</p>
+
+    <h2>Exemplo básico de cabeçalhos</h2>
+    <p>O exemplo abaixo demonstra o uso de cabeçalhos para identificar cada coluna da tabela:</p>
+
+    <table>
+        <caption>Exemplo de Cabeçalhos Horizontais</caption>
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Idade</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <p>Note que os cabeçalhos <code>&lt;th&gt;</code> da primeira linha descrevem o conteúdo das colunas subsequentes. Por padrão, eles são centralizados e exibidos em negrito.</p>
+
+    <h2>Cabeçalhos Verticais</h2>
+    <p>Além dos cabeçalhos horizontais, é possível organizar os cabeçalhos de forma vertical, usando a tag <code>&lt;th&gt;</code> na primeira célula de cada linha:</p>
+
+    <table>
+        <caption>Exemplo de Cabeçalhos Verticais</caption>
+        <tr>
+            <th>Nome</th>
+            <td>Jill</td>
+            <td>Eve</td>
+        </tr>
+        <tr>
+            <th>Sobrenome</th>
+            <td>Smith</td>
+            <td>Jackson</td>
+        </tr>
+        <tr>
+            <th>Idade</th>
+            <td>50</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <p>Neste caso, as células <code>&lt;th&gt;</code> rotulam os dados que estão em cada linha, em vez das colunas.</p>
+
+    <h2>Alinhamento dos Cabeçalhos</h2>
+    <p>Embora os cabeçalhos sejam centralizados por padrão, você pode alterar o alinhamento com CSS. No exemplo abaixo, os cabeçalhos são alinhados à esquerda:</p>
+
+    <table>
+        <caption>Cabeçalhos Alinhados à Esquerda</caption>
+        <tr>
+            <th style="text-align: left;">Nome</th>
+            <th style="text-align: left;">Sobrenome</th>
+            <th style="text-align: left;">Idade</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <h2>Cabeçalhos Abrangendo Múltiplas Colunas</h2>
+    <p>Em alguns casos, você pode querer que um cabeçalho se estenda por várias colunas. Isso é possível com o uso do atributo <code>colspan</code>:</p>
+
+    <table>
+        <caption>Cabeçalhos com Colspan</caption>
+        <tr>
+            <th colspan="2">Nome Completo</th>
+            <th>Idade</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <p>O atributo <code>colspan="2"</code> faz com que o cabeçalho "Nome Completo" abranja as duas primeiras colunas.</p>
+
+    <h2>Legenda da Tabela</h2>
+    <p>Você pode adicionar uma legenda à tabela com a tag <code>&lt;caption&gt;</code>. Ela funciona como um título para a tabela, facilitando a identificação do conteúdo apresentado.</p>
+
+</body>
+</html>
