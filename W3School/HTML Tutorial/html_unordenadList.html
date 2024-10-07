@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Unordered Lists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Unordered Lists</h1>
+
+    <p>
+        As listas não ordenadas em HTML são definidas pela tag <code>&lt;ul&gt;</code>, que cria uma estrutura de itens apresentados com marcadores. Cada item da lista é iniciado com a tag <code>&lt;li&gt;</code>, e, por padrão, os itens são exibidos com pequenos círculos pretos como marcadores. Essa funcionalidade permite que desenvolvedores web organizem informações de maneira clara e visualmente acessível.
+    </p>
+
+    <p>
+        Uma característica importante das listas não ordenadas é a possibilidade de personalizar o estilo dos marcadores utilizando a propriedade CSS <code>list-style-type</code>. Essa propriedade permite que os desenvolvedores escolham entre várias opções de estilo, como círculos, quadrados ou até mesmo a remoção total dos marcadores. Com essa flexibilidade, é possível adaptar a aparência das listas de acordo com o design desejado para uma página.
+    </p>
+
+    <p>
+        Outra funcionalidade interessante é a capacidade de aninhar listas. Isso significa que um item dentro de uma lista pode conter outra lista, permitindo a criação de hierarquias e a organização de informações de forma mais estruturada. Essa prática é especialmente útil para categorizar dados relacionados, tornando a apresentação mais compreensível.
+    </p>
+
+    <p>
+        Além disso, as listas podem ser estilizadas com CSS para serem exibidas horizontalmente, o que é uma abordagem comum em menus de navegação em sites. Ao remover os marcadores e aplicar flutuação aos itens, é possível criar um layout de menu que melhora a experiência do usuário. A combinação de HTML e CSS proporciona uma maneira eficaz de apresentar informações de forma organizada e esteticamente agradável, permitindo que os desenvolvedores criem interfaces interativas e funcionais.
+    </p>
+
+    <h2>Exemplos de Listas Não Ordenadas</h2>
+
+    <h3>Exemplo Básico</h3>
+    <p>Uma lista não ordenada simples com itens:</p>
+    <pre>
+        &lt;ul&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+            &lt;li&gt;Chá&lt;/li&gt;
+            &lt;li&gt;Leite&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
+
+    <h3>Exemplo com Diferentes Estilos de Marcadores</h3>
+    <p>A propriedade CSS <code>list-style-type</code> permite personalizar os marcadores:</p>
+    
+    <h4>Disc (Padrão)</h4>
+    <pre>
+        &lt;ul style="list-style-type: disc;"&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+            &lt;li&gt;Chá&lt;/li&gt;
+            &lt;li&gt;Leite&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
+
+    <h4>Círculo</h4>
+    <pre>
+        &lt;ul style="list-style-type: circle;"&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+            &lt;li&gt;Chá&lt;/li&gt;
+            &lt;li&gt;Leite&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
+
+    <h4>Quadrado</h4>
+    <pre>
+        &lt;ul style="list-style-type: square;"&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+            &lt;li&gt;Chá&lt;/li&gt;
+            &lt;li&gt;Leite&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
+
+    <h4>Nenhum Marcador</h4>
+    <pre>
+        &lt;ul style="list-style-type: none;"&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+            &lt;li&gt;Chá&lt;/li&gt;
+            &lt;li&gt;Leite&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
+
+    <h3>Exemplo de Listas Aninhadas</h3>
+    <p>Uma lista que contém outra lista:</p>
+    <pre>
+        &lt;ul&gt;
+            &lt;li&gt;Café&lt;/li&gt;
+            &lt;li&gt;Chá
+                &lt;ul&gt;
+                    &lt;li&gt;Chá preto&lt;/li&gt;
+                    &lt;li&gt;Chá verde&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Leite&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
+
+    <h3>Exemplo de Menu Horizontal</h3>
+    <p>Estilizando uma lista para funcionar como um menu de navegação:</p>
+    <pre>
+        &lt;ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;"&gt;
+            &lt;li style="float: left;"&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li style="float: left;"&gt;&lt;a href="#news"&gt;Notícias&lt;/a&gt;&lt;/li&gt;
+            &lt;li style="float: left;"&gt;&lt;a href="#contact"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+            &lt;li style="float: left;"&gt;&lt;a href="#about"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
+
+</body>
+</html>
