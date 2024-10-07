@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Colgroup Explanation</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Table Colgroup</h1>
+
+    <p>O elemento <code>&lt;colgroup&gt;</code> é usado para estilizar colunas específicas de uma tabela. Ele deve ser colocado dentro de uma tabela e sempre antes dos outros elementos, como <code>&lt;thead&gt;</code>, <code>&lt;tr&gt;</code>, e <code>&lt;td&gt;</code>, mas depois de <code>&lt;caption&gt;</code>, se presente.</p>
+
+    <h2>Exemplo Básico</h2>
+    <p>No exemplo abaixo, estilizamos as duas primeiras colunas da tabela, aplicando uma cor de fundo:</p>
+
+    <table>
+        <colgroup>
+            <col span="2" style="background-color: #D6EEEE">
+        </colgroup>
+        <tr>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+            <th>SUN</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>
+    </table>
+
+    <h2>Vários Estilos</h2>
+    <p>Para aplicar diferentes estilos a várias colunas, você pode usar vários elementos <code>&lt;col&gt;</code> dentro de um <code>&lt;colgroup&gt;</code>. Veja o exemplo abaixo:</p>
+
+    <table>
+        <colgroup>
+            <col span="2" style="background-color: #D6EEEE">
+            <col span="3" style="background-color: pink">
+        </colgroup>
+        <tr>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+    </table>
+
+    <h2>Colunas Vazias</h2>
+    <p>Se quiser aplicar estilo a colunas no meio da tabela, pode usar elementos <code>&lt;col&gt;</code> vazios (sem estilos) para pular as primeiras colunas:</p>
+
+    <table>
+        <colgroup>
+            <col span="3">
+            <col span="2" style="background-color: pink">
+        </colgroup>
+        <tr>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+    </table>
+
+    <h2>Ocultar Colunas</h2>
+    <p>Você pode ocultar colunas inteiras usando a propriedade CSS <code>visibility: collapse</code> no elemento <code>&lt;col&gt;</code>:</p>
+
+    <table>
+        <colgroup>
+            <col span="2">
+            <col span="3" style="visibility: collapse">
+        </colgroup>
+        <tr>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+    </table>
+
+</body>
+</html>
