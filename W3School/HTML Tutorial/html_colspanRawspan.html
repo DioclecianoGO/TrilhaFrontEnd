@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Colspan & Rowspan</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Table Colspan & Rowspan</h1>
+
+    <p>
+        As tabelas em HTML podem apresentar células que se estendem por múltiplas colunas e/ou linhas, proporcionando uma melhor organização visual dos dados. 
+        O atributo <code>colspan</code> é utilizado para fazer uma célula abranger várias colunas. 
+        No exemplo abaixo, a célula de cabeçalho "Nome" se estende por duas colunas, ilustrando como podemos combinar células para melhorar a clareza.
+    </p>
+
+    <table>
+        <tr>
+            <th colspan="2">Nome</th>
+            <th>Idade</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>57</td>
+        </tr>
+    </table>
+
+    <p>
+        Por outro lado, o atributo <code>rowspan</code> permite que uma célula se estenda por várias linhas. 
+        No exemplo a seguir, a célula "Telefone" abrange duas linhas, unindo informações relacionadas e garantindo que o layout permaneça claro e organizado.
+    </p>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <td>Jill</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telefone</th>
+            <td>555-1234</td>
+        </tr>
+        <tr>
+            <td>555-8745</td>
+        </tr>
+    </table>
+
+</body>
+</html>
