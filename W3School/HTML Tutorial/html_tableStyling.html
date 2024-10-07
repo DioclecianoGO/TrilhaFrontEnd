@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Table Styling</title>
+  <style>
+    /* Zebra Stripes - Horizontal */
+    tr:nth-child(even) {
+      background-color: #D6EEEE;
+    }
+
+    /* Zebra Stripes - Vertical */
+    th:nth-child(even), td:nth-child(even) {
+      background-color: #D6EEEE;
+    }
+
+    /* Combined Horizontal and Vertical Zebra Stripes with Transparency */
+    tr:nth-child(even) {
+      background-color: rgba(150, 212, 212, 0.4);
+    }
+
+    th:nth-child(even), td:nth-child(even) {
+      background-color: rgba(150, 212, 212, 0.4);
+    }
+
+    /* Horizontal Dividers */
+    tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Hoverable Table */
+    tr:hover {
+      background-color: #D6EEEE;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>HTML Table - Zebra Stripes (Horizontal)</h2>
+  <table>
+    <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+    <tr><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+    <tr><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+    <tr><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+  </table>
+
+  <h2>HTML Table - Vertical Zebra Stripes</h2>
+  <table>
+    <tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+    <tr><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+    <tr><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+    <tr><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+    <tr><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+  </table>
+
+  <h2>Combined Horizontal and Vertical Zebra Stripes with Transparency</h2>
+  <table>
+    <tr><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+    <tr><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+    <tr><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+    <tr><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+    <tr><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+  </table>
+
+  <h2>HTML Table with Horizontal Dividers</h2>
+  <table>
+    <tr><th>First Name</th><th>Last Name</th><th>Savings</th></tr>
+    <tr><td>Peter</td><td>Griffin</td><td>$100</td></tr>
+    <tr><td>Lois</td><td>Griffin</td><td>$150</td></tr>
+    <tr><td>Joe</td><td>Swanson</td><td>$300</td></tr>
+  </table>
+
+  <h2>Hoverable Table</h2>
+  <table>
+    <tr><th>First Name</th><th>Last Name</th><th>Savings</th></tr>
+    <tr><td>Peter</td><td>Griffin</td><td>$100</td></tr>
+    <tr><td>Lois</td><td>Griffin</td><td>$150</td></tr>
+    <tr><td>Joe</td><td>Swanson</td><td>$300</td></tr>
+  </table>
+
+</body>
+</html>
