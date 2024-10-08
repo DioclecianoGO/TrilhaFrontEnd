@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Block and Inline Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .example {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #333;
+        }
+        .inline-element {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Block and Inline Elements</h1>
+
+    <p>Every HTML element has a default display value, depending on what type of element it is. The two most common display values are block and inline.</p>
+
+    <h2>Block-level Elements</h2>
+    <p>A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.</p>
+    <p>It also takes up the full width available, stretching out as far left and right as possible.</p>
+    <p>Two commonly used block elements are:</p>
+    <ul>
+        <li><code>&lt;p&gt;</code> - defines a paragraph</li>
+        <li><code>&lt;div&gt;</code> - defines a division or section in an HTML document</li>
+    </ul>
+    
+    <div class="example">
+        <p>Example of block elements:</p>
+        <p>Hello World</p>
+        <div>Hello World</div>
+    </div>
+
+    <p>Here are other block-level elements in HTML:</p>
+    <ul>
+        <li><code>&lt;address&gt;</code></li>
+        <li><code>&lt;article&gt;</code></li>
+        <li><code>&lt;aside&gt;</code></li>
+        <li><code>&lt;blockquote&gt;</code></li>
+        <!-- List shortened for brevity -->
+        <li><code>&lt;video&gt;</code></li>
+    </ul>
+
+    <h2>Inline Elements</h2>
+    <p>An inline element does not start on a new line and only takes up as much width as necessary. For example, the <code>&lt;span&gt;</code> element is often used within a block-level element.</p>
+
+    <div class="example">
+        <p>Example of inline elements:</p>
+        <p>This is a <span class="inline-element">span</span> element inside a paragraph.</p>
+    </div>
+
+    <p>Other inline elements include:</p>
+    <ul>
+        <li><code>&lt;a&gt;</code></li>
+        <li><code>&lt;abbr&gt;</code></li>
+        <li><code>&lt;acronym&gt;</code></li>
+        <li><code>&lt;b&gt;</code></li>
+        <!-- List shortened for brevity -->
+        <li><code>&lt;var&gt;</code></li>
+    </ul>
+
+    <h2>The <code>&lt;div&gt;</code> Element</h2>
+    <p>The <code>&lt;div&gt;</code> element is a block-level container often used to group other HTML elements. It is commonly used with CSS to style sections of content.</p>
+
+    <div class="example">
+        <p>Example of a styled <code>&lt;div&gt;</code> element:</p>
+        <div style="background-color:black;color:white;padding:20px;">
+            <h2>London</h2>
+            <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+        </div>
+    </div>
+
+    <h2>The <code>&lt;span&gt;</code> Element</h2>
+    <p>The <code>&lt;span&gt;</code> element is an inline container used to style specific parts of the text. Like the <code>&lt;div&gt;</code> element, it has no required attributes but is often used with CSS to apply styles.</p>
+
+    <div class="example">
+        <p>Example of a styled <code>&lt;span&gt;</code> element:</p>
+        <p>My mother has <span style="color:blue;font-weight:bold;">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold;">dark green</span> eyes.</p>
+    </div>
+
+</body>
+</html>
+
