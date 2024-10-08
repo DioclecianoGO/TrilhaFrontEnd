@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Ordered Lists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Ordered Lists</h1>
+    <p>
+        O elemento <code>&lt;ol&gt;</code> em HTML é utilizado para definir uma lista ordenada, que pode ser numérica ou alfabética. Para iniciar uma lista ordenada, utiliza-se a tag <code>&lt;ol&gt;</code>, e cada item da lista é iniciado com a tag <code>&lt;li&gt;</code>. Por padrão, os itens da lista são numerados sequencialmente.
+    </p>
+
+    <h2>Atributo Type</h2>
+    <p>
+        A tag <code>&lt;ol&gt;</code> possui um atributo chamado <code>type</code>, que permite definir o estilo do marcador dos itens da lista. Os valores possíveis para este atributo incluem:
+    </p>
+    <ul>
+        <li><code>type="1"</code>: numeração com números (padrão).</li>
+        <li><code>type="A"</code>: numeração com letras maiúsculas.</li>
+        <li><code>type="a"</code>: numeração com letras minúsculas.</li>
+        <li><code>type="I"</code>: numeração com números romanos maiúsculos.</li>
+        <li><code>type="i"</code>: numeração com números romanos minúsculos.</li>
+    </ul>
+
+    <h2>Exemplos de Listas Ordenadas</h2>
+    <h3>Numeração com Números</h3>
+    <pre><code>&lt;ol type="1"&gt;
+  &lt;li&gt;Café&lt;/li&gt;
+  &lt;li&gt;Chá&lt;/li&gt;
+  &lt;li&gt;Leite&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <h3>Numeração com Letras Maiúsculas</h3>
+    <pre><code>&lt;ol type="A"&gt;
+  &lt;li&gt;Café&lt;/li&gt;
+  &lt;li&gt;Chá&lt;/li&gt;
+  &lt;li&gt;Leite&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <h3>Numeração com Letras Minúsculas</h3>
+    <pre><code>&lt;ol type="a"&gt;
+  &lt;li&gt;Café&lt;/li&gt;
+  &lt;li&gt;Chá&lt;/li&gt;
+  &lt;li&gt;Leite&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <h3>Numeração com Números Romanos Maiúsculos</h3>
+    <pre><code>&lt;ol type="I"&gt;
+  &lt;li&gt;Café&lt;/li&gt;
+  &lt;li&gt;Chá&lt;/li&gt;
+  &lt;li&gt;Leite&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <h3>Numeração com Números Romanos Minúsculos</h3>
+    <pre><code>&lt;ol type="i"&gt;
+  &lt;li&gt;Café&lt;/li&gt;
+  &lt;li&gt;Chá&lt;/li&gt;
+  &lt;li&gt;Leite&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <h2>Controlando a Contagem</h2>
+    <p>
+        É possível controlar a contagem da lista utilizando o atributo <code>start</code>, que define o número inicial da contagem. Por padrão, as listas começam a contagem a partir de 1, mas é possível iniciar a contagem a partir de um número específico.
+    </p>
+    <pre><code>&lt;ol start="50"&gt;
+  &lt;li&gt;Café&lt;/li&gt;
+  &lt;li&gt;Chá&lt;/li&gt;
+  &lt;li&gt;Leite&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <h2>Listas Aninhadas</h2>
+    <p>
+        As listas também podem ser aninhadas, ou seja, é possível incluir uma nova lista dentro de um item da lista existente. A tag <code>&lt;li&gt;</code> pode conter não apenas outra lista, mas também outros elementos HTML, como imagens e links, permitindo maior flexibilidade na estruturação do conteúdo.
+    </p>
+    <pre><code>&lt;ol&gt;
+  &lt;li&gt;Café&lt;/li&gt;
+  &lt;li&gt;Chá
+    &lt;ol&gt;
+      &lt;li&gt;Chá preto&lt;/li&gt;
+      &lt;li&gt;Chá verde&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Leite&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+</body>
+</html>
