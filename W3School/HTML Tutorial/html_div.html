@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplos e Explicações de Elemento Div</title>
+  <style>
+    .centered-div {
+      width: 300px;
+      margin: auto;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+    .float-container {
+      width: 100%;
+      overflow: auto;
+    }
+    .float-container div {
+      width: 33%;
+      float: left;
+      padding: 10px;
+      background-color: #e0e0e0;
+      box-sizing: border-box;
+    }
+    .inline-block-container div {
+      width: 30%;
+      display: inline-block;
+      padding: 10px;
+      background-color: #d0d0d0;
+      box-sizing: border-box;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .flex-container div {
+      width: 33%;
+      padding: 10px;
+      background-color: #c0c0c0;
+      box-sizing: border-box;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      gap: 10px;
+    }
+    .grid-container div {
+      padding: 10px;
+      background-color: #b0b0b0;
+      box-sizing: border-box;
+    }
+    h2 {
+      margin: 0;
+      padding-bottom: 10px;
+    }
+    p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exemplos e Explicações de Elemento &lt;div&gt;</h1>
+
+  <section>
+    <h2>Comportamento Padrão do &lt;div&gt;</h2>
+    <p>O &lt;div&gt; é um elemento de bloco que provoca quebras de linha antes e depois de seu conteúdo.</p>
+    <p>Exemplo:</p>
+    <div>
+      Lorem Ipsum <div>Eu sou um div</div> dolor sit amet.
+    </div>
+    <p>Resultado esperado:</p>
+    <pre>
+Lorem Ipsum
+Eu sou um div
+dolor sit amet.
+    </pre>
+  </section>
+
+  <section>
+    <h2>Uso de &lt;div&gt; como Contêiner</h2>
+    <p>Um exemplo de uso do &lt;div&gt; para agrupar um conjunto de elementos HTML.</p>
+    <div>
+      <h2>Londres</h2>
+      <p>Londres é a capital da Inglaterra.</p>
+      <p>Londres tem mais de 13 milhões de habitantes.</p>
+    </div>
+    <p>Resultado esperado:</p>
+    <pre>
+Londres
+Londres é a capital da Inglaterra.
+Londres tem mais de 13 milhões de habitantes.
+    </pre>
+  </section>
+
+  <section>
+    <h2>Centralizando um &lt;div&gt;</h2>
+    <p>Você pode centralizar um &lt;div&gt; usando a propriedade <code>margin: auto</code> no CSS.</p>
+    <div class="centered-div">
+      <h2>Londres</h2>
+      <p>Londres é a capital da Inglaterra.</p>
+      <p>Londres tem mais de 13 milhões de habitantes.</p>
+    </div>
+    <p>Este &lt;div&gt; está centralizado com largura de 300px.</p>
+  </section>
+
+  <section>
+    <h2>Alinhando Vários &lt;div&gt;s Lado a Lado</h2>
+    <h3>Usando <code>float</code></h3>
+    <p>O <code>float</code> pode alinhar elementos &lt;div&gt; lado a lado.</p>
+    <div class="float-container">
+      <div>
+        <h2>Londres</h2>
+        <p>Londres é a capital da Inglaterra.</p>
+      </div>
+      <div>
+        <h2>Oslo</h2>
+        <p>Oslo é a capital da Noruega.</p>
+      </div>
+      <div>
+        <h2>Roma</h2>
+        <p>Roma é a capital da Itália.</p>
+      </div>
+    </div>
+
+    <h3>Usando <code>inline-block</code></h3>
+    <p>Com <code>display: inline-block</code>, podemos alinhar os &lt;div&gt;s horizontalmente sem usar <code>float</code>.</p>
+    <div class="inline-block-container">
+      <div>
+        <h2>Londres</h2>
+        <p>Londres é a capital da Inglaterra.</p>
+      </div>
+      <div>
+        <h2>Oslo</h2>
+        <p>Oslo é a capital da Noruega.</p>
+      </div>
+      <div>
+        <h2>Roma</h2>
+        <p>Roma é a capital da Itália.</p>
+      </div>
+    </div>
+
+    <h3>Usando <code>flexbox</code></h3>
+    <p>O <code>flexbox</code> é uma solução moderna para alinhar &lt;div&gt;s horizontalmente.</p>
+    <div class="flex-container">
+      <div>
+        <h2>Londres</h2>
+        <p>Londres é a capital da Inglaterra.</p>
+      </div>
+      <div>
+        <h2>Oslo</h2>
+        <p>Oslo é a capital da Noruega.</p>
+      </div>
+      <div>
+        <h2>Roma</h2>
+        <p>Roma é a capital da Itália.</p>
+      </div>
+    </div>
+
+    <h3>Usando <code>grid</code></h3>
+    <p>O CSS Grid oferece controle mais sofisticado sobre linhas e colunas.</p>
+    <div class="grid-container">
+      <div>
+        <h2>Londres</h2>
+        <p>Londres é a capital da Inglaterra.</p>
+      </div>
+      <div>
+        <h2>Oslo</h2>
+        <p>Oslo é a capital da Noruega.</p>
+      </div>
+      <div>
+        <h2>Roma</h2>
+        <p>Roma é a capital da Itália.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
