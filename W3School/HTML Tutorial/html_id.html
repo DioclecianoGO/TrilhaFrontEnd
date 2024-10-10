@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Atributo ID</title>
+    <style>
+        /* Estilo para o elemento com id "myHeader" */
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Estilo para os elementos com a classe "city" */
+        .city {
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Exemplo de elemento com id exclusivo -->
+    <h1 id="myHeader">Minha Página de Exemplos</h1>
+
+    <!-- Exemplo de elementos com a mesma classe "city" -->
+    <h2 class="city">Londres</h2>
+    <p class="city">Londres é a capital da Inglaterra.</p>
+
+    <h2 class="city">Paris</h2>
+    <p class="city">Paris é a capital da França.</p>
+
+    <h2 class="city">Tóquio</h2>
+    <p class="city">Tóquio é a capital do Japão.</p>
+
+    <!-- Exemplo de uso de marcadores (bookmarks) com id -->
+    <h2 id="C4">Capítulo 4: Uso de ID para Navegação</h2>
+    <p>Este capítulo demonstra como usar o atributo id para navegação em páginas longas.</p>
+
+    <!-- Link para o marcador interno da página -->
+    <a href="#C4">Ir para o Capítulo 4</a>
+
+    <!-- Exemplo de manipulação de elemento pelo ID com JavaScript -->
+    <button onclick="displayResult()">Clique para alterar o texto do cabeçalho</button>
+
+    <script>
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Tenha um ótimo dia!";
+        }
+    </script>
+    
+</body>
+</html>
