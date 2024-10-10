@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML class Attribute - Explanation and Examples</title>
+    <style>
+        /* Definindo a classe .city com estilos comuns */
+        .city {
+            background-color: lightblue;
+            color: black;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        /* Definindo a classe .main */
+        .main {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Entendendo o Atributo <code>class</code> no HTML</h1>
+    
+    <p>O atributo <code>class</code> é utilizado para aplicar estilos a vários elementos de uma página, de forma eficiente e consistente. Além disso, pode ser manipulado com JavaScript para interatividade dinâmica.</p>
+    
+    <h2>Exemplo de Classe Única</h2>
+    <p>O código abaixo atribui a classe <code>city</code> a três elementos <code>div</code>, permitindo que eles compartilhem o mesmo estilo:</p>
+
+    <div class="city">
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+    </div>
+
+    <div class="city">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div class="city">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <h2>Aplicando Múltiplas Classes</h2>
+    <p>É possível adicionar mais de uma classe a um elemento, permitindo que ele herde estilos de diferentes definições de classe. Neste exemplo, o primeiro título utiliza tanto a classe <code>city</code> quanto <code>main</code>:</p>
+
+    <h2 class="city main">London</h2>
+    <h2 class="city">Paris</h2>
+    <h2 class="city">Tokyo</h2>
+
+    <h2>Manipulando Classes com JavaScript</h2>
+    <p>O JavaScript pode interagir com elementos que possuem uma classe específica. No exemplo abaixo, ao clicar no botão, todos os elementos com a classe <code>city</code> serão ocultados:</p>
+
+    <button onclick="hideCities()">Ocultar Cidades</button>
+
+    <script>
+        function hideCities() {
+            let elements = document.getElementsByClassName("city");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
