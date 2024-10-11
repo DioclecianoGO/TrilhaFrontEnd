@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iframe Example</title>
+  <style>
+    /* Estilo básico para iframes */
+    iframe {
+      border: 2px solid #333; /* Borda personalizada */
+      width: 300px; /* Largura padrão do iframe */
+      height: 200px; /* Altura padrão do iframe */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Trabalhando com Iframes no HTML</h1>
+  <p>O elemento <code>&lt;iframe&gt;</code> permite incorporar conteúdo externo dentro de uma página web. Ele utiliza o atributo <code>src</code> para definir o URL da página a ser exibida e o atributo <code>title</code> para acessibilidade.</p>
+
+  <!-- Exemplo de iframe básico -->
+  <h2>Iframe Básico</h2>
+  <iframe src="https://www.example.com" title="Exemplo de Iframe"></iframe>
+
+  <p>Você pode ajustar a altura e a largura de um iframe usando os atributos <code>height</code> e <code>width</code>:</p>
+  <code>&lt;iframe src="https://www.example.com" height="200" width="300" title="Iframe Exemplo"&gt;&lt;/iframe&gt;</code>
+
+  <h2>Personalização de Bordas</h2>
+  <p>Para remover ou estilizar a borda do iframe, use a propriedade <code>border</code> no CSS:</p>
+  <iframe src="https://www.example.com" style="border:none;" title="Iframe sem borda"></iframe>
+  
+  <p>Iframe com borda personalizada:</p>
+  <iframe src="https://www.example.com" style="border:2px solid red;" title="Iframe com borda vermelha"></iframe>
+
+  <h2>Iframe como Alvo de Links</h2>
+  <p>Você também pode usar iframes como alvo de links. Nesse exemplo, o iframe com nome <code>iframe_a</code> será o destino do link abaixo:</p>
+
+  <!-- Iframe alvo -->
+  <iframe src="https://www.example.com" name="iframe_a" title="Iframe para Link"></iframe>
+  <p><a href="https://www.w3schools.com" target="iframe_a">Abrir W3Schools.com no iframe</a></p>
+
+</body>
+</html>
