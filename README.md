@@ -23,3 +23,5 @@ To reinforce and test my knowledge, I am also using the Exercism platform.
 ## W3SCHOOL
 Learn to Code With the world's largest web developer site. 
 [W3Schools](https://www.w3schools.com/)
+
+[![](https://visitcount.itsvg.in/api?id=DioclecianoGO&icon=5&color=0)](https://visitcount.itsvg.in)
