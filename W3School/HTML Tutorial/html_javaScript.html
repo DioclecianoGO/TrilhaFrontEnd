@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML e JavaScript</title>
+</head>
+<body>
+
+<h1>HTML e JavaScript</h1>
+
+<p>JavaScript é uma linguagem de programação que torna as páginas HTML mais dinâmicas e interativas. Ele pode ser utilizado para manipulação de imagens, validação de formulários e alterações dinâmicas de conteúdo.</p>
+
+<h2>A Tag &lt;script&gt;</h2>
+<p>O elemento <code>&lt;script&gt;</code> é usado para definir um script do lado do cliente, podendo conter instruções JavaScript ou apontar para um arquivo externo através do atributo <code>src</code>.</p>
+
+<p>Para selecionar um elemento HTML, JavaScript frequentemente utiliza o método <code>document.getElementById()</code>. Por exemplo:</p>
+<pre><code>document.getElementById("demo").innerHTML = "Hello JavaScript!";</code></pre>
+
+<h2>O que o JavaScript pode fazer</h2>
+<ul>
+    <li><strong>Alterar Conteúdo:</strong> Modifica o texto de um elemento HTML.</li>
+    <li><strong>Alterar Estilos:</strong> Muda propriedades de estilo, como tamanho e cor da fonte.</li>
+    <li><strong>Alterar Atributos:</strong> Atualiza atributos de elementos, como a fonte de uma imagem.</li>
+</ul>
+
+<h2>Tag &lt;noscript&gt;</h2>
+<p>O elemento <code>&lt;noscript&gt;</code> é utilizado para fornecer conteúdo alternativo para usuários que têm scripts desativados em seus navegadores ou que utilizam navegadores que não suportam scripts. Por exemplo:</p>
+<pre><code>&lt;noscript&gt;Sorry, your browser does not support JavaScript!&lt;/noscript&gt;</code></pre>
+
+<h2>Exemplo de JavaScript</h2>
+<p>O código abaixo demonstra como o JavaScript pode ser utilizado:</p>
+<pre><code>
+&lt;script&gt;
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+&lt;/script&gt;
+&lt;noscript&gt;Sorry, your browser does not support JavaScript!&lt;/noscript&gt;
+</code></pre>
+
+</body>
+</html>
