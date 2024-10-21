@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos e Técnicas de Layout em HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, nav, section, article, aside, footer, details, summary {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        .example {
+            background-color: #eef;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #336699;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Elementos e Técnicas de Layout em HTML</h1>
+    </header>
+
+    <section>
+        <article>
+            <h2>Elementos de Layout HTML</h2>
+            <p>Com o HTML5, foram introduzidos diversos elementos semânticos para definir as diferentes partes de uma página web. Eles ajudam a organizar o conteúdo de forma mais clara e acessível.</p>
+
+            <h3>Principais Elementos Semânticos:</h3>
+            <ul>
+                <li><strong>&lt;header&gt;</strong>: Define o cabeçalho de uma página ou seção.</li>
+                <li><strong>&lt;nav&gt;</strong>: Define um conjunto de links de navegação.</li>
+                <li><strong>&lt;section&gt;</strong>: Define uma seção dentro de um documento.</li>
+                <li><strong>&lt;article&gt;</strong>: Define um conteúdo independente, como uma postagem ou artigo.</li>
+                <li><strong>&lt;aside&gt;</strong>: Define um conteúdo complementar, como uma barra lateral.</li>
+                <li><strong>&lt;footer&gt;</strong>: Define o rodapé de uma página ou seção.</li>
+                <li><strong>&lt;details&gt;</strong>: Adiciona detalhes que podem ser abertos ou fechados pelo usuário.</li>
+                <li><strong>&lt;summary&gt;</strong>: Define o título de um elemento &lt;details&gt;.</li>
+            </ul>
+
+            <div class="example">
+                <h4>Exemplo de Uso de Elementos Semânticos</h4>
+                <pre>
+&lt;header&gt;
+    &lt;h1&gt;Título do Site&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;section&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Artigo Principal&lt;/h2&gt;
+        &lt;p&gt;Este é o conteúdo principal do artigo.&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Copyright 2024&lt;/p&gt;
+&lt;/footer&gt;
+                </pre>
+            </div>
+        </article>
+
+        <article>
+            <h2>Técnicas de Layout em HTML</h2>
+            <p>Além dos elementos semânticos, o CSS oferece diferentes abordagens para criar layouts de múltiplas colunas, flexíveis e responsivos. As técnicas incluem frameworks CSS, float, Flexbox e Grid.</p>
+
+            <h3>1. Frameworks CSS</h3>
+            <p>Frameworks como Bootstrap e W3.CSS permitem que os desenvolvedores criem layouts rapidamente, fornecendo classes e estilos pré-definidos que facilitam o desenvolvimento. Essas ferramentas são ideais para quem deseja economizar tempo na criação de layouts complexos.</p>
+
+            <h3>2. Layout com CSS Float</h3>
+            <p>A propriedade <strong>float</strong> no CSS foi muito usada para criar layouts no passado, mas sua limitação em termos de flexibilidade levou ao desenvolvimento de técnicas mais modernas. Flutuar elementos permite organizá-los em colunas, porém exige atenção ao uso das propriedades <strong>clear</strong> para evitar que o layout seja quebrado.</p>
+
+            <div class="example">
+                <h4>Exemplo de Layout com Float</h4>
+                <pre>
+.container {
+    float: left;
+    width: 50%;
+}
+                </pre>
+            </div>
+
+            <h3>3. Layout com CSS Flexbox</h3>
+            <p><strong>Flexbox</strong> é uma abordagem moderna que permite criar layouts flexíveis, adaptáveis a diferentes tamanhos de tela. Com ele, é possível organizar os elementos de forma dinâmica, ajustando-os conforme o espaço disponível.</p>
+
+            <div class="example">
+                <h4>Exemplo de Layout com Flexbox</h4>
+                <pre>
+.container {
+    display: flex;
+    flex-direction: row;
+}
+                </pre>
+            </div>
+
+            <h3>4. Layout com CSS Grid</h3>
+            <p><strong>CSS Grid</strong> é a técnica mais avançada para a criação de layouts baseados em grades. Ele permite o controle preciso sobre linhas e colunas, sendo ideal para layouts complexos. Com o Grid, é possível criar seções de tamanhos variados sem precisar usar floats ou posicionamentos absolutos.</p>
+
+            <div class="example">
+                <h4>Exemplo de Layout com Grid</h4>
+                <pre>
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+                </pre>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>Desenvolvido como exemplo de layout em HTML</p>
+    </footer>
+</div>
+
+</body>
+</html>
