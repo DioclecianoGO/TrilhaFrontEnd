@@ -3,159 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de Estilo HTML</title>
+    <title>Entidades HTML</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+            background-color: #f8f9fa;
         }
         h1 {
-            color: #2c3e50;
+            color: #343a40;
         }
-        p, code {
-            background-color: #f4f4f4;
+        h2 {
+            color: #495057;
+        }
+        pre {
+            background-color: #e9ecef;
             padding: 10px;
-            border-left: 3px solid #ccc;
+            border-radius: 5px;
         }
-        .bad {
-            background-color: #fdd;
-            border-left: 3px solid red;
+        .example {
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
         }
-        .good {
-            background-color: #dff0d8;
-            border-left: 3px solid green;
-        }
-        table {
+        .entity-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+        .entity-table th, .entity-table td {
+            border: 1px solid #ced4da;
+            padding: 10px;
+            text-align: left;
         }
-        th {
-            background-color: #f4f4f4;
+        .entity-table th {
+            background-color: #e9ecef;
         }
     </style>
 </head>
 <body>
+    <h1>Entidades HTML</h1>
+    
+    <h2>Introdução</h2>
+    <p>No HTML, certos caracteres são reservados e precisam ser substituídos por entidades para evitar confusões na interpretação do código pelo navegador. Por exemplo, os sinais de menor (<) e maior (>) são frequentemente confundidos com tags HTML. Para representar esses caracteres, utiliza-se a sintaxe de entidades, que pode ser feita por meio de nomes de entidades ou números de entidades.</p>
 
-<h1>Guia de Estilo HTML</h1>
+    <h2>Exemplo de Sintaxe de Entidades</h2>
+    <p>Os nomes de entidades seguem o formato <code>&amp;entity_name;</code>, enquanto os números são apresentados como <code>&amp;#entity_number;</code>.</p>
+    
+    <div class="example">
+        <h3>Exemplos de Entidades:</h3>
+        <p>Para representar um sinal de menor:</p>
+        <pre>&lt;</pre>
+        <p>Para representar um sinal de maior:</p>
+        <pre>&gt;</pre>
+    </div>
 
-<!-- Declaração do tipo de documento -->
-<p><strong>Declaração do Tipo de Documento:</strong> O primeiro elemento de um documento HTML deve ser a declaração do tipo de documento.</p>
-<pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+    <h2>Espaço Não Separável</h2>
+    <p>Uma entidade muito utilizada é o espaço não separável, representado como <code>&amp;nbsp;</code>. Este tipo de espaço não quebra a linha, mantendo palavras adjacentes unidas, o que é útil para evitar quebras indesejadas.</p>
+    
+    <div class="example">
+        <h3>Exemplo Visual:</h3>
+        <p>Com espaço não separável:</p>
+        <pre>10&nbsp;km/h</pre>
+        <p>Sem espaço não separável:</p>
+        <pre>10 km/h</pre>
+    </div>
 
-<!-- Nomes de elementos em minúsculas -->
-<p><strong>Utilizar Nomes de Elementos em Minúsculas:</strong> Embora o HTML permita letras maiúsculas, recomendamos o uso de letras minúsculas para melhor legibilidade.</p>
-<p class="good">&lt;body&gt;&lt;/body&gt;</p>
-<p class="bad">&lt;BODY&gt;&lt;/BODY&gt;</p>
+    <h2>Outras Entidades Úteis</h2>
+    <p>Entre outras entidades úteis, destacam-se a representação de caracteres especiais:</p>
+    
+    <table class="entity-table">
+        <thead>
+            <tr>
+                <th>Resultado</th>
+                <th>Descrição</th>
+                <th>Nome</th>
+                <th>Número</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&nbsp;</td>
+                <td>espaço não separável</td>
+                <td>&amp;nbsp;</td>
+                <td>&amp;#160;</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>sinal de menor</td>
+                <td>&amp;lt;</td>
+                <td>&amp;#60;</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>sinal de maior</td>
+                <td>&amp;gt;</td>
+                <td>&amp;#62;</td>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td>e comercial</td>
+                <td>&amp;amp;</td>
+                <td>&amp;#38;</td>
+            </tr>
+            <tr>
+                <td>&quot;</td>
+                <td>aspas duplas</td>
+                <td>&amp;quot;</td>
+                <td>&amp;#34;</td>
+            </tr>
+            <tr>
+                <td>&#169;</td>
+                <td>símbolo de copyright</td>
+                <td>&amp;copy;</td>
+                <td>&amp;#169;</td>
+            </tr>
+        </tbody>
+    </table>
 
-<!-- Fechar todos os elementos HTML -->
-<p><strong>Fechar todos os elementos HTML:</strong> Fechar todos os elementos é uma boa prática, mesmo que alguns elementos não exijam.</p>
-<p class="good">
-&lt;section&gt;<br>
-  &nbsp;&nbsp;&lt;p&gt;Este é um parágrafo.&lt;/p&gt;<br>
-  &nbsp;&nbsp;&lt;p&gt;Este é outro parágrafo.&lt;/p&gt;<br>
-&lt;/section&gt;
-</p>
-<p class="bad">
-&lt;section&gt;<br>
-  &nbsp;&nbsp;&lt;p&gt;Este é um parágrafo.<br>
-  &nbsp;&nbsp;&lt;p&gt;Este é outro parágrafo.<br>
-&lt;/section&gt;
-</p>
-
-<!-- Nomes de atributos em minúsculas -->
-<p><strong>Utilizar Nomes de Atributos em Minúsculas:</strong> Seguindo a mesma lógica dos nomes de elementos, use atributos em minúsculas para maior consistência.</p>
-<p class="good">&lt;a href="https://exemplo.com"&gt;Visite o Exemplo&lt;/a&gt;</p>
-<p class="bad">&lt;a HREF="https://exemplo.com"&gt;Visite o Exemplo&lt;/a&gt;</p>
-
-<!-- Citar valores de atributos -->
-<p><strong>Citar Valores de Atributos:</strong> Sempre cite os valores dos atributos, especialmente se houver espaços no valor.</p>
-<p class="good">&lt;table class="tabela-bonita"&gt;</p>
-<p class="bad">&lt;table class=tabela-bonita&gt;</p>
-
-<!-- Especificar alt, width, e height em imagens -->
-<p><strong>Especificar <code>alt</code>, <code>width</code> e <code>height</code> para Imagens:</strong> Para evitar alterações no layout e garantir acessibilidade, sempre forneça esses atributos nas imagens.</p>
-<img src="https://via.placeholder.com/150" alt="Exemplo de Imagem" style="width:150px;height:150px;">
-
-<!-- Evitar espaços ao redor de igual -->
-<p><strong>Evitar Espaços ao Redor de Sinais de Igual:</strong> Manter o código limpo e legível sem adicionar espaços desnecessários ao redor de sinais de igual.</p>
-<p class="good">&lt;link rel="stylesheet" href="styles.css"&gt;</p>
-<p class="bad">&lt;link rel = "stylesheet" href = "styles.css"&gt;</p>
-
-<!-- Evitar linhas longas -->
-<p><strong>Evitar Linhas de Código Longas:</strong> Tente quebrar o código em várias linhas para evitar rolagem horizontal.</p>
-
-<!-- Quebras de linha e indentação -->
-<p><strong>Quebras de Linha e Indentação:</strong> Use linhas em branco para separar blocos lógicos de código, e indente com dois espaços, nunca com tabs.</p>
-<p class="good">
-<code>
-&lt;body&gt;<br>
-  &nbsp;&nbsp;&lt;h1&gt;Cidades Famosas&lt;/h1&gt;<br>
-  &nbsp;&nbsp;&lt;h2&gt;Tóquio&lt;/h2&gt;<br>
-  &nbsp;&nbsp;&lt;p&gt;Tóquio é a capital do Japão.&lt;/p&gt;<br>
-&lt;/body&gt;
-</code>
-</p>
-
-<!-- Exemplo de tabela -->
-<p><strong>Exemplo de Tabela:</strong></p>
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Descrição</th>
-  </tr>
-  <tr>
-    <td>A</td>
-    <td>Descrição do A</td>
-  </tr>
-  <tr>
-    <td>B</td>
-    <td>Descrição do B</td>
-  </tr>
-</table>
-
-<!-- Exemplo de lista -->
-<p><strong>Exemplo de Lista:</strong></p>
-<ul>
-  <li>London</li>
-  <li>Paris</li>
-  <li>Tokyo</li>
-</ul>
-
-<!-- Título da página -->
-<p><strong>Nunca Pule o Elemento <code>&lt;title&gt;</code>:</strong> O título da página é importante para SEO e deve ser sempre incluído.</p>
-<pre><code>&lt;title&gt;Guia de Estilo HTML&lt;/title&gt;</code></pre>
-
-<!-- Tag HTML e body -->
-<p><strong>Incluir <code>&lt;html&gt;</code> e <code>&lt;body&gt;</code>:</strong> Essas tags são opcionais, mas recomendadas para evitar problemas com navegadores antigos e softwares XML/DOM.</p>
-<pre><code>&lt;html&gt;<br>&lt;body&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>
-
-<!-- Comentários -->
-<p><strong>Comentários:</strong> Comentários curtos podem ser escritos em uma linha, enquanto comentários longos devem ser quebrados em várias linhas e indentados.</p>
-<pre><code>&lt;!-- Comentário curto --&gt;</code></pre>
-<pre><code>&lt;!--<br>
-  Comentário longo<br>
-  Comentário longo<br>
---&gt;</code></pre>
-
-<!-- Arquivos em minúsculas -->
-<p><strong>Utilizar Nomes de Arquivos em Minúsculas:</strong> Nomes de arquivos devem ser sempre em minúsculas para evitar erros em servidores sensíveis a maiúsculas.</p>
-
-<!-- Exemplo de codificação correta de metadados -->
-<p><strong>Meta Data:</strong> Incluir o charset e o atributo de idioma para garantir a interpretação correta da página e a otimização para mecanismos de busca.</p>
-<pre><code>
-&lt;meta charset="UTF-8"&gt;<br>
-&lt;html lang="pt-br"&gt;
-</code></pre>
-
-<!-- Configuração da viewport -->
-<p><strong>Configurar a Viewport:</strong> A tag <code>&lt;meta name="viewport"&gt;</code> garante que a página seja exibida corretamente em diferentes dispositivos.</p>
-<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+    <h2>Acentos Diacríticos</h2>
+    <p>Os acentos diacríticos são outros elementos importantes, pois são glifos adicionados a letras que podem criar caracteres que não estão presentes no conjunto de caracteres usado na página.</p>
+    
+    <div class="example">
+        <h3>Exemplo de Combinação de Diacríticos:</h3>
+        <pre>a&#768;  (a com acento grave)</pre>
+        <pre>a&#769;  (a com acento agudo)</pre>
+        <pre>O&#770;  (O com circunflexo)</pre>
+    </div>
 
 </body>
 </html>
