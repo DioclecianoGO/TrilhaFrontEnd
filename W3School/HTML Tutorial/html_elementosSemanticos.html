@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Semânticos em HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        header, nav, section, article, footer, aside, figure, figcaption {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        aside {
+            font-style: italic;
+            background-color: #f0f0f0;
+        }
+        figure {
+            display: inline-block;
+            margin: 10px;
+        }
+        figcaption {
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bem-vindo ao Site do WWF</h1>
+    <p>Explorando a importância dos elementos semânticos em HTML.</p>
+    <!-- 
+    Explicação:
+    O <header> é um elemento semântico que representa o cabeçalho da página ou de uma seção. Geralmente, inclui o título principal e informações introdutórias, como um subtítulo ou uma breve descrição. É importante para acessibilidade, pois ajuda a identificar o conteúdo principal da página.
+    -->
+</header>
+
+<nav>
+    <a href="#sobre">Sobre o WWF</a> |
+    <a href="#missao">Missão</a> |
+    <a href="#projetos">Projetos</a> |
+    <a href="#contato">Contato</a>
+    <!-- 
+    Explicação:
+    O <nav> é usado para definir um conjunto de links de navegação. Ele agrupa links importantes para a navegação dentro do site, facilitando o acesso a outras seções. É fundamental para melhorar a experiência do usuário e a estrutura de navegação da página.
+    -->
+</nav>
+
+<section id="sobre">
+    <h2>Sobre o WWF</h2>
+    <p>O World Wide Fund for Nature (WWF) é uma organização internacional que trabalha com questões de conservação e restauração ambiental.</p>
+    <!-- 
+    Explicação:
+    A tag <section> é utilizada para separar diferentes partes do conteúdo de uma página. Cada <section> deve conter um tema ou tópico relacionado, ajudando a estruturar melhor o conteúdo. Neste caso, a seção fala sobre a organização WWF.
+    -->
+</section>
+
+<section id="missao">
+    <h2>Missão do WWF</h2>
+    <article>
+        <header>
+            <h3>O que o WWF Faz?</h3>
+        </header>
+        <p>A missão do WWF é parar a degradação do meio ambiente e construir um futuro onde humanos vivam em harmonia com a natureza.</p>
+        <!-- 
+        Explicação:
+        A tag <article> define um conteúdo autocontido que pode fazer sentido fora de contexto, como uma notícia ou um post. Aqui, o <article> fala sobre a missão do WWF, e dentro dele temos um <header> que serve para introduzir o conteúdo do artigo.
+        -->
+    </article>
+</section>
+
+<article id="projetos">
+    <h2>O Símbolo do Panda do WWF</h2>
+    <p>O famoso logo do panda do WWF foi inspirado em um panda chamado Chi Chi, transferido do Zoológico de Pequim para o Zoológico de Londres em 1961.</p>
+    <!-- 
+    Explicação:
+    Aqui temos outro <article> que trata de um tópico diferente, mas ainda dentro do mesmo tema. É uma unidade de conteúdo separada, e cada artigo pode ser lido de forma independente. O uso de <article> facilita a organização de informações no site.
+    -->
+</article>
+
+<aside>
+    <h4>Você sabia?</h4>
+    <p>O logo do WWF foi projetado para maximizar o apelo público e aumentar a conscientização sobre a espécie panda ameaçada de extinção.</p>
+    <!-- 
+    Explicação:
+    O <aside> representa conteúdo relacionado ao principal, mas não essencial. Ele pode conter informações complementares, como curiosidades ou detalhes adicionais que ajudem a entender o contexto do conteúdo principal. É útil para adicionar valor sem interromper o fluxo do texto principal.
+    -->
+</aside>
+
+<section id="navegadores">
+    <h2>Navegadores Web Mais Populares</h2>
+    <article class="navegador">
+        <h3>Google Chrome</h3>
+        <p>O Google Chrome é um navegador web desenvolvido pela Google, lançado em 2008.</p>
+    </article>
+    <article class="navegador">
+        <h3>Mozilla Firefox</h3>
+        <p>O Mozilla Firefox é um navegador de código aberto desenvolvido pela Mozilla, popular por seu foco em privacidade.</p>
+    </article>
+    <article class="navegador">
+        <h3>Microsoft Edge</h3>
+        <p>O Microsoft Edge é um navegador web desenvolvido pela Microsoft, substituindo o Internet Explorer.</p>
+    </article>
+    <!-- 
+    Explicação:
+    Mais exemplos de <article>, aqui usados para descrever diferentes navegadores web. Cada um é autocontido e pode ser lido de forma independente. Isso facilita a leitura e a separação lógica dos tópicos.
+    -->
+</section>
+
+<figure>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Wochenmarkt_in_Guben.jpg/1200px-Wochenmarkt_in_Guben.jpg" alt="Mercado ao ar livre">
+    <figcaption>Fig.1 - Um típico mercado na Europa.</figcaption>
+    <!-- 
+    Explicação:
+    O <figure> é um contêiner usado para agrupar elementos gráficos ou diagramas, como imagens, gráficos ou códigos de exemplo. Já o <figcaption> é a legenda associada à figura, fornecendo uma breve descrição da imagem. Juntos, eles melhoram a acessibilidade e a compreensão do conteúdo visual.
+    -->
+</figure>
+
+<footer>
+    <p>&copy; 2024 WWF | Contate-nos em <a href="mailto:info@wwf.org">info@wwf.org</a></p>
+    <!-- 
+    Explicação:
+    O <footer> é o rodapé da página. Ele normalmente contém informações de contato, direitos autorais, links para políticas de privacidade ou termos de uso. É útil para fechar o conteúdo da página e fornecer informações adicionais relevantes para o usuário.
+    -->
+</footer>
+
+</body>
+</html>
