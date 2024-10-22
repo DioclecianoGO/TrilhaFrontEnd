@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design - Examples and Explanations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .example {
+            background-color: #f9f9f9;
+            border-left: 4px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            margin: 10px 0;
+        }
+        /* Responsive Columns Example */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .col-3 {
+            flex: 1;
+            min-width: 300px;
+        }
+        /* Media Queries */
+        @media screen and (max-width: 800px) {
+            .col-3 {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Web Design - Examples and Explanations</h1>
+
+    <section>
+        <h2>Setting the Viewport</h2>
+        <p>Para garantir que sua página web seja responsiva, use a seguinte meta tag:</p>
+        <div class="example">
+            <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+        </div>
+        <p>Isso ajusta o viewport, permitindo que o navegador saiba como controlar as dimensões e o escalonamento da página.</p>
+    </section>
+
+    <section>
+        <h2>Responsive Images</h2>
+        <p>Imagens podem ser escaladas de forma responsiva para se ajustar ao tamanho do navegador. Aqui estão duas maneiras:</p>
+
+        <h3>Using the <code>width</code> Property</h3>
+        <p>Se você definir a largura da imagem como 100%, ela se ajustará ao tamanho da tela:</p>
+        <div class="example">
+            <code>&lt;img src="img_girl.jpg" style="width:100%;"&gt;</code>
+        </div>
+        <p>Exemplo de uma imagem que escala com largura de 100%:</p>
+        <img src="img/img_girl.jpg" style="width:100%;" alt="Example Image">
+
+        <h3>Using the <code>max-width</code> Property</h3>
+        <p>Usando <code>max-width: 100%</code>, a imagem não será maior que seu tamanho original:</p>
+        <div class="example">
+            <code>&lt;img src="img_girl.jpg" style="max-width:100%;height:auto;"&gt;</code>
+        </div>
+        <p>Exemplo de uma imagem com <code>max-width</code> aplicado:</p>
+        <img src="img/img_girl.jpg" style="max-width:100%;height:auto;" alt="Example Image">
+    </section>
+
+    <section>
+        <h2>Responsive Text</h2>
+        <p>O tamanho do texto pode ser ajustado com a unidade <code>vw</code> (viewport width), que faz o texto escalar de acordo com o tamanho da janela.</p>
+        <div class="example">
+            <code>&lt;h1 style="font-size:10vw"&gt;Hello World&lt;/h1&gt;</code>
+        </div>
+        <h1 style="font-size:10vw">Hello World</h1>
+    </section>
+
+    <section>
+        <h2>Using Media Queries</h2>
+        <p>Media queries são usadas para aplicar diferentes estilos dependendo da largura da tela. No exemplo abaixo, três colunas são mostradas lado a lado em telas grandes, mas empilhadas em telas pequenas:</p>
+        <div class="example">
+            <code>
+                @media screen and (max-width: 800px) {<br>
+                &nbsp;&nbsp;.left, .main, .right {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+                &nbsp;&nbsp;}<br>
+                }
+            </code>
+        </div>
+        <div class="container">
+            <div class="box col-3" style="background-color:#f4b400;">Left Column</div>
+            <div class="box col-3" style="background-color:#0f9d58;">Main Content</div>
+            <div class="box col-3" style="background-color:#4285f4;">Right Column</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Responsive Frameworks</h2>
+        <h3>W3.CSS</h3>
+        <p>O W3.CSS é um framework moderno que suporta design responsivo. Veja um exemplo simples usando W3.CSS:</p>
+        <div class="example">
+            <code>&lt;link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"&gt;</code>
+        </div>
+        <div class="w3-container w3-green">
+            <h1>W3Schools Demo</h1>
+            <p>Resize this responsive page!</p>
+        </div>
+
+        <h3>Bootstrap</h3>
+        <p>Bootstrap é outro framework popular para criar layouts responsivos. Exemplo de uma página Bootstrap:</p>
+        <div class="example">
+            <code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code>
+        </div>
+        <div class="container-fluid p-5 bg-primary text-white text-center">
+            <h1>My First Bootstrap Page</h1>
+            <p>Resize this responsive page to see the effect!</p>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Column 1</h3>
+                    <p>Lorem ipsum...</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Column 2</h3>
+                    <p>Lorem ipsum...</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Column 3</h3>
+                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
