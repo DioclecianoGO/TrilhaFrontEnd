@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entidades HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .symbol {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Entidades HTML</h1>
+<p>As entidades HTML permitem adicionar símbolos ou letras que não estão disponíveis no teclado a uma página HTML.</p>
+
+<h2>Entidades de Símbolos HTML</h2>
+<p>Para inserir símbolos que não podem ser digitados diretamente, você pode usar o nome da entidade ou um número de entidade (decimal ou hexadecimal).</p>
+<pre><code>&lt;p&gt;Eu vou exibir &euro;&lt;/p&gt;</code></pre>
+<p>Esse código exibe o símbolo do euro:</p>
+<div class="symbol">&euro;</div>
+<p>Outros exemplos incluem:</p>
+<ul>
+    <li><code>&#8364;</code> para exibir: <div class="symbol">&#8364;</div></li>
+    <li><code>&#x20AC;</code> para exibir: <div class="symbol">&#x20AC;</div></li>
+</ul>
+
+<h2>Alguns Símbolos Matemáticos Suportados pelo HTML</h2>
+<table>
+    <tr>
+        <th>Caractere</th>
+        <th>Número</th>
+        <th>Nome da Entidade</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <td>∀</td>
+        <td>&#8704;</td>
+        <td>&amp;forall;</td>
+        <td>Para todos</td>
+    </tr>
+    <tr>
+        <td>∂</td>
+        <td>&#8706;</td>
+        <td>&amp;part;</td>
+        <td>Diferencial parcial</td>
+    </tr>
+    <tr>
+        <td>∃</td>
+        <td>&#8707;</td>
+        <td>&amp;exist;</td>
+        <td>Existe</td>
+    </tr>
+    <tr>
+        <td>∅</td>
+        <td>&#8709;</td>
+        <td>&amp;empty;</td>
+        <td>Conjunto vazio</td>
+    </tr>
+    <tr>
+        <td>∇</td>
+        <td>&#8711;</td>
+        <td>&amp;nabla;</td>
+        <td>Nabla</td>
+    </tr>
+</table>
+
+<h2>Algumas Letras Gregas Suportadas pelo HTML</h2>
+<table>
+    <tr>
+        <th>Caractere</th>
+        <th>Número</th>
+        <th>Nome da Entidade</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <td>Α</td>
+        <td>&#913;</td>
+        <td>&amp;Alpha;</td>
+        <td>ALFA GREGO</td>
+    </tr>
+    <tr>
+        <td>Β</td>
+        <td>&#914;</td>
+        <td>&amp;Beta;</td>
+        <td>BETA GREGO</td>
+    </tr>
+    <tr>
+        <td>Γ</td>
+        <td>&#915;</td>
+        <td>&amp;Gamma;</td>
+        <td>GAMA GREGO</td>
+    </tr>
+    <tr>
+        <td>Δ</td>
+        <td>&#916;</td>
+        <td>&amp;Delta;</td>
+        <td>DELTA GREGO</td>
+    </tr>
+</table>
+
+<h2>Outras Entidades Suportadas pelo HTML</h2>
+<table>
+    <tr>
+        <th>Caractere</th>
+        <th>Número</th>
+        <th>Nome da Entidade</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <td>©</td>
+        <td>&#169;</td>
+        <td>&amp;copy;</td>
+        <td>DIREITOS AUTORAIS</td>
+    </tr>
+    <tr>
+        <td>®</td>
+        <td>&#174;</td>
+        <td>&amp;reg;</td>
+        <td>REGISTRADO</td>
+    </tr>
+    <tr>
+        <td>€</td>
+        <td>&#8364;</td>
+        <td>&amp;euro;</td>
+        <td>SÍMBOLO EURO</td>
+    </tr>
+    <tr>
+        <td>™</td>
+        <td>&#8482;</td>
+        <td>&amp;trade;</td>
+        <td>MARCA REGISTRADA</td>
+    </tr>
+    <tr>
+        <td>←</td>
+        <td>&#8592;</td>
+        <td>&amp;larr;</td>
+        <td>SETAS DIRECIONAIS</td>
+    </tr>
+</table>
+
+</body>
+</html>
