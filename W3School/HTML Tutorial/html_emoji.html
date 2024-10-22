@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Utilizando Emojis em HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .emoji {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Utilizando Emojis em HTML</h1>
+
+<p>
+    Os emojis são caracteres pertencentes ao conjunto de caracteres <strong>UTF-8</strong>, o qual abrange quase todos os caracteres e símbolos existentes no mundo. Embora os emojis tenham a aparência de imagens ou ícones, eles são tratados como letras (ou caracteres) dentro do HTML.
+</p>
+
+<p>
+    Para que um navegador exiba corretamente uma página HTML, é essencial especificar o conjunto de caracteres utilizado, o que é feito por meio da tag <code>&lt;meta&gt;</code>, utilizando o atributo <code>charset</code> com o valor "UTF-8". Quando essa especificação não é fornecida, o UTF-8 é adotado como padrão.
+</p>
+
+<h2>Exemplo de Meta Charset</h2>
+<pre>
+<code>&lt;meta charset="UTF-8"&gt;</code>
+</pre>
+
+<p>
+    Os caracteres UTF-8, incluindo emojis, podem não ser digitados diretamente em um teclado, mas podem ser representados por números, conhecidos como números de entidade. Para exibir um caractere usando sua representação numérica, a sintaxe é iniciada com <code>&#38;#</code> e finalizada com um ponto e vírgula (<code>;</code>), seguido pelo número correspondente ao caractere desejado.
+</p>
+
+<h2>Exemplo de Entidade Numérica</h2>
+<pre>
+<code>&#38;#65; &lt;--- Para exibir a letra A</code>
+</pre>
+
+<p>
+    Emojis, como qualquer outro caractere UTF-8, podem ser copiados, exibidos e dimensionados em HTML, assim como textos comuns. 
+</p>
+
+<h2>Exemplos de Emojis em HTML</h2>
+<div class="emoji">
+    Aqui estão alguns emojis exibidos usando suas entidades numéricas:
+    <br>
+    <span>&#128512;</span> <!-- 😀 -->
+    <span>&#128516;</span> <!-- 😄 -->
+    <span>&#128525;</span> <!-- 😍 -->
+    <span>&#128151;</span> <!-- 💗 -->
+</div>
+
+<h2>Dimensionando Emojis</h2>
+<p>
+    Os emojis também podem ser estilizados. Aqui está um exemplo de emojis com tamanhos diferentes:
+</p>
+<div class="emoji" style="font-size: 36px;">
+    Emojis em tamanho padrão:
+    <br>
+    <span>&#128512;</span> <!-- 😀 -->
+    <span>&#128516;</span> <!-- 😄 -->
+    <span>&#128525;</span> <!-- 😍 -->
+</div>
+<div class="emoji" style="font-size: 72px;">
+    Emojis em tamanho grande:
+    <br>
+    <span>&#128512;</span> <!-- 😀 -->
+    <span>&#128516;</span> <!-- 😄 -->
+    <span>&#128525;</span> <!-- 😍 -->
+</div>
+
+<p>
+    Dessa forma, o uso de emojis em HTML não só enriquece a comunicação visual nas páginas web, mas também demonstra a versatilidade dos caracteres UTF-8, que se integram perfeitamente ao texto.
+</p>
+
+</body>
+</html>
