@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificação de Caracteres em HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .example {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .visualization {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Codificação de Caracteres em HTML</h1>
+
+<h2>1. Importância do Conjunto de Caracteres</h2>
+<p>Para que uma página HTML seja exibida corretamente, o navegador deve conhecer qual conjunto de caracteres utilizar. O conjunto de caracteres é especificado na tag <code>&lt;meta&gt;</code>, geralmente através do atributo <code>charset</code>.</p>
+<div class="example">
+<pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+</div>
+
+<h2>2. UTF-8</h2>
+<p>A especificação HTML5 incentiva o uso do conjunto de caracteres UTF-8, que abrange quase todos os caracteres e símbolos do mundo, refletindo a diversidade de idiomas e símbolos necessários para a comunicação global na web.</p>
+<div class="example">
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Exemplo de UTF-8&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Olá, mundo! 👋&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+<div class="visualization">
+    <p>Olá, mundo! 👋</p>
+</div>
+
+<h2>3. Conjuntos de Caracteres Conhecidos</h2>
+<p>Os conjuntos de caracteres mais conhecidos incluem:</p>
+<ul>
+    <li><strong>ASCII:</strong> O primeiro padrão de codificação de caracteres para a web, definindo 128 caracteres.</li>
+    <li><strong>ANSI (Windows-1252):</strong> Extensão do ASCII, idêntica nos primeiros 127 caracteres e com caracteres especiais adicionais.</li>
+    <li><strong>ISO-8859-1:</strong> Suporta 256 códigos diferentes, mantendo compatibilidade com ASCII para os primeiros 127 caracteres, mas não inclui os caracteres especiais do ANSI.</li>
+</ul>
+
+<h2>4. Tabela Comparativa de Conjuntos de Caracteres</h2>
+<p>A tabela a seguir ilustra como diferentes conjuntos de caracteres tratam o mesmo caractere especial:</p>
+<table style="width: 100%; border-collapse: collapse;">
+    <tr>
+        <th style="border: 1px solid #ddd; padding: 8px;">Caractere</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">ASCII</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">ANSI (Windows-1252)</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">ISO-8859-1</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">UTF-8</th>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">ç</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">N/A</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">231</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">231</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">C3 A7</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px;">á</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">N/A</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">225</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">225</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">C3 A1</td>
+    </tr>
+</table>
+
+<h2>5. Conclusão</h2>
+<p>A escolha do conjunto de caracteres apropriado é crucial para garantir a integridade e a legibilidade do conteúdo exibido, especialmente em um ambiente global onde diferentes idiomas e scripts são utilizados.</p>
+
+</body>
+</html>
