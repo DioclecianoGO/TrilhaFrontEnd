@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Computer Code Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 90%;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #ccc;
+            overflow-x: auto;
+        }
+        kbd {
+            background-color: #eee;
+            border: 1px solid #b4b4b4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            box-shadow: 1px 1px 1px #ccc;
+        }
+        samp {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        var {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Computer Code Elements</h1>
+
+    <h2>Elemento <code>&lt;kbd&gt;</code> para Entrada de Teclado</h2>
+    <p>O elemento <code>&lt;kbd&gt;</code> é usado para definir entradas de teclado. O texto dentro deste elemento é exibido com uma fonte monoespaçada, indicando que o usuário deve apertar as teclas mencionadas.</p>
+    <p><strong>Código:</strong></p>
+    <pre><code>&lt;p&gt;Save the document by pressing &lt;kbd&gt;Ctrl + S&lt;/kbd&gt;&lt;/p&gt;</code></pre>
+    <p><strong>Resultado:</strong></p>
+    <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+
+    <hr>
+
+    <h2>Elemento <code>&lt;samp&gt;</code> para Saída de Programa</h2>
+    <p>O elemento <code>&lt;samp&gt;</code> é utilizado para mostrar a saída de um programa de computador, exibido em fonte monoespaçada. Ideal para mostrar mensagens geradas por um sistema.</p>
+    <p><strong>Código:</strong></p>
+    <pre><code>&lt;p&gt;Message from my computer:&lt;/p&gt;
+&lt;p&gt;&lt;samp&gt;File not found.&lt;br&gt;Press F1 to continue&lt;/samp&gt;&lt;/p&gt;</code></pre>
+    <p><strong>Resultado:</strong></p>
+    <p>Message from my computer:</p>
+    <p><samp>File not found.<br>Press F1 to continue</samp></p>
+
+    <hr>
+
+    <h2>Elemento <code>&lt;code&gt;</code> para Código de Computador</h2>
+    <p>O elemento <code>&lt;code&gt;</code> é usado para representar um trecho de código de computador. Contudo, ele não preserva quebras de linha ou espaços extras.</p>
+    <p><strong>Código:</strong></p>
+    <pre><code>&lt;code&gt;
+x = 5;
+y = 6;
+z = x + y;
+&lt;/code&gt;</code></pre>
+    <p><strong>Resultado:</strong></p>
+    <p><code>x = 5; y = 6; z = x + y;</code></p>
+
+    <p>Para preservar a formatação, utilize <code>&lt;pre&gt;</code> em conjunto com o elemento <code>&lt;code&gt;</code>:</p>
+    <p><strong>Código:</strong></p>
+    <pre><code>&lt;pre&gt;&lt;code&gt;
+x = 5;
+y = 6;
+z = x + y;
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+    <p><strong>Resultado:</strong></p>
+    <pre><code>x = 5;
+y = 6;
+z = x + y;
+</code></pre>
+
+    <hr>
+
+    <h2>Elemento <code>&lt;var&gt;</code> para Variáveis</h2>
+    <p>O elemento <code>&lt;var&gt;</code> é utilizado para definir variáveis em expressões matemáticas ou programação, exibido geralmente em itálico.</p>
+    <p><strong>Código:</strong></p>
+    <pre><code>&lt;p&gt;The area of a triangle is: 1/2 x &lt;var&gt;b&lt;/var&gt; x &lt;var&gt;h&lt;/var&gt;, where &lt;var&gt;b&lt;/var&gt; is the base, and &lt;var&gt;h&lt;/var&gt; is the vertical height.&lt;/p&gt;</code></pre>
+    <p><strong>Resultado:</strong></p>
+    <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+
+</body>
+</html>
