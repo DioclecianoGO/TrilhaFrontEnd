@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Versus XHTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background-color: #e7e7e7;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .example {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .visual-example {
+            border: 1px dashed #007BFF;
+            padding: 10px;
+            background-color: #e9ecef;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Versus XHTML</h1>
+
+    <p>
+        XHTML, que significa <strong>EXtensible HyperText Markup Language</strong>, é uma versão mais rigorosa e baseada em XML do HTML. É essencialmente HTML definido como uma aplicação XML e é suportado por todos os principais navegadores. 
+    </p>
+
+    <h2>Por que XHTML?</h2>
+    <p>
+        A necessidade de XHTML surge da busca por uma linguagem de marcação que seja mais extensível e flexível, especialmente em relação à compatibilidade com outros formatos de dados, como o XML. 
+        Ao contrário do HTML, onde os navegadores ignoram erros e tentam exibir o conteúdo mesmo que haja falhas na marcação, o XHTML adota um tratamento de erros mais estrito, exigindo que os documentos estejam sempre "bem formados".
+    </p>
+
+    <h2>Principais Diferenças do XHTML em Relação ao HTML</h2>
+    <ul>
+        <li><strong>Declaração &lt;!DOCTYPE&gt;:</strong> obrigatória em todos os documentos XHTML.</li>
+        <li><strong>Elementos obrigatórios:</strong> &lt;html&gt;, &lt;head&gt;, &lt;title&gt; e &lt;body&gt; devem estar presentes.</li>
+        <li><strong>Aninhamento de Elementos:</strong> Os elementos devem ser corretamente aninhados.</li>
+        <li><strong>Fechamento de Elementos:</strong> Todos os elementos devem ser fechados.</li>
+        <li><strong>Minúsculas:</strong> Todos os nomes de elementos e atributos devem estar em letras minúsculas.</li>
+        <li><strong>Valores de Atributos:</strong> Devem ser sempre entre aspas.</li>
+        <li><strong>Minimização de Atributos:</strong> É proibida.</li>
+    </ul>
+
+    <h2>Exemplo de Estrutura XHTML</h2>
+    <div class="example">
+        <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+  &lt;title&gt;Título do Documento&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  conteúdo aqui...
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <h2>Regras de Sintaxe em XHTML</h2>
+    
+    <h3>1. Aninhamento Correto</h3>
+    <div class="visual-example">
+        <p><strong>Certo:</strong> <code>&lt;b&gt;&lt;i&gt;Texto em itálico&lt;/i&gt;&lt;/b&gt;</code></p>
+        <p><strong>Errado:</strong> <code>&lt;b&gt;&lt;i&gt;Texto em itálico&lt;/b&gt;&lt;/i&gt;</code></p>
+    </div>
+
+    <h3>2. Fechamento de Elementos</h3>
+    <div class="visual-example">
+        <p><strong>Certo:</strong> <code>&lt;p&gt;Este é um parágrafo&lt;/p&gt;</code></p>
+        <p><strong>Errado:</strong> <code>&lt;p&gt;Este é um parágrafo</code></p>
+    </div>
+
+    <h3>3. Elementos Vazios</h3>
+    <div class="visual-example">
+        <p><strong>Certo:</strong> <code>&lt;br /&gt;</code></p>
+        <p><strong>Errado:</strong> <code>&lt;br&gt;</code></p>
+    </div>
+
+    <h3>4. Letras Minúsculas</h3>
+    <div class="visual-example">
+        <p><strong>Certo:</strong> <code>&lt;body&gt;&lt;p&gt;Este é um parágrafo&lt;/p&gt;&lt;/body&gt;</code></p>
+        <p><strong>Errado:</strong> <code>&lt;BODY&gt;&lt;P&gt;Este é um parágrafo&lt;/P&gt;&lt;/BODY&gt;</code></p>
+    </div>
+
+    <h3>5. Nomes e Valores de Atributos</h3>
+    <div class="visual-example">
+        <p><strong>Certo:</strong> <code>&lt;a href="https://www.exemplo.com"&gt;Visite nosso tutorial&lt;/a&gt;</code></p>
+        <p><strong>Errado:</strong> <code>&lt;a HREF=https://www.exemplo.com&gt;Visite nosso tutorial&lt;/a&gt;</code></p>
+    </div>
+
+    <h2>Conclusão</h2>
+    <p>
+        A rigidez do XHTML visa garantir a consistência e a precisão dos documentos, promovendo uma prática de codificação que evita erros comuns encontrados na construção de páginas HTML tradicionais. 
+        Essa abordagem é particularmente útil em contextos onde a interoperabilidade entre diferentes sistemas e formatos de dados é essencial.
+    </p>
+
+</body>
+</html>
