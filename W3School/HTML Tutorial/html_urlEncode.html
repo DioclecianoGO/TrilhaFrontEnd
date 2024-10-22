@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URLs (Uniform Resource Locators)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background: #eaeaea;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        pre {
+            background: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .example {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>URLs (Uniform Resource Locators)</h1>
+    
+    <p>Uma URL, ou Localizador Uniforme de Recursos, é a forma como se referimos a um endereço da web. Ela pode ser constituída tanto por palavras, como em <code>w3schools.com</code>, quanto por um endereço de Protocolo de Internet (IP), como <code>192.68.20.50</code>. Na navegação pela internet, os usuários geralmente utilizam nomes, pois são mais fáceis de memorizar do que sequências numéricas.</p>
+
+    <h2>Função Principal</h2>
+    <p>A função principal de uma URL é direcionar navegadores da web para solicitar páginas de servidores.</p>
+
+    <h2>Sintaxe de uma URL</h2>
+    <p>A sintaxe de uma URL é composta por diversos elementos, cada um com uma função específica. A estrutura básica inclui:</p>
+    
+    <div class="example">
+        <h3>Estrutura de uma URL</h3>
+        <p><code>scheme://prefix.domain:port/path/filename</code></p>
+    </div>
+
+    <h3>Elementos da URL</h3>
+    <ul>
+        <li><strong>scheme:</strong> define o tipo de serviço da Internet (ex: <code>http</code> ou <code>https</code>).</li>
+        <li><strong>prefix:</strong> especifica um prefixo do domínio (ex: <code>www</code>).</li>
+        <li><strong>domain:</strong> refere-se ao nome do domínio da Internet (ex: <code>w3schools.com</code>).</li>
+        <li><strong>port:</strong> indica o número da porta no host (padrão para <code>http</code> é 80).</li>
+        <li><strong>path:</strong> determina o caminho no servidor (se omitido, aponta para o diretório raiz do site).</li>
+        <li><strong>filename:</strong> especifica o nome de um documento ou recurso.</li>
+    </ul>
+
+    <h2>Esquemas de URL Comuns</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Esquema</th>
+                <th>Abreviação</th>
+                <th>Uso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>http</code></td>
+                <td>HyperText Transfer Protocol</td>
+                <td>Páginas web comuns. Não criptografadas.</td>
+            </tr>
+            <tr>
+                <td><code>https</code></td>
+                <td>Secure HyperText Transfer Protocol</td>
+                <td>Páginas web seguras. Criptografadas.</td>
+            </tr>
+            <tr>
+                <td><code>ftp</code></td>
+                <td>File Transfer Protocol</td>
+                <td>Download ou upload de arquivos.</td>
+            </tr>
+            <tr>
+                <td><code>file</code></td>
+                <td></td>
+                <td>Um arquivo no seu computador.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Codificação de URLs</h2>
+    <p>As URLs devem ser enviadas pela Internet utilizando o conjunto de caracteres ASCII. Quando uma URL contém caracteres fora desse conjunto, é necessário convertê-los para um formato adequado. A codificação de URL substitui os caracteres não ASCII por um símbolo de porcentagem (<code>%</code>) seguido de dígitos hexadecimais.</p>
+    
+    <div class="example">
+        <h3>Exemplo de Codificação de URL</h3>
+        <p>Um espaço em uma URL é substituído por um sinal de mais (<code>+</code>) ou por <code>%20</code>.</p>
+    </div>
+
+    <h2>Conclusão</h2>
+    <p>A codificação assegura que a informação seja transmitida corretamente entre o navegador e o servidor, respeitando os padrões de codificação de caracteres, onde a codificação padrão em HTML5 é o UTF-8.</p>
+</body>
+</html>
