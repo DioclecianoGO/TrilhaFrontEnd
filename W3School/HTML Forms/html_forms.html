@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 200px;
+        }
+        input[type="submit"], input[type="button"] {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Forms</h1>
+
+    <section>
+        <h2>The &lt;form&gt; Element</h2>
+        <p>O elemento <code>&lt;form&gt;</code> é usado para criar um formulário que coleta dados do usuário.</p>
+        <p>Sintaxe básica:</p>
+        <pre><code>&lt;form&gt;
+  &lt;!-- elementos do formulário --&gt;
+&lt;/form&gt;</code></pre>
+
+        <h3>Exemplo de Formulário Simples:</h3>
+        <form action="#">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr>
+    </section>
+
+    <section>
+        <h2>The &lt;input&gt; Element</h2>
+        <p>O elemento <code>&lt;input&gt;</code> pode ser exibido de diferentes formas com base no valor do atributo <code>type</code>.</p>
+
+        <h3>Campos de Texto:</h3>
+        <p>O <code>&lt;input type="text"&gt;</code> define um campo de entrada de uma única linha.</p>
+        <form action="#">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br>
+        </form>
+
+        <h3>Botões de Rádio:</h3>
+        <p>O <code>&lt;input type="radio"&gt;</code> permite que o usuário escolha uma opção de várias disponíveis.</p>
+        <form action="#">
+            <p>Escolha sua linguagem favorita:</p>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label><br>
+        </form>
+
+        <h3>Checkboxes:</h3>
+        <p>O <code>&lt;input type="checkbox"&gt;</code> permite que o usuário selecione zero ou mais opções.</p>
+        <form action="#">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1">I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2">I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3">I have a boat</label><br>
+        </form>
+
+        <hr>
+    </section>
+
+    <section>
+        <h2>The Submit Button</h2>
+        <p>O <code>&lt;input type="submit"&gt;</code> define um botão para submeter os dados do formulário ao servidor.</p>
+
+        <h3>Exemplo de Formulário com Botão de Submissão:</h3>
+        <form action="/action_page.php">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" value="Doe"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p><strong>Nota:</strong> O atributo <code>action</code> do elemento <code>&lt;form&gt;</code> define o destino para onde os dados do formulário são enviados.</p>
+
+        <hr>
+    </section>
+
+    <section>
+        <h2>The &lt;label&gt; Element</h2>
+        <p>O elemento <code>&lt;label&gt;</code> associa texto a um elemento de entrada, melhorando a acessibilidade e a usabilidade.</p>
+        <p>Exemplo de uso de <code>&lt;label&gt;</code> com campos de entrada:</p>
+
+        <form action="#">
+            <label for="user">Username:</label>
+            <input type="text" id="user" name="user"><br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd"><br>
+            <input type="submit" value="Login">
+        </form>
+
+        <hr>
+    </section>
+
+    <section>
+        <h2>The Name Attribute</h2>
+        <p>Cada campo de entrada no formulário deve ter um atributo <code>name</code> para que seus valores sejam enviados ao servidor.</p>
+        <p>Se o atributo <code>name</code> for omitido, o valor não será submetido.</p>
+
+        <h3>Exemplo de Formulário Sem o Atributo "name":</h3>
+        <form action="/action_page.php">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" value="John"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p><em>Note que o valor do campo "First name" não será enviado por causa da ausência do atributo <code>name</code>.</em></p>
+    </section>
+</body>
+</html>
