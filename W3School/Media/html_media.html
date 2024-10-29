@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimídia em HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .example {
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        audio, video {
+            width: 100%;
+            max-width: 500px;
+        }
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multimídia na Web</h1>
+    <p>A multimídia na web abrange uma variedade de elementos, incluindo som, música, vídeos, filmes e animações. Definida como a combinação de diferentes formatos que envolvem conteúdos que podem ser ouvidos ou vistos, a multimídia integra imagens, músicas, sons e animações, enriquecendo a experiência do usuário em páginas da web.</p>
+
+    <h2>Histórico dos Navegadores</h2>
+    <p>Historicamente, os navegadores da web começaram com suporte apenas para texto, sem a capacidade de exibir cores, fontes ou elementos gráficos. Com o tempo, houve uma evolução significativa, permitindo que os navegadores suportassem uma gama de elementos multimídia.</p>
+
+    <h2>Formatos de Arquivos Multimídia</h2>
+    <p>Os arquivos multimídia são armazenados em formatos específicos, que são identificados principalmente por suas extensões. As extensões de arquivos são indicativos cruciais que ajudam a determinar o tipo de mídia com que se está lidando. Entre os formatos mais comuns, destacam-se .wav, .mp3, .mp4, .mpg, .wmv e .avi.</p>
+
+    <h3>Exemplos de Vídeo</h3>
+    <p>No que se refere a vídeos, formatos como MP4, WebM e Ogg são amplamente suportados no HTML. O MP4 é o formato mais recomendado.</p>
+    <div class="example media-container">
+        <h4>Exemplo de Vídeo MP4:</h4>
+        <video controls>
+            <source src="video_exemplo.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+
+    <h3>Exemplos de Áudio</h3>
+    <p>Os formatos de áudio também desempenham um papel crucial na multimídia. O MP3 se destaca como o formato preferido para música gravada.</p>
+    <div class="example media-container">
+        <h4>Exemplo de Áudio MP3:</h4>
+        <audio controls>
+            <source src="audio_exemplo.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+
+    <h2>Considerações Finais</h2>
+    <p>Em resumo, a multimídia na web é uma área rica e diversificada que permite a criação de experiências envolventes através do uso de vários formatos de áudio e vídeo. A compatibilidade e o suporte dos navegadores a diferentes tipos de arquivos são fatores fundamentais a serem considerados ao incorporar elementos multimídia em uma página da web.</p>
+</body>
+</html>
