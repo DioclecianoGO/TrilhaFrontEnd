@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao SVG (Scalable Vector Graphics)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        svg {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Introdução ao SVG (Scalable Vector Graphics)</h1>
+
+    <p>O SVG, que significa Scalable Vector Graphics, é um formato de imagem amplamente utilizado para a representação de gráficos vetoriais na web. Ao contrário de gráficos rasterizados, que são compostos por pixels e podem perder qualidade ao serem ampliados, os gráficos SVG são baseados em vetores. Isso permite que eles sejam redimensionados para qualquer dimensão sem comprometer a clareza ou a definição, o que os torna extremamente úteis para design responsivo e para aplicações que exigem imagens de alta qualidade.</p>
+
+    <h2>Características do SVG</h2>
+    <p>Uma das características marcantes do SVG é que ele é definido em XML, o que significa que todos os elementos que compõem a imagem são armazenados como texto. Essa estrutura não apenas permite que os gráficos sejam facilmente manipulados e editados, mas também possibilita sua integração com outras tecnologias da web, como CSS e JavaScript. Por ser uma recomendação do W3C, o SVG é suportado pela maioria dos navegadores modernos.</p>
+
+    <h2>Elemento &lt;svg&gt;</h2>
+    <p>O elemento HTML <code>&lt;svg&gt;</code> atua como um contêiner para os gráficos vetoriais. Dentro deste elemento, é possível desenhar uma gama diversificada de formas e gráficos utilizando uma sintaxe simples e acessível. Através da definição de atributos como cor de preenchimento, borda e opacidade, os desenvolvedores podem criar visuais complexos que se adaptam a diferentes contextos e necessidades de design.</p>
+
+    <h3>Exemplo de SVG - Círculo</h3>
+    <pre><code>&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /&gt;
+&lt;/svg&gt;</code></pre>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+
+    <h3>Exemplo de SVG - Retângulo</h3>
+    <pre><code>&lt;svg width="400" height="120"&gt;
+  &lt;rect x="10" y="10" width="200" height="100" stroke="red" stroke-width="6" fill="blue" /&gt;
+&lt;/svg&gt;</code></pre>
+    <svg width="400" height="120">
+        <rect x="10" y="10" width="200" height="100" stroke="red" stroke-width="6" fill="blue" />
+    </svg>
+
+    <h3>Exemplo de SVG - Estrela</h3>
+    <pre><code>&lt;svg width="300" height="200"&gt;
+  &lt;polygon points="100,10 40,198 190,78 10,78 160,198" 
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" /&gt;
+&lt;/svg&gt;</code></pre>
+    <svg width="300" height="200">
+        <polygon points="100,10 40,198 190,78 10,78 160,198" 
+                 style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+    </svg>
+
+    <h2>Comparação entre SVG e Canvas</h2>
+    <p>Ao se considerar SVG e Canvas, é fundamental entender que eles atendem a diferentes necessidades e propósitos no desenvolvimento web. O SVG é uma linguagem projetada para descrever gráficos bidimensionais em um formato que preserva a qualidade independente da resolução. Isso se opõe ao Canvas, que é mais voltado para a renderização dinâmica de gráficos. Enquanto o SVG permite que cada forma seja acessada e modificada como um objeto, o Canvas desenha gráficos pixel a pixel.</p>
+
+    <h3>Principais Diferenças</h3>
+    <ul>
+        <li>O SVG é independente de resolução, enquanto o Canvas é dependente de resolução.</li>
+        <li>O SVG possui suporte para manipuladores de eventos; o Canvas não tem.</li>
+        <li>O SVG tem melhores capacidades de renderização de texto em comparação com o Canvas.</li>
+        <li>O Canvas é mais adequado para aplicações gráficas intensivas, como jogos, devido à sua eficiência em renderização.</li>
+    </ul>
+
+    <h2>Conclusão</h2>
+    <p>Em suma, o SVG se revela uma ferramenta poderosa e versátil para a criação de gráficos vetoriais na web. Sua capacidade de manter qualidade em qualquer escala, aliada à possibilidade de animações e interações, faz dele uma escolha atrativa para designers e desenvolvedores. Por outro lado, o Canvas, com seu foco em renderização rápida e eficiente, se torna ideal para aplicações que demandam gráficos dinâmicos e que podem se beneficiar de uma abordagem mais performance-oriented.</p>
+    
+</body>
+</html>
