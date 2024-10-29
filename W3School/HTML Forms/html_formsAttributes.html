@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Atributos de Formulário em HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 1em;
+            color: #333;
+        }
+        form {
+            margin-top: 10px;
+        }
+        label, input {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="submit"] {
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 5px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exemplos de Atributos de Formulário em HTML</h1>
+
+    <!-- Atributo Action -->
+    <div class="section">
+        <h2>Atributo Action</h2>
+        <p>O atributo <code>action</code> define o destino dos dados quando o formulário é submetido. Geralmente, é o caminho de um arquivo que processa os dados no servidor.</p>
+        <p><strong>Exemplo de uso:</strong> Neste exemplo, os dados serão enviados para <code>action_page.php</code>:</p>
+        <code>
+            &lt;form action="/action_page.php"&gt;<br>
+            &nbsp;&nbsp;&lt;label for="fname"&gt;Nome:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&lt;input type="text" id="fname" name="fname"&gt;<br>
+            &nbsp;&nbsp;&lt;input type="submit" value="Enviar"&gt;<br>
+            &lt;/form&gt;
+        </code>
+        <form action="/action_page.php">
+            <label for="fname">Nome:</label>
+            <input type="text" id="fname" name="fname">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <!-- Atributo Target -->
+    <div class="section">
+        <h2>Atributo Target</h2>
+        <p>O atributo <code>target</code> especifica onde a resposta será exibida após o envio do formulário.</p>
+        <p>Principais valores:</p>
+        <ul>
+            <li><code>_blank</code>: abre a resposta em uma nova aba ou janela.</li>
+            <li><code>_self</code>: abre a resposta na mesma janela (padrão).</li>
+        </ul>
+        <p><strong>Exemplo de uso:</strong> Neste exemplo, a resposta abre em uma nova aba:</p>
+        <code>
+            &lt;form action="/action_page.php" target="_blank"&gt;<br>
+            &nbsp;&nbsp;&lt;label for="lname"&gt;Sobrenome:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&lt;input type="text" id="lname" name="lname"&gt;<br>
+            &nbsp;&nbsp;&lt;input type="submit" value="Enviar"&gt;<br>
+            &lt;/form&gt;
+        </code>
+        <form action="/action_page.php" target="_blank">
+            <label for="lname">Sobrenome:</label>
+            <input type="text" id="lname" name="lname">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <!-- Atributo Method -->
+    <div class="section">
+        <h2>Atributo Method</h2>
+        <p>O atributo <code>method</code> define o método HTTP para o envio dos dados, podendo ser <code>get</code> ou <code>post</code>.</p>
+        <p><strong>GET:</strong> Envia dados anexados à URL. Não deve ser usado para informações sensíveis.</p>
+        <p><strong>POST:</strong> Envia dados no corpo da requisição, recomendado para dados confidenciais.</p>
+        <p><strong>Exemplo de uso:</strong> Envio usando o método POST:</p>
+        <code>
+            &lt;form action="/action_page.php" method="post"&gt;<br>
+            &nbsp;&nbsp;&lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&lt;input type="text" id="email" name="email"&gt;<br>
+            &nbsp;&nbsp;&lt;input type="submit" value="Enviar"&gt;<br>
+            &lt;/form&gt;
+        </code>
+        <form action="/action_page.php" method="post">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <!-- Atributo Autocomplete -->
+    <div class="section">
+        <h2>Atributo Autocomplete</h2>
+        <p>O atributo <code>autocomplete</code> especifica se o navegador deve sugerir preenchimentos automáticos para campos do formulário.</p>
+        <p><strong>Exemplo de uso:</strong> O formulário abaixo possui preenchimento automático ativado:</p>
+        <code>
+            &lt;form action="/action_page.php" autocomplete="on"&gt;<br>
+            &nbsp;&nbsp;&lt;label for="username"&gt;Usuário:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&lt;input type="text" id="username" name="username"&gt;<br>
+            &nbsp;&nbsp;&lt;input type="submit" value="Enviar"&gt;<br>
+            &lt;/form&gt;
+        </code>
+        <form action="/action_page.php" autocomplete="on">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <!-- Atributo Novalidate -->
+    <div class="section">
+        <h2>Atributo Novalidate</h2>
+        <p>O atributo <code>novalidate</code> desativa a validação do navegador ao enviar o formulário.</p>
+        <p><strong>Exemplo de uso:</strong> O formulário abaixo não será validado ao enviar:</p>
+        <code>
+            &lt;form action="/action_page.php" novalidate&gt;<br>
+            &nbsp;&nbsp;&lt;label for="phone"&gt;Telefone:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&lt;input type="text" id="phone" name="phone" required&gt;<br>
+            &nbsp;&nbsp;&lt;input type="submit" value="Enviar"&gt;<br>
+            &lt;/form&gt;
+        </code>
+        <form action="/action_page.php" novalidate>
+            <label for="phone">Telefone:</label>
+            <input type="text" id="phone" name="phone" required>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+</body>
+</html>
