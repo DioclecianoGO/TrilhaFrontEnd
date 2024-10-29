@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de Formulário HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        .attribute {
+            margin-bottom: 20px;
+        }
+        .attribute p {
+            margin: 0 0 10px;
+            color: #555;
+        }
+        .code-example {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        .form-example {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="submit"], input[type="email"] {
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 1em;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Atributos de Formulário HTML</h1>
+    
+    <div class="attribute">
+        <h2>form</h2>
+        <p>O atributo <code>form</code> especifica a qual formulário o elemento <code>&lt;input&gt;</code> pertence, correspondendo ao <code>id</code> de um formulário <code>&lt;form&gt;</code> existente.</p>
+        <div class="code-example">
+            <code>
+                &lt;form id="form1"&gt;<br>
+                &nbsp;&nbsp;&lt;input type="text" name="nome"&gt;<br>
+                &lt;/form&gt;<br>
+                &lt;input type="text" name="sobrenome" form="form1"&gt;
+            </code>
+        </div>
+    </div>
+
+    <div class="attribute">
+        <h2>formaction</h2>
+        <p>O atributo <code>formaction</code> define a URL para onde os dados do formulário serão enviados, sobrescrevendo o atributo <code>action</code> do <code>&lt;form&gt;</code>.</p>
+        <div class="code-example">
+            <code>
+                &lt;form action="/acao_padrao.php"&gt;<br>
+                &nbsp;&nbsp;&lt;input type="submit" value="Enviar"&gt;<br>
+                &nbsp;&nbsp;&lt;input type="submit" formaction="/outra_acao.php" value="Enviar para outra ação"&gt;<br>
+                &lt;/form&gt;
+            </code>
+        </div>
+    </div>
+
+    <div class="attribute">
+        <h2>formenctype</h2>
+        <p>O atributo <code>formenctype</code> define o tipo de codificação dos dados do formulário ao serem enviados. Aplica-se somente ao método <code>post</code>.</p>
+        <div class="code-example">
+            <code>
+                &lt;form action="/upload" method="post"&gt;<br>
+                &nbsp;&nbsp;&lt;input type="submit" formenctype="multipart/form-data" value="Enviar como multipart"&gt;<br>
+                &lt;/form&gt;
+            </code>
+        </div>
+    </div>
+
+    <div class="attribute">
+        <h2>formmethod</h2>
+        <p>O atributo <code>formmethod</code> define o método HTTP para enviar os dados do formulário, podendo ser <code>GET</code> ou <code>POST</code>.</p>
+        <div class="code-example">
+            <code>
+                &lt;form action="/enviar" method="get"&gt;<br>
+                &nbsp;&nbsp;&lt;input type="submit" formmethod="post" value="Enviar como POST"&gt;<br>
+                &lt;/form&gt;
+            </code>
+        </div>
+    </div>
+
+    <div class="attribute">
+        <h2>formtarget</h2>
+        <p>O atributo <code>formtarget</code> especifica onde a resposta do formulário será exibida, como em uma nova aba ou janela.</p>
+        <div class="code-example">
+            <code>
+                &lt;form action="/resultado"&gt;<br>
+                &nbsp;&nbsp;&lt;input type="submit" formtarget="_blank" value="Abrir em nova aba"&gt;<br>
+                &lt;/form&gt;
+            </code>
+        </div>
+    </div>
+
+    <div class="attribute">
+        <h2>formnovalidate</h2>
+        <p>O atributo <code>formnovalidate</code> indica que o formulário não deve ser validado ao ser submetido.</p>
+        <div class="code-example">
+            <code>
+                &lt;form action="/envio"&gt;<br>
+                &nbsp;&nbsp;&lt;input type="email" required&gt;<br>
+                &nbsp;&nbsp;&lt;input type="submit" formnovalidate value="Enviar sem validação"&gt;<br>
+                &lt;/form&gt;
+            </code>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
