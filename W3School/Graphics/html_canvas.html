@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Canvas Graphics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .canvas-container {
+            margin-bottom: 40px;
+        }
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<h1>HTML Canvas Graphics</h1>
+
+<p>O elemento HTML <code>&lt;canvas&gt;</code> é uma ferramenta essencial para a criação de gráficos dinâmicos e interativos em páginas da web. Ele fornece uma área retangular onde os desenvolvedores podem desenhar elementos gráficos utilizando JavaScript.</p>
+
+<div class="canvas-container">
+    <h2>Exemplo Básico de Canvas</h2>
+    <p>O <code>&lt;canvas&gt;</code> em si serve apenas como um contêiner vazio; para que o desenho ocorra, é necessário invocar métodos específicos da linguagem de programação. Abaixo está um exemplo de um canvas básico:</p>
+    <canvas id="basicCanvas" width="300" height="150"></canvas>
+    <script>
+        var basicCanvas = document.getElementById("basicCanvas");
+        var ctx = basicCanvas.getContext("2d");
+        ctx.fillStyle = "lightgray"; // Cor de fundo
+        ctx.fillRect(0, 0, 300, 150); // Preencher o canvas com uma cor
+    </script>
+</div>
+
+<div class="canvas-container">
+    <h2>Desenhando Formas</h2>
+    <p>Os desenvolvedores podem desenhar linhas, retângulos e círculos utilizando métodos de desenho do contexto 2D. Veja como isso funciona:</p>
+    <canvas id="shapesCanvas" width="300" height="150"></canvas>
+    <script>
+        var shapesCanvas = document.getElementById("shapesCanvas");
+        var ctx = shapesCanvas.getContext("2d");
+
+        // Desenhar um retângulo vermelho
+        ctx.fillStyle = "red";
+        ctx.fillRect(10, 10, 100, 50);
+
+        // Desenhar um círculo azul
+        ctx.fillStyle = "blue";
+        ctx.beginPath();
+        ctx.arc(200, 40, 30, 0, Math.PI * 2);
+        ctx.fill();
+    </script>
+</div>
+
+<div class="canvas-container">
+    <h2>Desenhando Texto</h2>
+    <p>O <code>&lt;canvas&gt;</code> permite a inserção de texto estilizado:</p>
+    <canvas id="textCanvas" width="300" height="150"></canvas>
+    <script>
+        var textCanvas = document.getElementById("textCanvas");
+        var ctx = textCanvas.getContext("2d");
+
+        // Configurações do texto
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "black";
+        ctx.fillText("Texto no Canvas", 10, 50); // Texto preenchido
+        ctx.strokeText("Texto Contornado", 10, 100); // Texto contornado
+    </script>
+</div>
+
+<div class="canvas-container">
+    <h2>Gradientes</h2>
+    <p>O <code>&lt;canvas&gt;</code> também permite a criação de gradientes de cor:</p>
+    <canvas id="gradientCanvas" width="300" height="150"></canvas>
+    <script>
+        var gradientCanvas = document.getElementById("gradientCanvas");
+        var ctx = gradientCanvas.getContext("2d");
+
+        // Criar um gradiente linear
+        var grd = ctx.createLinearGradient(0, 0, 300, 0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "yellow");
+
+        // Preencher um retângulo com o gradiente
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, 300, 150);
+    </script>
+</div>
+
+<div class="canvas-container">
+    <h2>Desenhando Imagens</h2>
+    <p>Além de formas e texto, é possível desenhar imagens dentro do canvas. Abaixo está um exemplo:</p>
+    <canvas id="imageCanvas" width="300" height="150"></canvas>
+    <script>
+        var imageCanvas = document.getElementById("imageCanvas");
+        var ctx = imageCanvas.getContext("2d");
+        var img = new Image(); // Criar uma nova imagem
+        img.onload = function() {
+            ctx.drawImage(img, 10, 10, 100, 100); // Desenhar a imagem quando carregada
+        }
+        img.src = 'https://via.placeholder.com/100'; // URL da imagem
+    </script>
+</div>
+
+</body>
+</html>
