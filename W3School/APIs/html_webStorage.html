@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Web Storage API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .example-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+        }
+        .result {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Web Storage API</h1>
+    <p>A HTML Web Storage API permite que aplicações web armazenem dados localmente no navegador do usuário. Diferente dos cookies, esses dados não são transferidos ao servidor, tornando o armazenamento mais seguro e eficiente.</p>
+
+    <!-- Introduction Section -->
+    <div class="section">
+        <h2>O que é o Web Storage?</h2>
+        <p>
+            A Web Storage API permite o armazenamento de dados locais no navegador do usuário, evitando a necessidade de cookies. Com um limite maior de espaço (pelo menos 5MB), é possível armazenar grandes quantidades de dados de forma segura. Esse armazenamento é restrito à origem, ou seja, cada domínio tem acesso apenas aos seus próprios dados.
+        </p>
+    </div>
+
+    <!-- Browser Support Section -->
+    <div class="section">
+        <h2>Suporte dos Navegadores</h2>
+        <p>
+            A Web Storage API é amplamente suportada por navegadores modernos. Para garantir que o navegador do usuário suporte `localStorage` e `sessionStorage`, pode-se usar uma verificação de compatibilidade:
+        </p>
+        <div class="example-box">
+            <pre>
+if (typeof(Storage) !== "undefined") {
+    // Código para localStorage/sessionStorage.
+} else {
+    // Sem suporte ao Web Storage.
+}
+            </pre>
+        </div>
+    </div>
+
+    <!-- Local Storage Section -->
+    <div class="section">
+        <h2>O Objeto <code>localStorage</code></h2>
+        <p>
+            O objeto `localStorage` permite armazenar dados sem data de expiração, o que significa que esses dados permanecem no navegador mesmo após o navegador ser fechado.
+        </p>
+        <div class="example-box">
+            <pre>
+// Armazenar um par nome/valor
+localStorage.setItem("lastname", "Smith");
+
+// Recuperar o valor de "lastname"
+document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+
+// Remover um item do localStorage
+localStorage.removeItem("lastname");
+            </pre>
+        </div>
+        <div class="result" id="result">Resultado exibido aqui</div>
+    </div>
+
+    <!-- Click Count Example -->
+    <div class="section">
+        <h2>Exemplo: Contagem de Cliques com <code>localStorage</code></h2>
+        <p>
+            Este exemplo utiliza o `localStorage` para contar quantas vezes o botão foi clicado. A contagem permanece salva, mesmo se a página for atualizada ou o navegador fechado.
+        </p>
+        <button onclick="incrementLocalStorageCount()">Clique aqui</button>
+        <div class="result" id="localStorageClickCountResult">Clique no botão para iniciar a contagem.</div>
+
+        <script>
+            // Função para incrementar a contagem no localStorage
+            function incrementLocalStorageCount() {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+                document.getElementById("localStorageClickCountResult").innerHTML =
+                    "Você clicou no botão " + localStorage.clickcount + " vez(es).";
+            }
+            // Exibir o valor armazenado na página ao carregar
+            document.getElementById("localStorageClickCountResult").innerHTML =
+                localStorage.clickcount ? "Você clicou no botão " + localStorage.clickcount + " vez(es)." :
+                "Clique no botão para iniciar a contagem.";
+        </script>
+    </div>
+
+    <!-- Session Storage Section -->
+    <div class="section">
+        <h2>O Objeto <code>sessionStorage</code></h2>
+        <p>
+            O `sessionStorage` armazena dados para a sessão atual do navegador, sendo apagados assim que a aba do navegador é fechada. Essa característica o torna ideal para informações temporárias.
+        </p>
+        <div class="example-box">
+            <pre>
+// Incrementar a contagem com sessionStorage
+if (sessionStorage.clickcount) {
+    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+} else {
+    sessionStorage.clickcount = 1;
+}
+document.getElementById("result").innerHTML =
+    "Você clicou no botão " + sessionStorage.clickcount + " vez(es) nesta sessão.";
+            </pre>
+        </div>
+    </div>
+
+    <!-- Click Count Example with sessionStorage -->
+    <div class="section">
+        <h2>Exemplo: Contagem de Cliques com <code>sessionStorage</code></h2>
+        <p>
+            A contagem de cliques neste exemplo é reiniciada quando a aba do navegador é fechada, já que os dados são armazenados apenas para a sessão atual.
+        </p>
+        <button onclick="incrementSessionStorageCount()">Clique aqui</button>
+        <div class="result" id="sessionStorageClickCountResult">Clique no botão para iniciar a contagem.</div>
+
+        <script>
+            // Função para incrementar a contagem no sessionStorage
+            function incrementSessionStorageCount() {
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("sessionStorageClickCountResult").innerHTML =
+                    "Você clicou no botão " + sessionStorage.clickcount + " vez(es) nesta sessão.";
+            }
+            // Exibir o valor armazenado na página ao carregar
+            document.getElementById("sessionStorageClickCountResult").innerHTML =
+                sessionStorage.clickcount ? "Você clicou no botão " + sessionStorage.clickcount + " vez(es) nesta sessão." :
+                "Clique no botão para iniciar a contagem.";
+        </script>
+    </div>
+
+</body>
+</html>
