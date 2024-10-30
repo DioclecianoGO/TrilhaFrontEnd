@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Audio Example</title>
+</head>
+<body>
+
+    <h1>HTML Audio Element</h1>
+    
+    <!-- Explicação do uso básico do elemento de áudio -->
+    <section>
+        <h2>Uso Básico do Elemento <code>&lt;audio&gt;</code></h2>
+        <p>O elemento <code>&lt;audio&gt;</code> permite a reprodução de arquivos de áudio em uma página web, como mostrado no exemplo a seguir:</p>
+        
+        <audio controls>
+            <source src="audio_sample.mp3" type="audio/mpeg">
+            <source src="audio_sample.ogg" type="audio/ogg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        
+        <p>O exemplo acima utiliza o atributo <code>controls</code>, que exibe controles de reprodução como play, pause e volume para o usuário.</p>
+    </section>
+    
+    <!-- Explicação sobre o uso de múltiplos formatos de áudio -->
+    <section>
+        <h2>Múltiplos Formatos de Áudio com o Elemento <code>&lt;source&gt;</code></h2>
+        <p>Para aumentar a compatibilidade entre navegadores, o elemento <code>&lt;audio&gt;</code> pode incluir múltiplas fontes de áudio usando o elemento <code>&lt;source&gt;</code>. O navegador escolhe o primeiro formato compatível listado:</p>
+        
+        <audio controls>
+            <source src="audio_sample.mp3" type="audio/mpeg">
+            <source src="audio_sample.ogg" type="audio/ogg">
+            <source src="audio_sample.wav" type="audio/wav">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        
+        <p>Aqui, três formatos diferentes foram especificados: MP3, OGG e WAV, cada um com seu respectivo tipo MIME.</p>
+    </section>
+    
+    <!-- Explicação sobre o atributo autoplay e muted -->
+    <section>
+        <h2>Atributos <code>autoplay</code> e <code>muted</code> no Elemento <code>&lt;audio&gt;</code></h2>
+        <p>O atributo <code>autoplay</code> permite iniciar automaticamente a reprodução do áudio ao carregar a página. No entanto, navegadores como os baseados em Chromium permitem o autoplay somente se o áudio estiver silenciado, o que pode ser feito com o atributo <code>muted</code>:</p>
+        
+        <audio controls autoplay muted>
+            <source src="audio_sample.mp3" type="audio/mpeg">
+            <source src="audio_sample.ogg" type="audio/ogg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        
+        <p>No exemplo acima, o áudio é iniciado automaticamente, mas com o volume silenciado devido ao atributo <code>muted</code>.</p>
+    </section>
+    
+    <!-- Tabela de formatos de áudio e compatibilidade de navegador -->
+    <section>
+        <h2>Formatos de Áudio e Compatibilidade com Navegadores</h2>
+        <p>Os navegadores suportam três formatos de áudio principais: MP3, WAV e OGG. Abaixo está uma tabela de compatibilidade para os navegadores mais comuns:</p>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Navegador</th>
+                    <th>MP3</th>
+                    <th>WAV</th>
+                    <th>OGG</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Edge/IE</td>
+                    <td>Sim</td>
+                    <td>Sim*</td>
+                    <td>Sim*</td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>Sim</td>
+                    <td>Sim</td>
+                    <td>Sim</td>
+                </tr>
+                <tr>
+                    <td>Firefox</td>
+                    <td>Sim</td>
+                    <td>Sim</td>
+                    <td>Sim</td>
+                </tr>
+                <tr>
+                    <td>Safari</td>
+                    <td>Sim</td>
+                    <td>Sim</td>
+                    <td>Não</td>
+                </tr>
+                <tr>
+                    <td>Opera</td>
+                    <td>Sim</td>
+                    <td>Sim</td>
+                    <td>Sim</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>*Compatível a partir da versão Edge 79.</p>
+    </section>
+
+    <!-- Explicação sobre métodos e eventos do DOM para o elemento de áudio -->
+    <section>
+        <h2>Métodos e Eventos do DOM para o Elemento <code>&lt;audio&gt;</code></h2>
+        <p>O DOM HTML oferece métodos e eventos para controlar a reprodução do elemento <code>&lt;audio&gt;</code>, como carregar, iniciar e pausar o áudio. Também permite definir a duração e o volume da reprodução:</p>
+        
+        <ul>
+            <li><code>audio.play()</code>: Inicia a reprodução do áudio.</li>
+            <li><code>audio.pause()</code>: Pausa a reprodução do áudio.</li>
+            <li><code>audio.volume</code>: Ajusta o volume da reprodução.</li>
+            <li>Eventos como <code>play</code> e <code>pause</code> permitem detectar quando a reprodução é iniciada ou pausada.</li>
+        </ul>
+    </section>
+
+</body>
+</html>
