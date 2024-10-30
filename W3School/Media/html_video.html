@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Video Example</title>
+</head>
+<body>
+
+  <h1>Usando o Elemento de Vídeo no HTML</h1>
+  
+  <section>
+    <h2>Introdução ao Elemento &lt;video&gt;</h2>
+    <p>
+      O elemento <code>&lt;video&gt;</code> permite a incorporação de vídeos diretamente em páginas web. Com ele, é possível exibir vídeos com controles personalizados para o usuário, como play, pause e ajuste de volume, através do atributo <code>controls</code>.
+    </p>
+    
+    <h3>Sintaxe do Elemento &lt;video&gt;</h3>
+    <pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.ogg" type="video/ogg"&gt;
+  Seu navegador não suporta o elemento de vídeo.
+&lt;/video&gt;</code></pre>
+    
+    <p>Essa estrutura permite que o navegador escolha o primeiro formato de vídeo suportado entre as opções definidas com a tag <code>&lt;source&gt;</code>.</p>
+  </section>
+
+  <section>
+    <h2>Exemplo de Vídeo com Controles</h2>
+    <video width="320" height="240" controls>
+      <source src="movie.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <p>O vídeo acima possui os atributos <code>width</code>, <code>height</code> e <code>controls</code> para configuração de tamanho e controles de reprodução.</p>
+  </section>
+
+  <section>
+    <h2>Reprodução Automática e Silenciamento</h2>
+    <p>
+      Para iniciar o vídeo automaticamente, use o atributo <code>autoplay</code>. No entanto, navegadores modernos permitem autoplay somente em vídeos sem som, o que pode ser resolvido adicionando o atributo <code>muted</code> junto ao <code>autoplay</code>.
+    </p>
+    
+    <h3>Exemplo de Vídeo com Autoplay e Muted</h3>
+    <video width="320" height="240" autoplay muted>
+      <source src="movie.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <p>O vídeo acima inicia automaticamente e está silenciado.</p>
+  </section>
+
+  <section>
+    <h2>Formatos de Vídeo Suportados</h2>
+    <p>Os formatos de vídeo compatíveis com HTML são:</p>
+    <ul>
+      <li><strong>MP4</strong> (<code>video/mp4</code>) - Suportado por todos os navegadores e recomendado para uso geral.</li>
+      <li><strong>WebM</strong> (<code>video/webm</code>) - Formato eficiente para navegadores modernos.</li>
+      <li><strong>Ogg</strong> (<code>video/ogg</code>) - Suportado por vários navegadores, mas não pelo Safari.</li>
+    </ul>
+    <p>Esses formatos podem ser utilizados dentro da tag <code>&lt;video&gt;</code> com o elemento <code>&lt;source&gt;</code> para que o navegador selecione o primeiro formato disponível.</p>
+  </section>
+
+  <section>
+    <h2>Manipulação de Vídeo com o DOM HTML</h2>
+    <p>O DOM HTML permite controlar vídeos com métodos, propriedades e eventos. Por exemplo, é possível iniciar ou pausar o vídeo programaticamente, ajustar o volume e monitorar eventos como o início e a pausa do vídeo.</p>
+
+    <h3>Exemplo de Manipulação DOM</h3>
+    <button onclick="playVideo()">Play</button>
+    <button onclick="pauseVideo()">Pause</button>
+    <button onclick="stopVideo()">Stop</button>
+
+    <video id="sampleVideo" width="320" height="240" controls>
+      <source src="movie.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <script>
+      const video = document.getElementById('sampleVideo');
+
+      function playVideo() {
+        video.play();
+      }
+
+      function pauseVideo() {
+        video.pause();
+      }
+
+      function stopVideo() {
+        video.pause();
+        video.currentTime = 0; // Reseta o vídeo ao início
+      }
+    </script>
+
+    <p>Com os botões acima, você pode iniciar, pausar e parar o vídeo usando métodos DOM.</p>
+  </section>
+
+</body>
+</html>
