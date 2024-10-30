@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Geolocation API Example</title>
+</head>
+<body>
+
+  <h1>Geolocalização com HTML</h1>
+  <p>A API de Geolocalização permite localizar a posição geográfica do usuário com sua permissão.</p>
+
+  <section>
+    <h2>Obtenha a Localização do Usuário</h2>
+    <p>Clique no botão abaixo para obter sua posição:</p>
+    <button onclick="getLocation()">Obter Localização</button>
+    <p id="locationDisplay">Aguardando permissão para obter a localização...</p>
+
+    <script>
+      const locationDisplay = document.getElementById("locationDisplay");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          locationDisplay.innerHTML = "Geolocalização não é suportada pelo seu navegador.";
+        }
+      }
+
+      function showPosition(position) {
+        locationDisplay.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}<br>Precisão: ${position.coords.accuracy} metros`;
+      }
+
+      function showError(error) {
+        switch(error.code) {
+          case error.PERMISSION_DENIED:
+            locationDisplay.innerHTML = "Usuário negou a solicitação de geolocalização.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            locationDisplay.innerHTML = "Informações de localização indisponíveis.";
+            break;
+          case error.TIMEOUT:
+            locationDisplay.innerHTML = "A solicitação para obter a localização expirou.";
+            break;
+          case error.UNKNOWN_ERROR:
+            locationDisplay.innerHTML = "Ocorreu um erro desconhecido.";
+            break;
+        }
+      }
+    </script>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Monitoramento Contínuo da Posição</h2>
+    <p>Este exemplo usa <code>watchPosition()</code> para acompanhar a posição do usuário em tempo real:</p>
+    <button onclick="startWatching()">Iniciar Monitoramento</button>
+    <button onclick="stopWatching()">Parar Monitoramento</button>
+    <p id="watchDisplay">Aguardando início do monitoramento...</p>
+
+    <script>
+      let watchID;
+
+      function startWatching() {
+        if (navigator.geolocation) {
+          watchID = navigator.geolocation.watchPosition(showWatchPosition, showError);
+        } else {
+          document.getElementById("watchDisplay").innerHTML = "Geolocalização não é suportada pelo navegador.";
+        }
+      }
+
+      function showWatchPosition(position) {
+        document.getElementById("watchDisplay").innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
+      }
+
+      function stopWatching() {
+        if (watchID) {
+          navigator.geolocation.clearWatch(watchID);
+          document.getElementById("watchDisplay").innerHTML = "Monitoramento de localização interrompido.";
+        }
+      }
+    </script>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Notas de Segurança</h2>
+    <p>A API de Geolocalização funciona apenas em contextos seguros (HTTPS) em navegadores modernos. Verifique se a página está em um ambiente seguro ao implementar geolocalização.</p>
+  </section>
+
+</body>
+</html>
