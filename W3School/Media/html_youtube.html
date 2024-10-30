@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Integration</title>
+</head>
+<body>
+    <h1>Integrando Vídeos do YouTube em HTML</h1>
+
+    <section>
+        <h2>Incorporando um Vídeo do YouTube</h2>
+        <p>
+            Para exibir um vídeo do YouTube em uma página HTML, utilize a tag <code>&lt;iframe&gt;</code>.
+            Defina o atributo <code>src</code> com a URL do vídeo e ajuste as dimensões
+            do player com os atributos <code>width</code> e <code>height</code>.
+        </p>
+        <p><strong>Exemplo de código básico:</strong></p>
+        <code>
+            &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"&gt;&lt;/iframe&gt;
+        </code>
+        <div>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        </div>
+    </section>
+
+    <section>
+        <h2>Autoplay e Modo Mudo</h2>
+        <p>
+            Para que o vídeo seja reproduzido automaticamente, adicione <code>autoplay=1</code> à URL.
+            No entanto, alguns navegadores só permitem autoplay quando o vídeo está sem som. Use <code>mute=1</code>
+            para iniciar o vídeo automaticamente em modo mudo.
+        </p>
+        <p><strong>Exemplo de código com autoplay e mudo:</strong></p>
+        <code>
+            &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"&gt;&lt;/iframe&gt;
+        </code>
+        <div>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
+        </div>
+    </section>
+
+    <section>
+        <h2>Configuração de Playlist e Loop</h2>
+        <p>
+            Para configurar uma playlist, use uma lista de IDs separados por vírgula após <code>playlist=</code>.
+            Adicione <code>loop=1</code> para que o vídeo se repita continuamente.
+        </p>
+        <p><strong>Exemplo de código com loop e playlist:</strong></p>
+        <code>
+            &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"&gt;&lt;/iframe&gt;
+        </code>
+        <div>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"></iframe>
+        </div>
+    </section>
+
+    <section>
+        <h2>Controle de Exibição</h2>
+        <p>
+            Você pode escolher se os controles de reprodução do vídeo serão exibidos. Use <code>controls=0</code> para ocultar
+            os controles, enquanto <code>controls=1</code> (padrão) os exibe.
+        </p>
+        <p><strong>Exemplo de código sem controles:</strong></p>
+        <code>
+            &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"&gt;&lt;/iframe&gt;
+        </code>
+        <div>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"></iframe>
+        </div>
+    </section>
+
+</body>
+</html>
