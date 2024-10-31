@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Web Workers API - Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .output {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>HTML Web Workers API</h1>
+  <p>Os Web Workers permitem executar JavaScript em segundo plano, independentemente de outros scripts, sem afetar a responsividade da página. Eles são úteis para tarefas que exigem processamento intensivo, evitando que a página se torne não-responsiva durante a execução de scripts longos.</p>
+  
+  <h2>Verificando Suporte para Web Workers</h2>
+  <p>Antes de criar um Web Worker, é recomendável verificar se o navegador oferece suporte para essa funcionalidade.</p>
+  
+  <pre><code>
+if (typeof(Worker) !== "undefined") {
+  // Suporte disponível para Web Worker
+} else {
+  // Sem suporte para Web Worker
+}
+  </code></pre>
+
+  <h2>Exemplo de Web Worker</h2>
+  <p>Este exemplo cria um Web Worker simples que conta números em segundo plano e exibe o resultado abaixo:</p>
+  
+  <div class="output">
+    <p>Contador: <output id="result">0</output></p>
+    <button onclick="startWorker()">Iniciar Worker</button>
+    <button onclick="stopWorker()">Parar Worker</button>
+  </div>
+
+  <script>
+    var w;
+
+    function startWorker() {
+      if (typeof(Worker) !== "undefined") {
+        if (typeof(w) === "undefined") {
+          // Inicia o Web Worker com o arquivo "worker.js"
+          w = new Worker("worker.js");
+        }
+        // Evento para receber dados do Web Worker
+        w.onmessage = function(event) {
+          document.getElementById("result").textContent = event.data;
+        };
+      } else {
+        document.getElementById("result").textContent = "Desculpe, seu navegador não suporta Web Workers.";
+      }
+    }
+
+    function stopWorker() {
+      if (w) {
+        w.terminate(); // Termina o Web Worker
+        w = undefined;
+      }
+    }
+  </script>
+
+  <h2>Código do Web Worker</h2>
+  <p>O arquivo JavaScript "worker.js" contém o código do Web Worker, que incrementa um contador e usa <code>postMessage()</code> para enviar o valor de volta à página principal:</p>
+
+  <pre><code>
+// worker.js
+
+let i = 0;
+
+function timedCount() {
+  i++;
+  postMessage(i); // Envia o valor de "i" para a página principal
+  setTimeout(timedCount, 500); // Repete a cada 500ms
+}
+
+timedCount();
+  </code></pre>
+
+  <h2>Encerrando um Web Worker</h2>
+  <p>Para interromper a execução do Web Worker e liberar recursos do sistema, usamos o método <code>terminate()</code>, conforme feito no botão "Parar Worker".</p>
+  
+  <h2>Limitações do Web Worker</h2>
+  <p>Web Workers não têm acesso aos objetos <code>window</code>, <code>document</code> e <code>parent</code>, sendo isolados da manipulação direta do DOM da página.</p>
+</div>
+</body>
+</html>
