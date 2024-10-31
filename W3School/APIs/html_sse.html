@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Server-Sent Events (SSE)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            max-width: 400px;
+        }
+        .code-example {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            color: #333;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exemplo de Server-Sent Events (SSE)</h1>
+    <p>Este exemplo demonstra o uso de SSE para receber mensagens do servidor em tempo real.</p>
+
+    <section>
+        <h2>Descrição</h2>
+        <p>SSE permite que uma página web receba atualizações contínuas do servidor sem a necessidade de fazer novas requisições, o que é útil para dados em tempo real como notícias, resultados esportivos e atualizações financeiras.</p>
+    </section>
+
+    <section>
+        <h2>Exemplo de Uso com <code>EventSource</code></h2>
+        <p>Para implementar SSE, usamos o objeto <code>EventSource</code> que se conecta ao servidor e recebe atualizações automaticamente.</p>
+        
+        <div class="code-example">
+            <code>
+                var source = new EventSource("demo_sse.php");<br>
+                source.onmessage = function(event) {<br>
+                    &nbsp;&nbsp;document.getElementById("result").innerHTML += event.data + "&lt;br&gt;";<br>
+                };
+            </code>
+        </div>
+    </section>
+
+    <section>
+        <h2>Verificação de Suporte para Server-Sent Events</h2>
+        <p>É importante verificar o suporte do navegador para <code>EventSource</code>:</p>
+        
+        <div class="code-example">
+            <code>
+                if (typeof(EventSource) !== "undefined") {<br>
+                    &nbsp;&nbsp;console.log("SSE suportado!");<br>
+                } else {<br>
+                    &nbsp;&nbsp;console.log("SSE não é suportado neste navegador.");<br>
+                }
+            </code>
+        </div>
+    </section>
+
+    <section>
+        <h2>Interface Interativa</h2>
+        <button onclick="startSSE()">Iniciar SSE</button>
+        <button onclick="stopSSE()">Parar SSE</button>
+
+        <div id="result">As atualizações do servidor aparecerão aqui...</div>
+    </section>
+
+    <section>
+        <h2>Servidor Enviando Eventos</h2>
+        <p>No servidor, o cabeçalho <code>Content-Type: text/event-stream</code> é usado para enviar eventos, seguido do conteúdo que começa com <code>data:</code> para cada mensagem.</p>
+        
+        <h3>Exemplo em PHP (demo_sse.php)</h3>
+        <div class="code-example">
+            <code>
+                &lt;?php<br>
+                header('Content-Type: text/event-stream');<br>
+                header('Cache-Control: no-cache');<br><br>
+
+                $time = date('r');<br>
+                echo "data: A hora no servidor é: {$time}\n\n";<br>
+                flush();<br>
+                ?&gt;
+            </code>
+        </div>
+    </section>
+
+    <section>
+        <h2>Eventos do <code>EventSource</code></h2>
+        <p>O <code>EventSource</code> possui eventos úteis como:</p>
+        <ul>
+            <li><code>onopen</code>: disparado quando a conexão é aberta.</li>
+            <li><code>onmessage</code>: executado quando uma nova mensagem é recebida.</li>
+            <li><code>onerror</code>: ocorre quando há um erro na conexão.</li>
+        </ul>
+    </section>
+
+    <script>
+        let source;
+
+        function startSSE() {
+            if (typeof(EventSource) !== "undefined") {
+                if (!source) {
+                    source = new EventSource("demo_sse.php");
+                    source.onmessage = function(event) {
+                        document.getElementById("result").innerHTML += event.data + "<br>";
+                    };
+                    source.onerror = function() {
+                        document.getElementById("result").innerHTML += "Erro na conexão com SSE.<br>";
+                    };
+                    source.onopen = function() {
+                        document.getElementById("result").innerHTML += "Conexão com SSE aberta.<br>";
+                    };
+                }
+            } else {
+                document.getElementById("result").innerHTML = "SSE não é suportado neste navegador.";
+            }
+        }
+
+        function stopSSE() {
+            if (source) {
+                source.close();
+                document.getElementById("result").innerHTML += "Conexão com SSE fechada.<br>";
+                source = null;
+            }
+        }
+    </script>
+</body>
+</html>
