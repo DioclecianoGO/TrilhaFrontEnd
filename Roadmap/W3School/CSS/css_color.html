@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Trabalhando com Cores</title>
+    <style>
+        /* Estilos de Exemplo */
+
+        /* Cores Predefinidas */
+        .cor-predefinida { color: tomato; }
+
+        /* Cor de Fundo e de Texto */
+        .cor-texto { color: dodgerblue; }
+        .cor-fundo { background-color: lightgray; padding: 10px; }
+
+        /* Cor da Borda */
+        .cor-borda { border: 2px solid; border-color: tomato dodgerblue violet gray; padding: 10px; }
+
+        /* RGB e RGBA */
+        .cor-rgb { color: rgb(255, 0, 0); }
+        .cor-rgba { background-color: rgba(0, 128, 0, 0.5); padding: 10px; color: white; }
+
+        /* HEX */
+        .cor-hex { color: #ff5733; }
+        .cor-hex-abreviado { color: #0f0; }
+
+        /* HSL e HSLA */
+        .cor-hsl { color: hsl(240, 100%, 50%); }
+        .cor-hsla { background-color: hsla(120, 100%, 25%, 0.5); padding: 10px; color: white; }
+
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS: Trabalhando com Cores</h1>
+
+    <section>
+        <h2>Nomes de Cores Predefinidos</h2>
+        <p>O CSS oferece <b>140 nomes de cores predefinidos</b> que podem ser utilizados diretamente.</p>
+        <p class="cor-predefinida">Exemplo de cor predefinida: Tomato.</p>
+    </section>
+
+    <section>
+        <h2>Cores de Fundo e de Texto</h2>
+        <p>Podemos definir a cor do <b>fundo</b> com <code>background-color</code> e a cor do <b>texto</b> com <code>color</code>.</p>
+        <p class="cor-texto">Texto com cor "DodgerBlue".</p>
+        <div class="cor-fundo">
+            <p>Fundo com cor "LightGray".</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Cor das Bordas</h2>
+        <p>A cor das bordas pode ser definida com <code>border-color</code>, aplicando estilos diferentes em cada lado.</p>
+        <div class="cor-borda">
+            <p>Borda com cores diferentes: topo (Tomato), direita (DodgerBlue), inferior (Violet), esquerda (Gray).</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Valores RGB e RGBA</h2>
+        <p>O modelo RGB define a cor com valores de Vermelho, Verde e Azul. RGBA adiciona transparência ao permitir um valor de 0 a 1.</p>
+        <p class="cor-rgb">Texto com RGB: Vermelho puro (rgb(255, 0, 0)).</p>
+        <div class="cor-rgba">
+            <p>Fundo com RGBA: Verde semitransparente (rgba(0, 128, 0, 0.5)).</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Valores HEX</h2>
+        <p>A notação hexadecimal define cores com <code>#rrggbb</code> ou <code>#rgb</code> para cores abreviadas.</p>
+        <p class="cor-hex">Texto com HEX: Vermelho alaranjado (#ff5733).</p>
+        <p class="cor-hex-abreviado">Texto com HEX abreviado: Verde claro (#0f0).</p>
+    </section>
+
+    <section>
+        <h2>Valores HSL e HSLA</h2>
+        <p>O modelo HSL usa matiz, saturação e luminosidade para definir a cor. HSLA adiciona transparência com o canal Alpha.</p>
+        <p class="cor-hsl">Texto com HSL: Azul puro (hsl(240, 100%, 50%)).</p>
+        <div class="cor-hsla">
+            <p>Fundo com HSLA: Verde escuro semitransparente (hsla(120, 100%, 25%, 0.5)).</p>
+        </div>
+    </section>
+
+</body>
+</html>
