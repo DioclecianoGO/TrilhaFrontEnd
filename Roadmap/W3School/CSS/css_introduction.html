@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução ao CSS</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Arquivo externo de CSS -->
+  <style>
+    /* CSS interno */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    .center {
+      text-align: center;
+      color: red;
+    }
+    #intro-section {
+      background-color: #f0f8ff;
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+    .highlight {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Introdução ao CSS - Cascading Style Sheets</h1>
+    <p>Exemplo prático de estilos CSS aplicados em HTML.</p>
+  </header>
+
+  <section id="intro-section">
+    <h2>O que é o CSS?</h2>
+    <p>CSS (Cascading Style Sheets) é a linguagem utilizada para estilizar páginas da web. Ela controla a aparência dos documentos HTML, centralizando a definição de estilo em arquivos externos. Essa abordagem facilita a manutenção e evita a repetição de estilos em cada página individual.</p>
+  </section>
+
+  <section>
+    <h2>Por que usar CSS?</h2>
+    <p>CSS permite <span class="highlight">organização e consistência</span> ao estilizar sites. Um arquivo .css externo oferece uniformidade, permitindo que alterações feitas neste arquivo impactem todas as páginas que o referenciam. Ele também permite responsividade, adaptando o design para diferentes dispositivos e tamanhos de tela.</p>
+  </section>
+
+  <section>
+    <h2>Syntax</h2>
+    <p>Uma regra CSS é composta por um seletor e um bloco de declarações. O seletor indica o elemento HTML a ser estilizado, e o bloco de declarações define as propriedades CSS. Exemplo:</p>
+    <pre><code>p { color: red; text-align: center; }</code></pre>
+    <p class="center">Este parágrafo está centralizado e em vermelho, conforme a regra CSS acima.</p>
+  </section>
+
+  <section>
+    <h2>Selectors</h2>
+    <p>CSS oferece uma variedade de seletores para identificar e aplicar estilos a elementos HTML. Aqui estão alguns exemplos:</p>
+    <ul>
+      <li><strong>Seletor de elemento:</strong> aplica estilo a todos os elementos de um tipo específico, como <code>p</code>.</li>
+      <li><strong>Seletor de ID:</strong> estiliza um elemento único usando <code>#id</code>. Exemplo: <span id="unique-style">Estilo único</span>.</li>
+      <li><strong>Seletor de classe:</strong> estiliza elementos com uma classe específica, usando <code>.classe</code>. Exemplo: <span class="highlight">Texto com classe highlight</span>.</li>
+      <li><strong>Seletor universal:</strong> estiliza todos os elementos usando <code>*</code>.</li>
+      <li><strong>Seletor de agrupamento:</strong> aplica o mesmo estilo a vários elementos separados por vírgula.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Inserindo CSS</h2>
+    <p>Há três formas principais de adicionar CSS:</p>
+    <ul>
+      <li><strong>CSS Externo:</strong> Referenciado por meio de <code>&lt;link&gt;</code> em cada página. Veja <code>styles.css</code> neste exemplo.</li>
+      <li><strong>CSS Interno:</strong> Definido dentro da tag <code>&lt;style&gt;</code> no <code>&lt;head&gt;</code>. Exemplo nesta página.</li>
+      <li><strong>CSS Inline:</strong> Aplicado diretamente ao elemento HTML. Exemplo: <span style="color: green;">Texto com CSS inline em verde</span>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Comentários</h2>
+    <p>Comentários em CSS são adicionados com <code>/* comentário */</code> e ajudam na documentação do código.</p>
+    <pre><code>/* Este é um comentário em CSS */</code></pre>
+    <p>Em HTML, comentários são feitos assim: <code>&lt;!-- comentário --&gt;</code>.</p>
+  </section>
+
+</body>
+</html>
