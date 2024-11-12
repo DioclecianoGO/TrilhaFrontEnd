@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de Borda no CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #4a90e2;
+            margin: 20px 0;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        .box {
+            margin: 15px 0;
+            padding: 20px;
+            background-color: #f9f9fb;
+            color: #333;
+            text-align: center;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .box:hover {
+            background-color: #eef5fd;
+        }
+        .dotted { border: 2px dotted #333; }
+        .dashed { border: 2px dashed #333; }
+        .solid { border: 2px solid #333; }
+        .double { border: 4px double #333; }
+        .groove { border: 4px groove #333; }
+        .ridge { border: 4px ridge #333; }
+        .inset { border: 4px inset #333; }
+        .outset { border: 4px outset #333; }
+        .thick { border-width: 10px; border-style: solid; border-color: #ff5722; }
+        .color { border: 3px solid rgb(0, 128, 255); }
+        .radius { border: 2px solid #333; border-radius: 15px; }
+        .radius-diff { border: 2px solid #333; border-radius: 10px 20px 30px 40px; }
+        pre, code {
+            background-color: #f4f4f9;
+            padding: 5px;
+            color: #d6336c;
+            font-family: Consolas, monospace;
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedades de Borda no CSS</h1>
+
+    <section>
+        <h2>Estilo da Borda (border-style)</h2>
+        <p>Define o tipo de borda ao redor de um elemento. Abaixo estão exemplos de estilos diferentes:</p>
+        <div class="box dotted">Estilo: dotted</div>
+        <div class="box dashed">Estilo: dashed</div>
+        <div class="box solid">Estilo: solid</div>
+        <div class="box double">Estilo: double</div>
+        <div class="box groove">Estilo: groove</div>
+        <div class="box ridge">Estilo: ridge</div>
+        <div class="box inset">Estilo: inset</div>
+        <div class="box outset">Estilo: outset</div>
+    </section>
+
+    <section>
+        <h2>Largura da Borda (border-width)</h2>
+        <p>Define a espessura da borda. Abaixo, uma borda com espessura de 10px:</p>
+        <div class="box thick">Largura: 10px</div>
+    </section>
+
+    <section>
+        <h2>Cor da Borda (border-color)</h2>
+        <p>Define a cor da borda. Abaixo, uma borda com cor azul:</p>
+        <div class="box color">Cor: rgb(0, 128, 255)</div>
+    </section>
+
+    <section>
+        <h2>Bordas Individualizadas (border-top, border-right, border-bottom, border-left)</h2>
+        <p>Permite definir estilos diferentes para cada lado da borda. No exemplo abaixo, temos uma borda sólida à direita:</p>
+        <div class="box" style="border-right: 3px solid #333;">Borda direita: 3px solid</div>
+    </section>
+
+    <section>
+        <h2>Propriedade Abreviada de Borda (border)</h2>
+        <p>Abaixo, um exemplo de uso da propriedade abreviada:</p>
+        <pre><code>border: 5px solid red;</code></pre>
+        <div class="box" style="border: 5px solid red;">Borda: 5px solid red</div>
+    </section>
+
+    <section>
+        <h2>Bordas Arredondadas (border-radius)</h2>
+        <p>Adiciona arredondamento nos cantos das bordas. Abaixo, exemplos de arredondamento uniforme e distinto:</p>
+        <div class="box radius">border-radius: 15px</div>
+        <div class="box radius-diff">border-radius: 10px 20px 30px 40px</div>
+    </section>
+</body>
+</html>
