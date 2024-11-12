@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Propriedades de Fundo</title>
+    <style>
+        /* Estilos para as seções de exemplo */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .exemplo {
+            margin-top: 10px;
+            padding: 20px;
+            border: 1px dashed #333;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Exemplo background-color */
+        .exemplo-bg-color {
+            background-color: tomato;
+        }
+
+        /* Exemplo background-image */
+        .exemplo-bg-image {
+            background-image: url('https://www.w3schools.com/css/img_tree.png');
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Exemplo background-repeat */
+        .exemplo-bg-repeat {
+            background-image: url('https://www.w3schools.com/css/img_tree.png');
+            background-repeat: repeat-x;
+            background-color: lightgray;
+        }
+
+        /* Exemplo background-position */
+        .exemplo-bg-position {
+            background-image: url('https://www.w3schools.com/css/img_tree.png');
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-color: lightblue;
+        }
+
+        /* Exemplo background-attachment */
+        .exemplo-bg-attachment {
+            background-image: url('https://www.w3schools.com/css/img_tree.png');
+            background-attachment: fixed;
+            background-size: cover;
+            height: 300px;
+            color: white;
+        }
+
+        /* Exemplo background (abreviado) */
+        .exemplo-bg-abreviado {
+            background: #ffffff url('https://www.w3schools.com/css/img_tree.png') no-repeat right top;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Propriedades de Fundo no CSS</h1>
+
+    <section>
+        <h2>background-color</h2>
+        <p>A propriedade <code>background-color</code> define a cor de fundo de um elemento. Aceita diversos formatos, como nomes de cores, valores hexadecimais ou RGB.</p>
+        <p>Exemplo de código:</p>
+        <code>background-color: tomato;</code>
+        <div class="exemplo exemplo-bg-color">Exemplo com cor de fundo "Tomato"</div>
+    </section>
+
+    <section>
+        <h2>background-image</h2>
+        <p>Com <code>background-image</code>, é possível definir uma imagem como fundo. A imagem é especificada com o valor <code>url()</code>.</p>
+        <p>Exemplo de código:</p>
+        <code>background-image: url('https://via.placeholder.com/150');</code>
+        <div class="exemplo exemplo-bg-image">Exemplo com imagem de fundo</div>
+    </section>
+
+    <section>
+        <h2>background-repeat</h2>
+        <p>A propriedade <code>background-repeat</code> controla a repetição da imagem de fundo. Pode-se repetir a imagem horizontalmente, verticalmente ou não repetir.</p>
+        <p>Exemplo de código:</p>
+        <code>background-repeat: repeat-x;</code>
+        <div class="exemplo exemplo-bg-repeat">Exemplo com repetição horizontal (repeat-x)</div>
+    </section>
+
+    <section>
+        <h2>background-position</h2>
+        <p>A <code>background-position</code> define a posição inicial da imagem de fundo dentro do elemento, com valores como <code>top</code>, <code>right</code>, <code>center</code>, etc.</p>
+        <p>Exemplo de código:</p>
+        <code>background-position: right top;</code>
+        <div class="exemplo exemplo-bg-position">Exemplo com imagem posicionada no canto superior direito</div>
+    </section>
+
+    <section>
+        <h2>background-attachment</h2>
+        <p>Com <code>background-attachment</code>, controla-se o movimento da imagem de fundo durante a rolagem da página. Com <code>fixed</code>, a imagem permanece fixa.</p>
+        <p>Exemplo de código:</p>
+        <code>background-attachment: fixed;</code>
+        <div class="exemplo exemplo-bg-attachment">Exemplo com imagem fixa (parallax)</div>
+    </section>
+
+    <section>
+        <h2>background (abreviado)</h2>
+        <p>A propriedade <code>background</code> permite definir múltiplas configurações de fundo em uma única linha.</p>
+        <p>Exemplo de código:</p>
+        <code>background: #ffffff url("https://via.placeholder.com/200") no-repeat right top;</code>
+        <div class="exemplo exemplo-bg-abreviado">Exemplo de propriedade abreviada com cor e imagem de fundo</div>
+    </section>
+
+</body>
+</html>
