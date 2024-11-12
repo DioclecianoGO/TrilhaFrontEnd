@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade Margin em CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #4a90e2;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .box {
+            background-color: #f9f9fb;
+            padding: 20px;
+            margin: 10px 0;
+            text-align: center;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .box:hover {
+            background-color: #eef5fd;
+        }
+        .example-box {
+            margin: 20px;
+            padding: 30px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            text-align: center;
+        }
+        pre, code {
+            background-color: #f4f4f9;
+            padding: 10px;
+            color: #d6336c;
+            font-family: Consolas, monospace;
+            border-radius: 5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .center-box {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #e0f7fa;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedade Margin em CSS</h1>
+    <section>
+        <h2>Composição e Sintaxe</h2>
+        <p>A propriedade <strong>margin</strong> é usada para adicionar espaços ao redor dos elementos. Ela pode ser aplicada individualmente para cada lado ou de forma abreviada para definir as margens de todos os lados de uma só vez.</p>
+    </section>
+
+    <section>
+        <h2>Estrutura e Funcionamento das Margens</h2>
+        <p>As margens podem ser configuradas individualmente para cada lado do elemento:</p>
+        <div class="example-box" style="margin-top: 20px;">margin-top: 20px;</div>
+        <div class="example-box" style="margin-right: 30px;">margin-right: 30px;</div>
+        <div class="example-box" style="margin-bottom: 40px;">margin-bottom: 40px;</div>
+        <div class="example-box" style="margin-left: 50px;">margin-left: 50px;</div>
+    </section>
+
+    <section>
+        <h2>Unidades de Medida</h2>
+        <p>Você pode definir as margens com diferentes unidades de medida:</p>
+        <div class="box" style="margin: 20px;">Margin com valor fixo (px)</div>
+        <div class="box" style="margin: 5em;">Margin com valor relativo (em)</div>
+        <div class="box" style="margin: 10%; background-color: #f1c40f;">Margin com valor percentual (%)</div>
+        <div class="box" style="margin: auto; width: 200px; background-color: #e74c3c;">Margin auto para centralização</div>
+    </section>
+
+    <section>
+        <h2>Sintaxe Abreviada</h2>
+        <p>A propriedade margin pode ser escrita de forma abreviada para simplificar o código. Veja os exemplos abaixo:</p>
+        <div class="box" style="margin: 20px 30px 40px 50px;">margin: 20px 30px 40px 50px;</div>
+        <div class="box" style="margin: 20px 30px 40px;">margin: 20px 30px 40px;</div>
+        <div class="box" style="margin: 20px 30px;">margin: 20px 30px;</div>
+        <div class="box" style="margin: 20px;">margin: 20px;</div>
+    </section>
+
+    <section>
+        <h2>Exemplo de Centralização com <code>margin: auto</code></h2>
+        <div class="center-box">
+            <p>Este box está centralizado com <code>margin: auto</code>.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Valor inherit</h2>
+        <p>Utilizando <code>margin: inherit</code>, o elemento herda as margens do elemento pai:</p>
+        <div class="box" style="margin: 30px; background-color: #9b59b6;">
+            Este box tem margens de 30px
+            <div class="box" style="margin: inherit; background-color: #8e44ad;">Este box herda as margens do elemento pai</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Colapso de Margens</h2>
+        <p>Quando duas margens verticais se encontram, elas se "fundem" em uma única. O valor final será o maior entre as duas margens adjacentes.</p>
+        <div style="margin-bottom: 30px; background-color: #f39c12; padding: 20px;">Margem inferior de 30px</div>
+        <div style="margin-top: 40px; background-color: #e67e22; padding: 20px;">Margem superior de 40px</div>
+    </section>
+
+</body>
+</html>
