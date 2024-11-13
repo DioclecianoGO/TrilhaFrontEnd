@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de Altura e Largura em CSS</title>
+    <style>
+        * {
+            box-sizing: border-box; /* Adiciona box-sizing a todos os elementos para evitar transbordamento */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .box {
+            border: 2px solid #000;
+            padding: 10px;
+            width: 100%; /* Faz a box ocupar 100% do espaço disponível */
+            max-width: 250px; /* Limita a largura máxima */
+            text-align: center;
+            overflow: hidden; /* Evita o transbordamento do conteúdo */
+        }
+
+        .example-box {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+            margin: 10px 0;
+        }
+
+        .example-box.auto {
+            background-color: #cce5ff;
+        }
+
+        .example-box.fixed {
+            background-color: #ffb3b3;
+        }
+
+        .example-box.percentage {
+            background-color: #d9f7be;
+        }
+
+        .example-box.max-width {
+            background-color: #ffd966;
+        }
+
+        .example-box.border-box {
+            background-color: #ffcc99;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Propriedades de Altura e Largura em CSS</h1>
+    <p>As propriedades <code>height</code>, <code>width</code>, e <code>max-width</code> são essenciais no CSS para controlar as dimensões dos elementos. Aqui, exploraremos como essas propriedades funcionam e exemplos práticos.</p>
+
+    <div class="container">
+        <!-- Exemplo com width e height automáticos -->
+        <div class="box example-box auto">
+            <h2>auto (Padrão)</h2>
+            <p>Com a propriedade <code>auto</code>, o navegador ajusta automaticamente a largura e a altura com base no conteúdo.</p>
+            <p>Exemplo de Box com auto:</p>
+            <div class="example-box" style="width: auto; height: auto;">
+                Este box tem altura e largura ajustadas automaticamente.
+            </div>
+        </div>
+
+        <!-- Exemplo com valores fixos -->
+        <div class="box example-box fixed">
+            <h2>Valores Fixos</h2>
+            <p>Quando usamos unidades como <code>px</code>, definimos dimensões fixas.</p>
+            <p>Exemplo de Box com largura e altura fixas:</p>
+            <div class="example-box" style="width: 150px; height: 100px;">
+                Box com largura de 150px e altura de 100px.
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Exemplo com porcentagem -->
+        <div class="box example-box percentage">
+            <h2>Porcentagem</h2>
+            <p>Usando <code>%</code>, a largura é calculada em relação à largura do elemento pai.</p>
+            <p>Exemplo de Box com largura em 50%:</p>
+            <div class="example-box" style="width: 50%; height: 100px;">
+                Box com largura de 50% do contêiner.
+            </div>
+        </div>
+
+        <!-- Exemplo com max-width -->
+        <div class="box example-box max-width">
+            <h2>max-width</h2>
+            <p>A propriedade <code>max-width</code> define o limite máximo de largura do elemento.</p>
+            <p>Exemplo de Box com max-width de 200px:</p>
+            <div class="example-box" style="width: 100%; max-width: 200px; height: 100px;">
+                Box com largura máxima de 200px, ajustando-se conforme o tamanho do contêiner.
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Exemplo com box-sizing -->
+        <div class="box example-box border-box">
+            <h2>box-sizing: border-box</h2>
+            <p>Usando <code>box-sizing: border-box</code>, o padding é incluído na largura total do elemento.</p>
+            <p>Exemplo de Box com box-sizing:</p>
+            <div class="example-box" style="box-sizing: border-box; width: 200px; padding: 20px;">
+                Box com box-sizing border-box, incluindo o padding dentro da largura de 200px.
+            </div>
+        </div>
+    </div>
+
+    <h2>Conclusão</h2>
+    <p>As propriedades <code>height</code>, <code>width</code> e <code>max-width</code> são ferramentas poderosas no CSS, essenciais para controle de layout e criação de designs responsivos. A interação entre essas propriedades e o uso de <code>box-sizing</code> são importantes para garantir um design funcional e visualmente agradável.</p>
+
+</body>
+</html>
