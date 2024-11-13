@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Outline</title>
+  <style>
+    /* Estilos de exemplo para outline */
+    .box-solid {
+      outline: solid 3px blue;
+      padding: 20px;
+      margin: 15px;
+      background-color: lightblue;
+    }
+
+    .box-dotted {
+      outline: dotted 3px red;
+      padding: 20px;
+      margin: 15px;
+      background-color: lightpink;
+    }
+
+    .box-dashed {
+      outline: dashed 4px green;
+      padding: 20px;
+      margin: 15px;
+      background-color: lightgreen;
+    }
+
+    .box-offset {
+      outline: solid 3px purple;
+      outline-offset: 10px;
+      padding: 20px;
+      margin: 15px;
+      background-color: lightyellow;
+    }
+
+    /* Estilos para diferentes espessuras */
+    .box-thin {
+      outline: thin solid orange;
+      padding: 20px;
+      margin: 15px;
+      background-color: lightcoral;
+    }
+
+    .box-thick {
+      outline: thick solid black;
+      padding: 20px;
+      margin: 15px;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Outline (Contorno)</h1>
+
+  <section>
+    <h2>O Que é o Outline no CSS?</h2>
+    <p>O outline (contorno) é uma linha ao redor de um elemento, localizada externamente à borda, que serve para destacar o elemento sem afetar suas dimensões totais.</p>
+  </section>
+
+  <section>
+    <h2>Propriedade de Estilo do Contorno (<code>outline-style</code>)</h2>
+    <p>A propriedade <code>outline-style</code> controla a aparência do contorno:</p>
+    
+    <h3>Exemplo: Contorno Sólido</h3>
+    <div class="box-solid">
+      <p>Contorno sólido (solid) com cor azul e espessura de 3px.</p>
+    </div>
+    
+    <h3>Exemplo: Contorno Pontilhado</h3>
+    <div class="box-dotted">
+      <p>Contorno pontilhado (dotted) com cor vermelha e espessura de 3px.</p>
+    </div>
+    
+    <h3>Exemplo: Contorno Tracejado</h3>
+    <div class="box-dashed">
+      <p>Contorno tracejado (dashed) com cor verde e espessura de 4px.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Propriedade de Largura do Contorno (<code>outline-width</code>)</h2>
+    <p>O <code>outline-width</code> define a espessura do contorno:</p>
+    
+    <h3>Exemplo: Contorno Fino</h3>
+    <div class="box-thin">
+      <p>Contorno fino (thin) com cor laranja.</p>
+    </div>
+    
+    <h3>Exemplo: Contorno Grosso</h3>
+    <div class="box-thick">
+      <p>Contorno grosso (thick) com cor preta.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Propriedade de Cor do Contorno (<code>outline-color</code>)</h2>
+    <p>A cor do contorno pode ser definida com nomes de cores, valores HEX, RGB ou HSL.</p>
+    <p>No exemplo acima, utilizamos cores como <code>blue</code>, <code>red</code>, <code>green</code>, <code>orange</code> e <code>black</code> para diferenciar visualmente cada contorno.</p>
+  </section>
+
+  <section>
+    <h2>Propriedade Resumida (<code>outline</code>)</h2>
+    <p>A propriedade <code>outline</code> permite definir a largura, estilo e cor do contorno em uma única linha. Exemplo:</p>
+    <pre><code>outline: 3px solid blue;</code></pre>
+  </section>
+
+  <section>
+    <h2>Propriedade Offset do Contorno (<code>outline-offset</code>)</h2>
+    <p>O <code>outline-offset</code> adiciona um espaçamento entre o contorno e a borda do elemento, criando uma área transparente.</p>
+    
+    <h3>Exemplo: Contorno com Offset</h3>
+    <div class="box-offset">
+      <p>Contorno com offset de 10px, afastando o contorno da borda.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Diferença Entre Contorno e Borda</h2>
+    <p>Ao contrário da borda, o contorno é exibido fora da área do elemento e não interfere em seu tamanho total, sendo útil para destaque visual sem afetar o layout.</p>
+  </section>
+
+</body>
+</html>
