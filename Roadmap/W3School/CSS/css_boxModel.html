@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo de Caixa (Box Model) - CSS</title>
+  <style>
+    /* Exemplo de conteúdo com padding, border e margin */
+    .box {
+      width: 200px;
+      padding: 20px;
+      border: 5px solid blue;
+      margin: 15px;
+      background-color: lightblue;
+    }
+
+    /* Exemplo de box-sizing: border-box */
+    .box-border-box {
+      width: 200px;
+      padding: 20px;
+      border: 5px solid green;
+      box-sizing: border-box;
+      background-color: lightgreen;
+      margin-top: 20px;
+    }
+
+    /* Exemplo para visualização de borda e padding */
+    .box-padding {
+      width: 150px;
+      padding: 15px;
+      border: 3px solid red;
+      background-color: lightcoral;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Modelo de Caixa (Box Model) no CSS</h1>
+
+  <section>
+    <h2>Componentes do Box Model</h2>
+    <p>O Modelo de Caixa é composto de quatro partes principais:</p>
+    <ul>
+      <li><strong>Conteúdo:</strong> onde os textos e imagens aparecem.</li>
+      <li><strong>Padding:</strong> espaço transparente ao redor do conteúdo.</li>
+      <li><strong>Borda:</strong> circunda o conteúdo e o padding, destacando a área interna.</li>
+      <li><strong>Margem:</strong> espaço transparente entre a borda do elemento e os elementos vizinhos.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Exemplo Básico do Box Model</h2>
+    <p>Exemplo de um elemento com conteúdo, padding, borda e margem:</p>
+    <div class="box">
+      <p>Este é o conteúdo da caixa. A largura especificada é de 200px, com padding de 20px e borda de 5px.</p>
+    </div>
+    <p><em>O resultado visual mostra uma caixa com espaçamento interno (padding) e uma borda ao redor.</em></p>
+  </section>
+
+  <section>
+    <h2>Cálculo da Largura Total</h2>
+    <p>Para calcular a largura total de um elemento, somamos:</p>
+    <ul>
+      <li><strong>Conteúdo:</strong> largura definida (ex.: 200px).</li>
+      <li><strong>Padding:</strong> 20px de cada lado (total de 40px).</li>
+      <li><strong>Borda:</strong> 5px de cada lado (total de 10px).</li>
+    </ul>
+    <p>No exemplo acima, a largura total da caixa é: <strong>250px</strong> (200px + 40px + 10px).</p>
+  </section>
+
+  <section>
+    <h2>Propriedade <code>box-sizing: border-box</code></h2>
+    <p>A propriedade <code>box-sizing: border-box</code> inclui padding e bordas dentro das dimensões especificadas, mantendo a largura e altura definidas:</p>
+    <div class="box-border-box">
+      <p>Este é um exemplo com <code>box-sizing: border-box</code>, onde a largura total permanece 200px, incluindo o padding e a borda.</p>
+    </div>
+    <p><em>O elemento mantém a largura definida (200px) mesmo com padding e borda.</em></p>
+  </section>
+
+  <section>
+    <h2>Exemplo Visual: Padding e Borda</h2>
+    <p>Exemplo de como padding e borda afetam o layout da caixa:</p>
+    <div class="box-padding">
+      <p>Este elemento possui padding de 15px e uma borda de 3px em vermelho.</p>
+    </div>
+    <p><em>Observe o espaçamento adicional entre o conteúdo e a borda (padding) e o contorno colorido (borda).</em></p>
+  </section>
+</body>
+</html>
