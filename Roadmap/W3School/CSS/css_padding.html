@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding em CSS</title>
+    <style>
+        /* Exemplo básico de padding */
+        .padding-exemplo {
+            background-color: #f0f0f0;
+            border: 2px solid #007BFF;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+        }
+
+        /* Exemplo de padding individual */
+        .padding-individual {
+            background-color: #f9f9f9;
+            border: 1px solid #333;
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+            margin: 10px;
+            width: 250px;
+        }
+
+        /* Exemplo de padding com valores abreviados */
+        .padding-abreviado {
+            background-color: #e9e9e9;
+            border: 1px solid #333;
+            padding: 10px 20px 30px 40px;
+            margin: 10px;
+            width: 250px;
+        }
+
+        /* Exemplo de padding com box-sizing: border-box */
+        .box-sizing-exemplo {
+            background-color: #d9d9d9;
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Propriedades de Padding no CSS</h1>
+    <p>Em CSS, o padding é o espaço interno entre o conteúdo de um elemento e suas bordas, conhecido como o "respiro" do conteúdo.</p>
+
+    <section>
+        <h2>Exemplo de Padding Básico</h2>
+        <p>Neste exemplo, aplicamos um padding uniforme em todos os lados do elemento:</p>
+        <div class="padding-exemplo">
+            <p>Este elemento possui padding de 20px em todos os lados.</p>
+        </div>
+        <pre>
+.padding-exemplo {
+    padding: 20px;
+}
+        </pre>
+    </section>
+
+    <section>
+        <h2>Padding Individual para Cada Lado</h2>
+        <p>É possível definir o padding de cada lado do elemento separadamente:</p>
+        <div class="padding-individual">
+            <p>Este elemento possui padding de 10px no topo, 20px à direita, 30px embaixo e 40px à esquerda.</p>
+        </div>
+        <pre>
+.padding-individual {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+}
+        </pre>
+    </section>
+
+    <section>
+        <h2>Sintaxe Abreviada para Padding</h2>
+        <p>Com a sintaxe abreviada, é possível configurar todos os lados com uma linha de código:</p>
+        <div class="padding-abreviado">
+            <p>Padding com valores diferentes para cada lado: 10px (topo), 20px (direita), 30px (inferior), 40px (esquerda).</p>
+        </div>
+        <pre>
+.padding-abreviado {
+    padding: 10px 20px 30px 40px;
+}
+        </pre>
+    </section>
+
+    <section>
+        <h2>Box-sizing: Border-box</h2>
+        <p>Usar <code>box-sizing: border-box;</code> evita que o padding aumente a largura total do elemento:</p>
+        <div class="box-sizing-exemplo">
+            <p>Este elemento possui <code>box-sizing: border-box;</code>, o que permite que o padding seja incluído dentro da largura especificada (250px).</p>
+        </div>
+        <pre>
+.box-sizing-exemplo {
+    padding: 20px;
+    box-sizing: border-box;
+}
+        </pre>
+    </section>
+
+</body>
+</html>
